@@ -1,0 +1,926 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 8 INDIVIDUAL | Relatório de equipes</title>
+  <meta name="description" content="<p>This is a minimal example of using the bookdown package to write a book.
+The HTML output format for this example is bookdown::gitbook,
+set in the _output.yml file.</p>" />
+  <meta name="generator" content="bookdown 0.40.1 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 8 INDIVIDUAL | Relatório de equipes" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:description" content="<p>This is a minimal example of using the bookdown package to write a book.
+The HTML output format for this example is bookdown::gitbook,
+set in the _output.yml file.</p>" />
+  <meta name="github-repo" content="rstudio/bookdown-demo" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 8 INDIVIDUAL | Relatório de equipes" />
+  
+  <meta name="twitter:description" content="<p>This is a minimal example of using the bookdown package to write a book.
+The HTML output format for this example is bookdown::gitbook,
+set in the _output.yml file.</p>" />
+  
+
+<meta name="author" content="Felipe Lima (Ori)" />
+
+
+<meta name="date" content="2024-09-04" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="defesa.html"/>
+<link rel="next" href="vazio1.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+<script src="libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">A Minimal Book Example</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> About</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#usage"><i class="fa fa-check"></i><b>1.1</b> Usage</a></li>
+<li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#render-book"><i class="fa fa-check"></i><b>1.2</b> Render book</a></li>
+<li class="chapter" data-level="1.3" data-path="index.html"><a href="index.html#preview-book"><i class="fa fa-check"></i><b>1.3</b> Preview book</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="apresentação-da-equipe.html"><a href="apresentação-da-equipe.html"><i class="fa fa-check"></i><b>2</b> Apresentação da equipe</a>
+<ul>
+<li class="chapter" data-level="" data-path="apresentação-da-equipe.html"><a href="apresentação-da-equipe.html#an-unnumbered-section"><i class="fa fa-check"></i>An unnumbered section</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="cross.html"><a href="cross.html"><i class="fa fa-check"></i><b>3</b> Saque</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="cross.html"><a href="cross.html#geral"><i class="fa fa-check"></i><b>3.1</b> GERAL</a></li>
+<li class="chapter" data-level="3.2" data-path="cross.html"><a href="cross.html#por-tipo"><i class="fa fa-check"></i><b>3.2</b> POR TIPO</a></li>
+<li class="chapter" data-level="3.3" data-path="cross.html"><a href="cross.html#por-atleta"><i class="fa fa-check"></i><b>3.3</b> POR ATLETA</a>
+<ul>
+<li class="chapter" data-level="3.3.1" data-path="cross.html"><a href="cross.html#gráficos"><i class="fa fa-check"></i><b>3.3.1</b> GRÁFICOS</a>
+<ul>
+<li class="chapter" data-level="3.3.1.1" data-path="cross.html"><a href="cross.html#viagem-total"><i class="fa fa-check"></i><b>3.3.1.1</b> VIAGEM TOTAL</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3.2" data-path="cross.html"><a href="cross.html#viagem-peso"><i class="fa fa-check"></i><b>3.3.2</b> VIAGEM PESO</a>
+<ul>
+<li class="chapter" data-level="3.3.2.1" data-path="cross.html"><a href="cross.html#viagem-dirigido"><i class="fa fa-check"></i><b>3.3.2.1</b> VIAGEM DIRIGIDO</a></li>
+<li class="chapter" data-level="3.3.2.2" data-path="cross.html"><a href="cross.html#float"><i class="fa fa-check"></i><b>3.3.2.2</b> FLOAT</a></li>
+<li class="chapter" data-level="3.3.2.3" data-path="cross.html"><a href="cross.html#híbrido"><i class="fa fa-check"></i><b>3.3.2.3</b> HÍBRIDO</a></li>
+</ul></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="recepção.html"><a href="recepção.html"><i class="fa fa-check"></i><b>4</b> RECEPÇÃO</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="recepção.html"><a href="recepção.html#totais"><i class="fa fa-check"></i><b>4.1</b> TOTAIS</a></li>
+<li class="chapter" data-level="4.2" data-path="recepção.html"><a href="recepção.html#detalhado"><i class="fa fa-check"></i><b>4.2</b> DETALHADO</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="ataque.html"><a href="ataque.html"><i class="fa fa-check"></i><b>5</b> ATAQUE</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="ataque.html"><a href="ataque.html#totais-1"><i class="fa fa-check"></i><b>5.1</b> TOTAIS</a></li>
+<li class="chapter" data-level="5.2" data-path="ataque.html"><a href="ataque.html#sideout"><i class="fa fa-check"></i><b>5.2</b> SIDEOUT</a></li>
+<li class="chapter" data-level="5.3" data-path="ataque.html"><a href="ataque.html#transição"><i class="fa fa-check"></i><b>5.3</b> TRANSIÇÃO</a></li>
+<li class="chapter" data-level="5.4" data-path="ataque.html"><a href="ataque.html#detalhado-1"><i class="fa fa-check"></i><b>5.4</b> DETALHADO</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="bloqueio.html"><a href="bloqueio.html"><i class="fa fa-check"></i><b>6</b> BLOQUEIO</a></li>
+<li class="chapter" data-level="7" data-path="defesa.html"><a href="defesa.html"><i class="fa fa-check"></i><b>7</b> DEFESA</a></li>
+<li class="chapter" data-level="8" data-path="individual.html"><a href="individual.html"><i class="fa fa-check"></i><b>8</b> INDIVIDUAL</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="individual.html"><a href="individual.html#ponteiros"><i class="fa fa-check"></i><b>8.1</b> PONTEIROS</a>
+<ul>
+<li class="chapter" data-level="8.1.1" data-path="individual.html"><a href="individual.html#alessandro-michieletto"><i class="fa fa-check"></i><b>8.1.1</b> 05 Alessandro Michieletto</a>
+<ul>
+<li class="chapter" data-level="8.1.1.1" data-path="individual.html"><a href="individual.html#saque"><i class="fa fa-check"></i><b>8.1.1.1</b> Saque</a></li>
+<li class="chapter" data-level="8.1.1.2" data-path="individual.html"><a href="individual.html#ataque-sideout"><i class="fa fa-check"></i><b>8.1.1.2</b> Ataque sideout</a></li>
+<li class="chapter" data-level="" data-path="individual.html"><a href="individual.html#aso---todos-os-passes-var"><i class="fa fa-check"></i>ASO - todos os passes VAR</a></li>
+<li class="chapter" data-level="8.1.1.3" data-path="individual.html"><a href="individual.html#aso---passes-ab"><i class="fa fa-check"></i><b>8.1.1.3</b> ASO - Passes AB+</a></li>
+<li class="chapter" data-level="" data-path="individual.html"><a href="individual.html#aso---passes-ab-sem-curtas"><i class="fa fa-check"></i>ASO - Passes AB+ Sem Curtas</a></li>
+<li class="chapter" data-level="" data-path="individual.html"><a href="individual.html#aso---passes-ab-curtas"><i class="fa fa-check"></i>ASO - Passes AB+ Curtas</a></li>
+<li class="chapter" data-level="8.1.1.4" data-path="individual.html"><a href="individual.html#aso---passes-b-c-tt"><i class="fa fa-check"></i><b>8.1.1.4</b> ASO - Passes B-C TT</a></li>
+<li class="chapter" data-level="" data-path="individual.html"><a href="individual.html#aso---passes-b-c-sem-curtas"><i class="fa fa-check"></i>ASO - Passes B-C Sem Curtas</a></li>
+<li class="chapter" data-level="" data-path="individual.html"><a href="individual.html#aso---passes-b-c-curtas"><i class="fa fa-check"></i>ASO - Passes B-C Curtas</a></li>
+<li class="chapter" data-level="" data-path="individual.html"><a href="individual.html#aso---passando-e-sem-passar"><i class="fa fa-check"></i>ASO - passando e sem passar</a></li>
+<li class="chapter" data-level="" data-path="individual.html"><a href="individual.html#aso---passando"><i class="fa fa-check"></i>ASO - passando</a></li>
+<li class="chapter" data-level="" data-path="individual.html"><a href="individual.html#aso---sem-passar"><i class="fa fa-check"></i>ASO - sem passar</a></li>
+<li class="chapter" data-level="" data-path="individual.html"><a href="individual.html#aso---por-base-de-bloqueio"><i class="fa fa-check"></i>ASO - por base de bloqueio</a></li>
+<li class="chapter" data-level="" data-path="individual.html"><a href="individual.html#aso---base-alta"><i class="fa fa-check"></i>ASO - base alta</a></li>
+<li class="chapter" data-level="" data-path="individual.html"><a href="individual.html#aso---base-baixa"><i class="fa fa-check"></i>ASO - base baixa</a></li>
+<li class="chapter" data-level="" data-path="individual.html"><a href="individual.html#aso---entrada-setor-do-passe-abb"><i class="fa fa-check"></i>ASO - Entrada setor do passe ABB!</a></li>
+<li class="chapter" data-level="" data-path="individual.html"><a href="individual.html#aso---entrada-setor-do-passe-abb-1"><i class="fa fa-check"></i>ASO - Entrada setor do passe ABB!</a></li>
+<li class="chapter" data-level="" data-path="individual.html"><a href="individual.html#aso---saída-setor-do-passe-abb"><i class="fa fa-check"></i>ASO - Saída setor do passe ABB!</a></li>
+</ul></li>
+<li class="chapter" data-level="8.1.2" data-path="individual.html"><a href="individual.html#daniele-lavia"><i class="fa fa-check"></i><b>8.1.2</b> 15 Daniele Lavia</a>
+<ul>
+<li class="chapter" data-level="8.1.2.1" data-path="individual.html"><a href="individual.html#saque-1"><i class="fa fa-check"></i><b>8.1.2.1</b> Saque</a></li>
+<li class="chapter" data-level="8.1.2.2" data-path="individual.html"><a href="individual.html#ataque-sideout-1"><i class="fa fa-check"></i><b>8.1.2.2</b> Ataque sideout</a></li>
+<li class="chapter" data-level="" data-path="individual.html"><a href="individual.html#aso---todos-os-passes-var-1"><i class="fa fa-check"></i>ASO - todos os passes VAR</a></li>
+<li class="chapter" data-level="8.1.2.3" data-path="individual.html"><a href="individual.html#aso---passes-ab-1"><i class="fa fa-check"></i><b>8.1.2.3</b> ASO - Passes AB+</a></li>
+<li class="chapter" data-level="" data-path="individual.html"><a href="individual.html#aso---passes-ab-sem-curtas-1"><i class="fa fa-check"></i>ASO - Passes AB+ Sem Curtas</a></li>
+<li class="chapter" data-level="" data-path="individual.html"><a href="individual.html#aso---passes-ab-curtas-1"><i class="fa fa-check"></i>ASO - Passes AB+ Curtas</a></li>
+<li class="chapter" data-level="8.1.2.4" data-path="individual.html"><a href="individual.html#aso---passes-b-c-tt-1"><i class="fa fa-check"></i><b>8.1.2.4</b> ASO - Passes B-C TT</a></li>
+<li class="chapter" data-level="" data-path="individual.html"><a href="individual.html#aso---passes-b-c-sem-curtas-1"><i class="fa fa-check"></i>ASO - Passes B-C Sem Curtas</a></li>
+<li class="chapter" data-level="" data-path="individual.html"><a href="individual.html#aso---passes-b-c-curtas-1"><i class="fa fa-check"></i>ASO - Passes B-C Curtas</a></li>
+<li class="chapter" data-level="" data-path="individual.html"><a href="individual.html#aso---passando-e-sem-passar-1"><i class="fa fa-check"></i>ASO - passando e sem passar</a></li>
+<li class="chapter" data-level="" data-path="individual.html"><a href="individual.html#aso---passando-1"><i class="fa fa-check"></i>ASO - passando</a></li>
+<li class="chapter" data-level="" data-path="individual.html"><a href="individual.html#aso---sem-passar-1"><i class="fa fa-check"></i>ASO - sem passar</a></li>
+<li class="chapter" data-level="" data-path="individual.html"><a href="individual.html#aso---por-base-de-bloqueio-1"><i class="fa fa-check"></i>ASO - por base de bloqueio</a></li>
+<li class="chapter" data-level="" data-path="individual.html"><a href="individual.html#aso---base-alta-1"><i class="fa fa-check"></i>ASO - base alta</a></li>
+<li class="chapter" data-level="" data-path="individual.html"><a href="individual.html#aso---base-baixa-1"><i class="fa fa-check"></i>ASO - base baixa</a></li>
+<li class="chapter" data-level="" data-path="individual.html"><a href="individual.html#aso---entrada-setor-do-passe-abb-2"><i class="fa fa-check"></i>ASO - Entrada setor do passe ABB!</a></li>
+<li class="chapter" data-level="" data-path="individual.html"><a href="individual.html#aso---entrada-setor-do-passe-abb-3"><i class="fa fa-check"></i>ASO - Entrada setor do passe ABB!</a></li>
+<li class="chapter" data-level="" data-path="individual.html"><a href="individual.html#aso---saída-setor-do-passe-abb-1"><i class="fa fa-check"></i>ASO - Saída setor do passe ABB!</a></li>
+</ul></li>
+<li class="chapter" data-level="8.1.3" data-path="individual.html"><a href="individual.html#luca-porro"><i class="fa fa-check"></i><b>8.1.3</b> 31 Luca Porro</a>
+<ul>
+<li class="chapter" data-level="8.1.3.1" data-path="individual.html"><a href="individual.html#saque-2"><i class="fa fa-check"></i><b>8.1.3.1</b> Saque</a></li>
+<li class="chapter" data-level="8.1.3.2" data-path="individual.html"><a href="individual.html#ataque-sideout-2"><i class="fa fa-check"></i><b>8.1.3.2</b> Ataque sideout</a></li>
+<li class="chapter" data-level="" data-path="individual.html"><a href="individual.html#aso---todos-os-passes-var-2"><i class="fa fa-check"></i>ASO - todos os passes VAR</a></li>
+<li class="chapter" data-level="8.1.3.3" data-path="individual.html"><a href="individual.html#aso---passes-ab-2"><i class="fa fa-check"></i><b>8.1.3.3</b> ASO - Passes AB+</a></li>
+<li class="chapter" data-level="" data-path="individual.html"><a href="individual.html#aso---passes-ab-sem-curtas-2"><i class="fa fa-check"></i>ASO - Passes AB+ Sem Curtas</a></li>
+<li class="chapter" data-level="" data-path="individual.html"><a href="individual.html#aso---passes-ab-curtas-2"><i class="fa fa-check"></i>ASO - Passes AB+ Curtas</a></li>
+<li class="chapter" data-level="8.1.3.4" data-path="individual.html"><a href="individual.html#aso---passes-b-c-tt-2"><i class="fa fa-check"></i><b>8.1.3.4</b> ASO - Passes B-C TT</a></li>
+<li class="chapter" data-level="" data-path="individual.html"><a href="individual.html#aso---passes-b-c-sem-curtas-2"><i class="fa fa-check"></i>ASO - Passes B-C Sem Curtas</a></li>
+<li class="chapter" data-level="" data-path="individual.html"><a href="individual.html#aso---passes-b-c-curtas-2"><i class="fa fa-check"></i>ASO - Passes B-C Curtas</a></li>
+<li class="chapter" data-level="" data-path="individual.html"><a href="individual.html#aso---passando-e-sem-passar-2"><i class="fa fa-check"></i>ASO - passando e sem passar</a></li>
+<li class="chapter" data-level="" data-path="individual.html"><a href="individual.html#aso---passando-2"><i class="fa fa-check"></i>ASO - passando</a></li>
+<li class="chapter" data-level="" data-path="individual.html"><a href="individual.html#aso---sem-passar-2"><i class="fa fa-check"></i>ASO - sem passar</a></li>
+<li class="chapter" data-level="" data-path="individual.html"><a href="individual.html#aso---por-base-de-bloqueio-2"><i class="fa fa-check"></i>ASO - por base de bloqueio</a></li>
+<li class="chapter" data-level="" data-path="individual.html"><a href="individual.html#aso---base-alta-2"><i class="fa fa-check"></i>ASO - base alta</a></li>
+<li class="chapter" data-level="" data-path="individual.html"><a href="individual.html#aso---base-baixa-2"><i class="fa fa-check"></i>ASO - base baixa</a></li>
+<li class="chapter" data-level="" data-path="individual.html"><a href="individual.html#aso---entrada-setor-do-passe-abb-4"><i class="fa fa-check"></i>ASO - Entrada setor do passe ABB!</a></li>
+<li class="chapter" data-level="" data-path="individual.html"><a href="individual.html#aso---entrada-setor-do-passe-abb-5"><i class="fa fa-check"></i>ASO - Entrada setor do passe ABB!</a></li>
+<li class="chapter" data-level="" data-path="individual.html"><a href="individual.html#aso---saída-setor-do-passe-abb-2"><i class="fa fa-check"></i>ASO - Saída setor do passe ABB!</a></li>
+</ul></li>
+<li class="chapter" data-level="8.1.4" data-path="individual.html"><a href="individual.html#mattia-bottolo"><i class="fa fa-check"></i><b>8.1.4</b> 12 Mattia Bottolo</a>
+<ul>
+<li class="chapter" data-level="8.1.4.1" data-path="individual.html"><a href="individual.html#saque-3"><i class="fa fa-check"></i><b>8.1.4.1</b> Saque</a></li>
+<li class="chapter" data-level="8.1.4.2" data-path="individual.html"><a href="individual.html#ataque-sideout-3"><i class="fa fa-check"></i><b>8.1.4.2</b> Ataque sideout</a></li>
+<li class="chapter" data-level="" data-path="individual.html"><a href="individual.html#aso---todos-os-passes-var-3"><i class="fa fa-check"></i>ASO - todos os passes VAR</a></li>
+<li class="chapter" data-level="8.1.4.3" data-path="individual.html"><a href="individual.html#aso---passes-ab-3"><i class="fa fa-check"></i><b>8.1.4.3</b> ASO - Passes AB+</a></li>
+<li class="chapter" data-level="" data-path="individual.html"><a href="individual.html#aso---passes-ab-sem-curtas-3"><i class="fa fa-check"></i>ASO - Passes AB+ Sem Curtas</a></li>
+<li class="chapter" data-level="" data-path="individual.html"><a href="individual.html#aso---passes-ab-curtas-3"><i class="fa fa-check"></i>ASO - Passes AB+ Curtas</a></li>
+<li class="chapter" data-level="8.1.4.4" data-path="individual.html"><a href="individual.html#aso---passes-b-c-tt-3"><i class="fa fa-check"></i><b>8.1.4.4</b> ASO - Passes B-C TT</a></li>
+<li class="chapter" data-level="" data-path="individual.html"><a href="individual.html#aso---passes-b-c-sem-curtas-3"><i class="fa fa-check"></i>ASO - Passes B-C Sem Curtas</a></li>
+<li class="chapter" data-level="" data-path="individual.html"><a href="individual.html#aso---passes-b-c-curtas-3"><i class="fa fa-check"></i>ASO - Passes B-C Curtas</a></li>
+<li class="chapter" data-level="" data-path="individual.html"><a href="individual.html#aso---passando-e-sem-passar-3"><i class="fa fa-check"></i>ASO - passando e sem passar</a></li>
+<li class="chapter" data-level="" data-path="individual.html"><a href="individual.html#aso---passando-3"><i class="fa fa-check"></i>ASO - passando</a></li>
+<li class="chapter" data-level="" data-path="individual.html"><a href="individual.html#aso---sem-passar-3"><i class="fa fa-check"></i>ASO - sem passar</a></li>
+<li class="chapter" data-level="" data-path="individual.html"><a href="individual.html#aso---por-base-de-bloqueio-3"><i class="fa fa-check"></i>ASO - por base de bloqueio</a></li>
+<li class="chapter" data-level="" data-path="individual.html"><a href="individual.html#aso---base-alta-3"><i class="fa fa-check"></i>ASO - base alta</a></li>
+<li class="chapter" data-level="" data-path="individual.html"><a href="individual.html#aso---base-baixa-3"><i class="fa fa-check"></i>ASO - base baixa</a></li>
+<li class="chapter" data-level="" data-path="individual.html"><a href="individual.html#aso---entrada-setor-do-passe-abb-6"><i class="fa fa-check"></i>ASO - Entrada setor do passe ABB!</a></li>
+<li class="chapter" data-level="" data-path="individual.html"><a href="individual.html#aso---entrada-setor-do-passe-abb-7"><i class="fa fa-check"></i>ASO - Entrada setor do passe ABB!</a></li>
+<li class="chapter" data-level="" data-path="individual.html"><a href="individual.html#aso---saída-setor-do-passe-abb-3"><i class="fa fa-check"></i>ASO - Saída setor do passe ABB!</a></li>
+</ul></li>
+<li class="chapter" data-level="8.1.5" data-path="individual.html"><a href="individual.html#francesco-recine"><i class="fa fa-check"></i><b>8.1.5</b> 03 Francesco Recine</a>
+<ul>
+<li class="chapter" data-level="8.1.5.1" data-path="individual.html"><a href="individual.html#saque-4"><i class="fa fa-check"></i><b>8.1.5.1</b> Saque</a></li>
+<li class="chapter" data-level="8.1.5.2" data-path="individual.html"><a href="individual.html#ataque-sideout-4"><i class="fa fa-check"></i><b>8.1.5.2</b> Ataque sideout</a></li>
+<li class="chapter" data-level="" data-path="individual.html"><a href="individual.html#aso---todos-os-passes-var-4"><i class="fa fa-check"></i>ASO - todos os passes VAR</a></li>
+<li class="chapter" data-level="8.1.5.3" data-path="individual.html"><a href="individual.html#aso---passes-ab-4"><i class="fa fa-check"></i><b>8.1.5.3</b> ASO - Passes AB+</a></li>
+<li class="chapter" data-level="" data-path="individual.html"><a href="individual.html#aso---passes-ab-sem-curtas-4"><i class="fa fa-check"></i>ASO - Passes AB+ Sem Curtas</a></li>
+<li class="chapter" data-level="" data-path="individual.html"><a href="individual.html#aso---passes-ab-curtas-4"><i class="fa fa-check"></i>ASO - Passes AB+ Curtas</a></li>
+<li class="chapter" data-level="8.1.5.4" data-path="individual.html"><a href="individual.html#aso---passes-b-c-tt-4"><i class="fa fa-check"></i><b>8.1.5.4</b> ASO - Passes B-C TT</a></li>
+<li class="chapter" data-level="" data-path="individual.html"><a href="individual.html#aso---passes-b-c-sem-curtas-4"><i class="fa fa-check"></i>ASO - Passes B-C Sem Curtas</a></li>
+<li class="chapter" data-level="" data-path="individual.html"><a href="individual.html#aso---passes-b-c-curtas-4"><i class="fa fa-check"></i>ASO - Passes B-C Curtas</a></li>
+<li class="chapter" data-level="" data-path="individual.html"><a href="individual.html#aso---passando-e-sem-passar-4"><i class="fa fa-check"></i>ASO - passando e sem passar</a></li>
+<li class="chapter" data-level="" data-path="individual.html"><a href="individual.html#aso---passando-4"><i class="fa fa-check"></i>ASO - passando</a></li>
+<li class="chapter" data-level="" data-path="individual.html"><a href="individual.html#aso---sem-passar-4"><i class="fa fa-check"></i>ASO - sem passar</a></li>
+<li class="chapter" data-level="" data-path="individual.html"><a href="individual.html#aso---por-base-de-bloqueio-4"><i class="fa fa-check"></i>ASO - por base de bloqueio</a></li>
+<li class="chapter" data-level="" data-path="individual.html"><a href="individual.html#aso---base-alta-4"><i class="fa fa-check"></i>ASO - base alta</a></li>
+<li class="chapter" data-level="" data-path="individual.html"><a href="individual.html#aso---base-baixa-4"><i class="fa fa-check"></i>ASO - base baixa</a></li>
+<li class="chapter" data-level="" data-path="individual.html"><a href="individual.html#aso---entrada-setor-do-passe-abb-8"><i class="fa fa-check"></i>ASO - Entrada setor do passe ABB!</a></li>
+<li class="chapter" data-level="" data-path="individual.html"><a href="individual.html#aso---entrada-setor-do-passe-abb-9"><i class="fa fa-check"></i>ASO - Entrada setor do passe ABB!</a></li>
+<li class="chapter" data-level="" data-path="individual.html"><a href="individual.html#aso---saída-setor-do-passe-abb-4"><i class="fa fa-check"></i>ASO - Saída setor do passe ABB!</a></li>
+</ul></li>
+<li class="chapter" data-level="8.1.6" data-path="individual.html"><a href="individual.html#fabrizio-gironi"><i class="fa fa-check"></i><b>8.1.6</b> 18 Fabrizio Gironi</a>
+<ul>
+<li class="chapter" data-level="8.1.6.1" data-path="individual.html"><a href="individual.html#saque-5"><i class="fa fa-check"></i><b>8.1.6.1</b> Saque</a></li>
+<li class="chapter" data-level="8.1.6.2" data-path="individual.html"><a href="individual.html#ataque-sideout-5"><i class="fa fa-check"></i><b>8.1.6.2</b> Ataque sideout</a></li>
+<li class="chapter" data-level="" data-path="individual.html"><a href="individual.html#aso---todos-os-passes-var-5"><i class="fa fa-check"></i>ASO - todos os passes VAR</a></li>
+<li class="chapter" data-level="8.1.6.3" data-path="individual.html"><a href="individual.html#aso---passes-ab-5"><i class="fa fa-check"></i><b>8.1.6.3</b> ASO - Passes AB+</a></li>
+<li class="chapter" data-level="" data-path="individual.html"><a href="individual.html#aso---passes-ab-sem-curtas-5"><i class="fa fa-check"></i>ASO - Passes AB+ Sem Curtas</a></li>
+<li class="chapter" data-level="" data-path="individual.html"><a href="individual.html#aso---passes-ab-curtas-5"><i class="fa fa-check"></i>ASO - Passes AB+ Curtas</a></li>
+<li class="chapter" data-level="8.1.6.4" data-path="individual.html"><a href="individual.html#aso---passes-b-c-tt-5"><i class="fa fa-check"></i><b>8.1.6.4</b> ASO - Passes B-C TT</a></li>
+<li class="chapter" data-level="" data-path="individual.html"><a href="individual.html#aso---passes-b-c-sem-curtas-5"><i class="fa fa-check"></i>ASO - Passes B-C Sem Curtas</a></li>
+<li class="chapter" data-level="" data-path="individual.html"><a href="individual.html#aso---passes-b-c-curtas-5"><i class="fa fa-check"></i>ASO - Passes B-C Curtas</a></li>
+<li class="chapter" data-level="" data-path="individual.html"><a href="individual.html#aso---passando-e-sem-passar-5"><i class="fa fa-check"></i>ASO - passando e sem passar</a></li>
+<li class="chapter" data-level="" data-path="individual.html"><a href="individual.html#aso---passando-5"><i class="fa fa-check"></i>ASO - passando</a></li>
+<li class="chapter" data-level="" data-path="individual.html"><a href="individual.html#aso---sem-passar-5"><i class="fa fa-check"></i>ASO - sem passar</a></li>
+<li class="chapter" data-level="" data-path="individual.html"><a href="individual.html#aso---por-base-de-bloqueio-5"><i class="fa fa-check"></i>ASO - por base de bloqueio</a></li>
+<li class="chapter" data-level="" data-path="individual.html"><a href="individual.html#aso---base-alta-5"><i class="fa fa-check"></i>ASO - base alta</a></li>
+<li class="chapter" data-level="" data-path="individual.html"><a href="individual.html#aso---base-baixa-5"><i class="fa fa-check"></i>ASO - base baixa</a></li>
+<li class="chapter" data-level="" data-path="individual.html"><a href="individual.html#aso---entrada-setor-do-passe-abb-10"><i class="fa fa-check"></i>ASO - Entrada setor do passe ABB!</a></li>
+<li class="chapter" data-level="" data-path="individual.html"><a href="individual.html#aso---entrada-setor-do-passe-abb-11"><i class="fa fa-check"></i>ASO - Entrada setor do passe ABB!</a></li>
+<li class="chapter" data-level="" data-path="individual.html"><a href="individual.html#aso---saída-setor-do-passe-abb-5"><i class="fa fa-check"></i>ASO - Saída setor do passe ABB!</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="8.2" data-path="individual.html"><a href="individual.html#opostos"><i class="fa fa-check"></i><b>8.2</b> OPOSTOS</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="vazio1.html"><a href="vazio1.html"><i class="fa fa-check"></i><b>9</b> Vazio1</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Relatório de equipes</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="individual" class="section level1 hasAnchor" number="8">
+<h1><span class="header-section-number">Chapter 8</span> INDIVIDUAL<a href="individual.html#individual" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="ponteiros" class="section level2 hasAnchor" number="8.1">
+<h2><span class="header-section-number">8.1</span> PONTEIROS<a href="individual.html#ponteiros" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="alessandro-michieletto" class="section level3 hasAnchor" number="8.1.1">
+<h3><span class="header-section-number">8.1.1</span> 05 Alessandro Michieletto<a href="individual.html#alessandro-michieletto" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="saque" class="section level4 hasAnchor" number="8.1.1.1">
+<h4><span class="header-section-number">8.1.1.1</span> Saque<a href="individual.html#saque" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p><img src="_main_files/figure-html/unnamed-chunk-27-1.png" width="1056" /></p>
+<p><strong>Saques contra P1; contra P63; contra P542</strong><br />
+<img src="_main_files/figure-html/unnamed-chunk-27-2.png" width="1056" /></p>
+<p><strong>Saques por fase do set</strong><br />
+<img src="_main_files/figure-html/unnamed-chunk-27-3.png" width="1056" /></p>
+</div>
+<div id="ataque-sideout" class="section level4 hasAnchor" number="8.1.1.2">
+<h4><span class="header-section-number">8.1.1.2</span> Ataque sideout<a href="individual.html#ataque-sideout" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div id="so---todos-os-passes-svar" class="section level5 unnumbered hasAnchor">
+<h5>SO - todos os passes S/VAR<a href="individual.html#so---todos-os-passes-svar" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<p><img src="_main_files/figure-html/unnamed-chunk-27-4.png" width="1056" /></p>
+</div>
+</div>
+<div id="aso---todos-os-passes-var" class="section level4 unnumbered hasAnchor">
+<h4>ASO - todos os passes VAR<a href="individual.html#aso---todos-os-passes-var" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p><img src="_main_files/figure-html/unnamed-chunk-27-5.png" width="1056" /></p>
+</div>
+<div id="aso---passes-ab" class="section level4 hasAnchor" number="8.1.1.3">
+<h4><span class="header-section-number">8.1.1.3</span> ASO - Passes AB+<a href="individual.html#aso---passes-ab" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p><img src="_main_files/figure-html/unnamed-chunk-27-6.png" width="1056" /></p>
+</div>
+<div id="aso---passes-ab-sem-curtas" class="section level4 unnumbered hasAnchor">
+<h4>ASO - Passes AB+ Sem Curtas<a href="individual.html#aso---passes-ab-sem-curtas" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p><img src="_main_files/figure-html/unnamed-chunk-27-7.png" width="1056" /></p>
+</div>
+<div id="aso---passes-ab-curtas" class="section level4 unnumbered hasAnchor">
+<h4>ASO - Passes AB+ Curtas<a href="individual.html#aso---passes-ab-curtas" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p><img src="_main_files/figure-html/unnamed-chunk-27-8.png" width="1056" /></p>
+</div>
+<div id="aso---passes-b-c-tt" class="section level4 hasAnchor" number="8.1.1.4">
+<h4><span class="header-section-number">8.1.1.4</span> ASO - Passes B-C TT<a href="individual.html#aso---passes-b-c-tt" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p><img src="_main_files/figure-html/unnamed-chunk-27-9.png" width="1056" /></p>
+</div>
+<div id="aso---passes-b-c-sem-curtas" class="section level4 unnumbered hasAnchor">
+<h4>ASO - Passes B-C Sem Curtas<a href="individual.html#aso---passes-b-c-sem-curtas" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p><img src="_main_files/figure-html/unnamed-chunk-27-10.png" width="1056" /></p>
+</div>
+<div id="aso---passes-b-c-curtas" class="section level4 unnumbered hasAnchor">
+<h4>ASO - Passes B-C Curtas<a href="individual.html#aso---passes-b-c-curtas" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p><img src="_main_files/figure-html/unnamed-chunk-27-11.png" width="1056" /></p>
+</div>
+<div id="aso---passando-e-sem-passar" class="section level4 unnumbered hasAnchor">
+<h4>ASO - passando e sem passar<a href="individual.html#aso---passando-e-sem-passar" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p><img src="_main_files/figure-html/unnamed-chunk-27-12.png" width="1056" /></p>
+</div>
+<div id="aso---passando" class="section level4 unnumbered hasAnchor">
+<h4>ASO - passando<a href="individual.html#aso---passando" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p><img src="_main_files/figure-html/unnamed-chunk-27-13.png" width="1056" /></p>
+</div>
+<div id="aso---sem-passar" class="section level4 unnumbered hasAnchor">
+<h4>ASO - sem passar<a href="individual.html#aso---sem-passar" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p><img src="_main_files/figure-html/unnamed-chunk-27-14.png" width="1056" /></p>
+</div>
+<div id="aso---por-base-de-bloqueio" class="section level4 unnumbered hasAnchor">
+<h4>ASO - por base de bloqueio<a href="individual.html#aso---por-base-de-bloqueio" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p><img src="_main_files/figure-html/unnamed-chunk-27-15.png" width="1056" /></p>
+</div>
+<div id="aso---base-alta" class="section level4 unnumbered hasAnchor">
+<h4>ASO - base alta<a href="individual.html#aso---base-alta" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p><img src="_main_files/figure-html/unnamed-chunk-27-16.png" width="1056" /></p>
+</div>
+<div id="aso---base-baixa" class="section level4 unnumbered hasAnchor">
+<h4>ASO - base baixa<a href="individual.html#aso---base-baixa" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p><img src="_main_files/figure-html/unnamed-chunk-27-17.png" width="1056" /></p>
+</div>
+<div id="aso---entrada-setor-do-passe-abb" class="section level4 unnumbered hasAnchor">
+<h4>ASO - Entrada setor do passe ABB!<a href="individual.html#aso---entrada-setor-do-passe-abb" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p><img src="_main_files/figure-html/unnamed-chunk-27-18.png" width="1056" /></p>
+</div>
+<div id="aso---entrada-setor-do-passe-abb-1" class="section level4 unnumbered hasAnchor">
+<h4>ASO - Entrada setor do passe ABB!<a href="individual.html#aso---entrada-setor-do-passe-abb-1" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p><img src="_main_files/figure-html/unnamed-chunk-27-19.png" width="1056" /><img src="_main_files/figure-html/unnamed-chunk-27-20.png" width="1056" /><img src="_main_files/figure-html/unnamed-chunk-27-21.png" width="1056" /></p>
+</div>
+<div id="aso---saída-setor-do-passe-abb" class="section level4 unnumbered hasAnchor">
+<h4>ASO - Saída setor do passe ABB!<a href="individual.html#aso---saída-setor-do-passe-abb" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p><img src="_main_files/figure-html/unnamed-chunk-27-22.png" width="1056" /></p>
+</div>
+</div>
+<div id="daniele-lavia" class="section level3 hasAnchor" number="8.1.2">
+<h3><span class="header-section-number">8.1.2</span> 15 Daniele Lavia<a href="individual.html#daniele-lavia" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="saque-1" class="section level4 hasAnchor" number="8.1.2.1">
+<h4><span class="header-section-number">8.1.2.1</span> Saque<a href="individual.html#saque-1" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p><img src="_main_files/figure-html/unnamed-chunk-27-23.png" width="1056" /></p>
+<p><strong>Saques contra P1; contra P63; contra P542</strong><br />
+<img src="_main_files/figure-html/unnamed-chunk-27-24.png" width="1056" /></p>
+<p><strong>Saques por fase do set</strong><br />
+<img src="_main_files/figure-html/unnamed-chunk-27-25.png" width="1056" /></p>
+</div>
+<div id="ataque-sideout-1" class="section level4 hasAnchor" number="8.1.2.2">
+<h4><span class="header-section-number">8.1.2.2</span> Ataque sideout<a href="individual.html#ataque-sideout-1" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div id="so---todos-os-passes-svar-1" class="section level5 unnumbered hasAnchor">
+<h5>SO - todos os passes S/VAR<a href="individual.html#so---todos-os-passes-svar-1" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<p><img src="_main_files/figure-html/unnamed-chunk-27-26.png" width="1056" /></p>
+</div>
+</div>
+<div id="aso---todos-os-passes-var-1" class="section level4 unnumbered hasAnchor">
+<h4>ASO - todos os passes VAR<a href="individual.html#aso---todos-os-passes-var-1" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p><img src="_main_files/figure-html/unnamed-chunk-27-27.png" width="1056" /></p>
+</div>
+<div id="aso---passes-ab-1" class="section level4 hasAnchor" number="8.1.2.3">
+<h4><span class="header-section-number">8.1.2.3</span> ASO - Passes AB+<a href="individual.html#aso---passes-ab-1" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p><img src="_main_files/figure-html/unnamed-chunk-27-28.png" width="1056" /></p>
+</div>
+<div id="aso---passes-ab-sem-curtas-1" class="section level4 unnumbered hasAnchor">
+<h4>ASO - Passes AB+ Sem Curtas<a href="individual.html#aso---passes-ab-sem-curtas-1" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p><img src="_main_files/figure-html/unnamed-chunk-27-29.png" width="1056" /></p>
+</div>
+<div id="aso---passes-ab-curtas-1" class="section level4 unnumbered hasAnchor">
+<h4>ASO - Passes AB+ Curtas<a href="individual.html#aso---passes-ab-curtas-1" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p><img src="_main_files/figure-html/unnamed-chunk-27-30.png" width="1056" /></p>
+</div>
+<div id="aso---passes-b-c-tt-1" class="section level4 hasAnchor" number="8.1.2.4">
+<h4><span class="header-section-number">8.1.2.4</span> ASO - Passes B-C TT<a href="individual.html#aso---passes-b-c-tt-1" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p><img src="_main_files/figure-html/unnamed-chunk-27-31.png" width="1056" /></p>
+</div>
+<div id="aso---passes-b-c-sem-curtas-1" class="section level4 unnumbered hasAnchor">
+<h4>ASO - Passes B-C Sem Curtas<a href="individual.html#aso---passes-b-c-sem-curtas-1" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p><img src="_main_files/figure-html/unnamed-chunk-27-32.png" width="1056" /></p>
+</div>
+<div id="aso---passes-b-c-curtas-1" class="section level4 unnumbered hasAnchor">
+<h4>ASO - Passes B-C Curtas<a href="individual.html#aso---passes-b-c-curtas-1" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p><img src="_main_files/figure-html/unnamed-chunk-27-33.png" width="1056" /></p>
+</div>
+<div id="aso---passando-e-sem-passar-1" class="section level4 unnumbered hasAnchor">
+<h4>ASO - passando e sem passar<a href="individual.html#aso---passando-e-sem-passar-1" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p><img src="_main_files/figure-html/unnamed-chunk-27-34.png" width="1056" /></p>
+</div>
+<div id="aso---passando-1" class="section level4 unnumbered hasAnchor">
+<h4>ASO - passando<a href="individual.html#aso---passando-1" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p><img src="_main_files/figure-html/unnamed-chunk-27-35.png" width="1056" /></p>
+</div>
+<div id="aso---sem-passar-1" class="section level4 unnumbered hasAnchor">
+<h4>ASO - sem passar<a href="individual.html#aso---sem-passar-1" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p><img src="_main_files/figure-html/unnamed-chunk-27-36.png" width="1056" /></p>
+</div>
+<div id="aso---por-base-de-bloqueio-1" class="section level4 unnumbered hasAnchor">
+<h4>ASO - por base de bloqueio<a href="individual.html#aso---por-base-de-bloqueio-1" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p><img src="_main_files/figure-html/unnamed-chunk-27-37.png" width="1056" /></p>
+</div>
+<div id="aso---base-alta-1" class="section level4 unnumbered hasAnchor">
+<h4>ASO - base alta<a href="individual.html#aso---base-alta-1" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p><img src="_main_files/figure-html/unnamed-chunk-27-38.png" width="1056" /></p>
+</div>
+<div id="aso---base-baixa-1" class="section level4 unnumbered hasAnchor">
+<h4>ASO - base baixa<a href="individual.html#aso---base-baixa-1" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p><img src="_main_files/figure-html/unnamed-chunk-27-39.png" width="1056" /></p>
+</div>
+<div id="aso---entrada-setor-do-passe-abb-2" class="section level4 unnumbered hasAnchor">
+<h4>ASO - Entrada setor do passe ABB!<a href="individual.html#aso---entrada-setor-do-passe-abb-2" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p><img src="_main_files/figure-html/unnamed-chunk-27-40.png" width="1056" /></p>
+</div>
+<div id="aso---entrada-setor-do-passe-abb-3" class="section level4 unnumbered hasAnchor">
+<h4>ASO - Entrada setor do passe ABB!<a href="individual.html#aso---entrada-setor-do-passe-abb-3" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p><img src="_main_files/figure-html/unnamed-chunk-27-41.png" width="1056" /><img src="_main_files/figure-html/unnamed-chunk-27-42.png" width="1056" /><img src="_main_files/figure-html/unnamed-chunk-27-43.png" width="1056" /></p>
+</div>
+<div id="aso---saída-setor-do-passe-abb-1" class="section level4 unnumbered hasAnchor">
+<h4>ASO - Saída setor do passe ABB!<a href="individual.html#aso---saída-setor-do-passe-abb-1" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p><img src="_main_files/figure-html/unnamed-chunk-27-44.png" width="1056" /></p>
+</div>
+</div>
+<div id="luca-porro" class="section level3 hasAnchor" number="8.1.3">
+<h3><span class="header-section-number">8.1.3</span> 31 Luca Porro<a href="individual.html#luca-porro" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="saque-2" class="section level4 hasAnchor" number="8.1.3.1">
+<h4><span class="header-section-number">8.1.3.1</span> Saque<a href="individual.html#saque-2" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p><img src="_main_files/figure-html/unnamed-chunk-27-45.png" width="1056" /></p>
+<p><strong>Saques contra P1; contra P63; contra P542</strong><br />
+<img src="_main_files/figure-html/unnamed-chunk-27-46.png" width="1056" /></p>
+<p><strong>Saques por fase do set</strong><br />
+<img src="_main_files/figure-html/unnamed-chunk-27-47.png" width="1056" /></p>
+</div>
+<div id="ataque-sideout-2" class="section level4 hasAnchor" number="8.1.3.2">
+<h4><span class="header-section-number">8.1.3.2</span> Ataque sideout<a href="individual.html#ataque-sideout-2" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div id="so---todos-os-passes-svar-2" class="section level5 unnumbered hasAnchor">
+<h5>SO - todos os passes S/VAR<a href="individual.html#so---todos-os-passes-svar-2" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<p><img src="_main_files/figure-html/unnamed-chunk-27-48.png" width="1056" /></p>
+</div>
+</div>
+<div id="aso---todos-os-passes-var-2" class="section level4 unnumbered hasAnchor">
+<h4>ASO - todos os passes VAR<a href="individual.html#aso---todos-os-passes-var-2" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p><img src="_main_files/figure-html/unnamed-chunk-27-49.png" width="1056" /></p>
+</div>
+<div id="aso---passes-ab-2" class="section level4 hasAnchor" number="8.1.3.3">
+<h4><span class="header-section-number">8.1.3.3</span> ASO - Passes AB+<a href="individual.html#aso---passes-ab-2" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p><img src="_main_files/figure-html/unnamed-chunk-27-50.png" width="1056" /></p>
+</div>
+<div id="aso---passes-ab-sem-curtas-2" class="section level4 unnumbered hasAnchor">
+<h4>ASO - Passes AB+ Sem Curtas<a href="individual.html#aso---passes-ab-sem-curtas-2" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p><img src="_main_files/figure-html/unnamed-chunk-27-51.png" width="1056" /></p>
+</div>
+<div id="aso---passes-ab-curtas-2" class="section level4 unnumbered hasAnchor">
+<h4>ASO - Passes AB+ Curtas<a href="individual.html#aso---passes-ab-curtas-2" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p><img src="_main_files/figure-html/unnamed-chunk-27-52.png" width="1056" /></p>
+</div>
+<div id="aso---passes-b-c-tt-2" class="section level4 hasAnchor" number="8.1.3.4">
+<h4><span class="header-section-number">8.1.3.4</span> ASO - Passes B-C TT<a href="individual.html#aso---passes-b-c-tt-2" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p><img src="_main_files/figure-html/unnamed-chunk-27-53.png" width="1056" /></p>
+</div>
+<div id="aso---passes-b-c-sem-curtas-2" class="section level4 unnumbered hasAnchor">
+<h4>ASO - Passes B-C Sem Curtas<a href="individual.html#aso---passes-b-c-sem-curtas-2" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p><img src="_main_files/figure-html/unnamed-chunk-27-54.png" width="1056" /></p>
+</div>
+<div id="aso---passes-b-c-curtas-2" class="section level4 unnumbered hasAnchor">
+<h4>ASO - Passes B-C Curtas<a href="individual.html#aso---passes-b-c-curtas-2" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p><img src="_main_files/figure-html/unnamed-chunk-27-55.png" width="1056" /></p>
+</div>
+<div id="aso---passando-e-sem-passar-2" class="section level4 unnumbered hasAnchor">
+<h4>ASO - passando e sem passar<a href="individual.html#aso---passando-e-sem-passar-2" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p><img src="_main_files/figure-html/unnamed-chunk-27-56.png" width="1056" /></p>
+</div>
+<div id="aso---passando-2" class="section level4 unnumbered hasAnchor">
+<h4>ASO - passando<a href="individual.html#aso---passando-2" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p><img src="_main_files/figure-html/unnamed-chunk-27-57.png" width="1056" /></p>
+</div>
+<div id="aso---sem-passar-2" class="section level4 unnumbered hasAnchor">
+<h4>ASO - sem passar<a href="individual.html#aso---sem-passar-2" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p><img src="_main_files/figure-html/unnamed-chunk-27-58.png" width="1056" /></p>
+</div>
+<div id="aso---por-base-de-bloqueio-2" class="section level4 unnumbered hasAnchor">
+<h4>ASO - por base de bloqueio<a href="individual.html#aso---por-base-de-bloqueio-2" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p><img src="_main_files/figure-html/unnamed-chunk-27-59.png" width="1056" /></p>
+</div>
+<div id="aso---base-alta-2" class="section level4 unnumbered hasAnchor">
+<h4>ASO - base alta<a href="individual.html#aso---base-alta-2" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p><img src="_main_files/figure-html/unnamed-chunk-27-60.png" width="1056" /></p>
+</div>
+<div id="aso---base-baixa-2" class="section level4 unnumbered hasAnchor">
+<h4>ASO - base baixa<a href="individual.html#aso---base-baixa-2" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p><img src="_main_files/figure-html/unnamed-chunk-27-61.png" width="1056" /></p>
+</div>
+<div id="aso---entrada-setor-do-passe-abb-4" class="section level4 unnumbered hasAnchor">
+<h4>ASO - Entrada setor do passe ABB!<a href="individual.html#aso---entrada-setor-do-passe-abb-4" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p><img src="_main_files/figure-html/unnamed-chunk-27-62.png" width="1056" /></p>
+</div>
+<div id="aso---entrada-setor-do-passe-abb-5" class="section level4 unnumbered hasAnchor">
+<h4>ASO - Entrada setor do passe ABB!<a href="individual.html#aso---entrada-setor-do-passe-abb-5" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p><img src="_main_files/figure-html/unnamed-chunk-27-63.png" width="1056" /><img src="_main_files/figure-html/unnamed-chunk-27-64.png" width="1056" /><img src="_main_files/figure-html/unnamed-chunk-27-65.png" width="1056" /></p>
+</div>
+<div id="aso---saída-setor-do-passe-abb-2" class="section level4 unnumbered hasAnchor">
+<h4>ASO - Saída setor do passe ABB!<a href="individual.html#aso---saída-setor-do-passe-abb-2" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p><img src="_main_files/figure-html/unnamed-chunk-27-66.png" width="1056" /></p>
+</div>
+</div>
+<div id="mattia-bottolo" class="section level3 hasAnchor" number="8.1.4">
+<h3><span class="header-section-number">8.1.4</span> 12 Mattia Bottolo<a href="individual.html#mattia-bottolo" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="saque-3" class="section level4 hasAnchor" number="8.1.4.1">
+<h4><span class="header-section-number">8.1.4.1</span> Saque<a href="individual.html#saque-3" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p><img src="_main_files/figure-html/unnamed-chunk-27-67.png" width="1056" /></p>
+<p><strong>Saques contra P1; contra P63; contra P542</strong><br />
+<img src="_main_files/figure-html/unnamed-chunk-27-68.png" width="1056" /></p>
+<p><strong>Saques por fase do set</strong><br />
+<img src="_main_files/figure-html/unnamed-chunk-27-69.png" width="1056" /></p>
+</div>
+<div id="ataque-sideout-3" class="section level4 hasAnchor" number="8.1.4.2">
+<h4><span class="header-section-number">8.1.4.2</span> Ataque sideout<a href="individual.html#ataque-sideout-3" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div id="so---todos-os-passes-svar-3" class="section level5 unnumbered hasAnchor">
+<h5>SO - todos os passes S/VAR<a href="individual.html#so---todos-os-passes-svar-3" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<p><img src="_main_files/figure-html/unnamed-chunk-27-70.png" width="1056" /></p>
+</div>
+</div>
+<div id="aso---todos-os-passes-var-3" class="section level4 unnumbered hasAnchor">
+<h4>ASO - todos os passes VAR<a href="individual.html#aso---todos-os-passes-var-3" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p><img src="_main_files/figure-html/unnamed-chunk-27-71.png" width="1056" /></p>
+</div>
+<div id="aso---passes-ab-3" class="section level4 hasAnchor" number="8.1.4.3">
+<h4><span class="header-section-number">8.1.4.3</span> ASO - Passes AB+<a href="individual.html#aso---passes-ab-3" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p><img src="_main_files/figure-html/unnamed-chunk-27-72.png" width="1056" /></p>
+</div>
+<div id="aso---passes-ab-sem-curtas-3" class="section level4 unnumbered hasAnchor">
+<h4>ASO - Passes AB+ Sem Curtas<a href="individual.html#aso---passes-ab-sem-curtas-3" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p><img src="_main_files/figure-html/unnamed-chunk-27-73.png" width="1056" /></p>
+</div>
+<div id="aso---passes-ab-curtas-3" class="section level4 unnumbered hasAnchor">
+<h4>ASO - Passes AB+ Curtas<a href="individual.html#aso---passes-ab-curtas-3" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p><img src="_main_files/figure-html/unnamed-chunk-27-74.png" width="1056" /></p>
+</div>
+<div id="aso---passes-b-c-tt-3" class="section level4 hasAnchor" number="8.1.4.4">
+<h4><span class="header-section-number">8.1.4.4</span> ASO - Passes B-C TT<a href="individual.html#aso---passes-b-c-tt-3" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p><img src="_main_files/figure-html/unnamed-chunk-27-75.png" width="1056" /></p>
+</div>
+<div id="aso---passes-b-c-sem-curtas-3" class="section level4 unnumbered hasAnchor">
+<h4>ASO - Passes B-C Sem Curtas<a href="individual.html#aso---passes-b-c-sem-curtas-3" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p><img src="_main_files/figure-html/unnamed-chunk-27-76.png" width="1056" /></p>
+</div>
+<div id="aso---passes-b-c-curtas-3" class="section level4 unnumbered hasAnchor">
+<h4>ASO - Passes B-C Curtas<a href="individual.html#aso---passes-b-c-curtas-3" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p><img src="_main_files/figure-html/unnamed-chunk-27-77.png" width="1056" /></p>
+</div>
+<div id="aso---passando-e-sem-passar-3" class="section level4 unnumbered hasAnchor">
+<h4>ASO - passando e sem passar<a href="individual.html#aso---passando-e-sem-passar-3" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p><img src="_main_files/figure-html/unnamed-chunk-27-78.png" width="1056" /></p>
+</div>
+<div id="aso---passando-3" class="section level4 unnumbered hasAnchor">
+<h4>ASO - passando<a href="individual.html#aso---passando-3" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p><img src="_main_files/figure-html/unnamed-chunk-27-79.png" width="1056" /></p>
+</div>
+<div id="aso---sem-passar-3" class="section level4 unnumbered hasAnchor">
+<h4>ASO - sem passar<a href="individual.html#aso---sem-passar-3" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p><img src="_main_files/figure-html/unnamed-chunk-27-80.png" width="1056" /></p>
+</div>
+<div id="aso---por-base-de-bloqueio-3" class="section level4 unnumbered hasAnchor">
+<h4>ASO - por base de bloqueio<a href="individual.html#aso---por-base-de-bloqueio-3" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p><img src="_main_files/figure-html/unnamed-chunk-27-81.png" width="1056" /></p>
+</div>
+<div id="aso---base-alta-3" class="section level4 unnumbered hasAnchor">
+<h4>ASO - base alta<a href="individual.html#aso---base-alta-3" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p><img src="_main_files/figure-html/unnamed-chunk-27-82.png" width="1056" /></p>
+</div>
+<div id="aso---base-baixa-3" class="section level4 unnumbered hasAnchor">
+<h4>ASO - base baixa<a href="individual.html#aso---base-baixa-3" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p><img src="_main_files/figure-html/unnamed-chunk-27-83.png" width="1056" /></p>
+</div>
+<div id="aso---entrada-setor-do-passe-abb-6" class="section level4 unnumbered hasAnchor">
+<h4>ASO - Entrada setor do passe ABB!<a href="individual.html#aso---entrada-setor-do-passe-abb-6" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p><img src="_main_files/figure-html/unnamed-chunk-27-84.png" width="1056" /></p>
+</div>
+<div id="aso---entrada-setor-do-passe-abb-7" class="section level4 unnumbered hasAnchor">
+<h4>ASO - Entrada setor do passe ABB!<a href="individual.html#aso---entrada-setor-do-passe-abb-7" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p><img src="_main_files/figure-html/unnamed-chunk-27-85.png" width="1056" /><img src="_main_files/figure-html/unnamed-chunk-27-86.png" width="1056" /><img src="_main_files/figure-html/unnamed-chunk-27-87.png" width="1056" /></p>
+</div>
+<div id="aso---saída-setor-do-passe-abb-3" class="section level4 unnumbered hasAnchor">
+<h4>ASO - Saída setor do passe ABB!<a href="individual.html#aso---saída-setor-do-passe-abb-3" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p><img src="_main_files/figure-html/unnamed-chunk-27-88.png" width="1056" /></p>
+</div>
+</div>
+<div id="francesco-recine" class="section level3 hasAnchor" number="8.1.5">
+<h3><span class="header-section-number">8.1.5</span> 03 Francesco Recine<a href="individual.html#francesco-recine" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="saque-4" class="section level4 hasAnchor" number="8.1.5.1">
+<h4><span class="header-section-number">8.1.5.1</span> Saque<a href="individual.html#saque-4" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p><img src="_main_files/figure-html/unnamed-chunk-27-89.png" width="1056" /></p>
+<p><strong>Saques contra P1; contra P63; contra P542</strong><br />
+<img src="_main_files/figure-html/unnamed-chunk-27-90.png" width="1056" /></p>
+<p><strong>Saques por fase do set</strong><br />
+<img src="_main_files/figure-html/unnamed-chunk-27-91.png" width="1056" /></p>
+</div>
+<div id="ataque-sideout-4" class="section level4 hasAnchor" number="8.1.5.2">
+<h4><span class="header-section-number">8.1.5.2</span> Ataque sideout<a href="individual.html#ataque-sideout-4" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div id="so---todos-os-passes-svar-4" class="section level5 unnumbered hasAnchor">
+<h5>SO - todos os passes S/VAR<a href="individual.html#so---todos-os-passes-svar-4" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<p><img src="_main_files/figure-html/unnamed-chunk-27-92.png" width="1056" /></p>
+</div>
+</div>
+<div id="aso---todos-os-passes-var-4" class="section level4 unnumbered hasAnchor">
+<h4>ASO - todos os passes VAR<a href="individual.html#aso---todos-os-passes-var-4" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p><img src="_main_files/figure-html/unnamed-chunk-27-93.png" width="1056" /></p>
+</div>
+<div id="aso---passes-ab-4" class="section level4 hasAnchor" number="8.1.5.3">
+<h4><span class="header-section-number">8.1.5.3</span> ASO - Passes AB+<a href="individual.html#aso---passes-ab-4" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p><img src="_main_files/figure-html/unnamed-chunk-27-94.png" width="1056" /></p>
+</div>
+<div id="aso---passes-ab-sem-curtas-4" class="section level4 unnumbered hasAnchor">
+<h4>ASO - Passes AB+ Sem Curtas<a href="individual.html#aso---passes-ab-sem-curtas-4" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p><img src="_main_files/figure-html/unnamed-chunk-27-95.png" width="1056" /></p>
+</div>
+<div id="aso---passes-ab-curtas-4" class="section level4 unnumbered hasAnchor">
+<h4>ASO - Passes AB+ Curtas<a href="individual.html#aso---passes-ab-curtas-4" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p><img src="_main_files/figure-html/unnamed-chunk-27-96.png" width="1056" /></p>
+</div>
+<div id="aso---passes-b-c-tt-4" class="section level4 hasAnchor" number="8.1.5.4">
+<h4><span class="header-section-number">8.1.5.4</span> ASO - Passes B-C TT<a href="individual.html#aso---passes-b-c-tt-4" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p><img src="_main_files/figure-html/unnamed-chunk-27-97.png" width="1056" /></p>
+</div>
+<div id="aso---passes-b-c-sem-curtas-4" class="section level4 unnumbered hasAnchor">
+<h4>ASO - Passes B-C Sem Curtas<a href="individual.html#aso---passes-b-c-sem-curtas-4" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p><img src="_main_files/figure-html/unnamed-chunk-27-98.png" width="1056" /></p>
+</div>
+<div id="aso---passes-b-c-curtas-4" class="section level4 unnumbered hasAnchor">
+<h4>ASO - Passes B-C Curtas<a href="individual.html#aso---passes-b-c-curtas-4" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p><img src="_main_files/figure-html/unnamed-chunk-27-99.png" width="1056" /></p>
+</div>
+<div id="aso---passando-e-sem-passar-4" class="section level4 unnumbered hasAnchor">
+<h4>ASO - passando e sem passar<a href="individual.html#aso---passando-e-sem-passar-4" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p><img src="_main_files/figure-html/unnamed-chunk-27-100.png" width="1056" /></p>
+</div>
+<div id="aso---passando-4" class="section level4 unnumbered hasAnchor">
+<h4>ASO - passando<a href="individual.html#aso---passando-4" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p><img src="_main_files/figure-html/unnamed-chunk-27-101.png" width="1056" /></p>
+</div>
+<div id="aso---sem-passar-4" class="section level4 unnumbered hasAnchor">
+<h4>ASO - sem passar<a href="individual.html#aso---sem-passar-4" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p><img src="_main_files/figure-html/unnamed-chunk-27-102.png" width="1056" /></p>
+</div>
+<div id="aso---por-base-de-bloqueio-4" class="section level4 unnumbered hasAnchor">
+<h4>ASO - por base de bloqueio<a href="individual.html#aso---por-base-de-bloqueio-4" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p><img src="_main_files/figure-html/unnamed-chunk-27-103.png" width="1056" /></p>
+</div>
+<div id="aso---base-alta-4" class="section level4 unnumbered hasAnchor">
+<h4>ASO - base alta<a href="individual.html#aso---base-alta-4" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p><img src="_main_files/figure-html/unnamed-chunk-27-104.png" width="1056" /></p>
+</div>
+<div id="aso---base-baixa-4" class="section level4 unnumbered hasAnchor">
+<h4>ASO - base baixa<a href="individual.html#aso---base-baixa-4" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p><img src="_main_files/figure-html/unnamed-chunk-27-105.png" width="1056" /></p>
+</div>
+<div id="aso---entrada-setor-do-passe-abb-8" class="section level4 unnumbered hasAnchor">
+<h4>ASO - Entrada setor do passe ABB!<a href="individual.html#aso---entrada-setor-do-passe-abb-8" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p><img src="_main_files/figure-html/unnamed-chunk-27-106.png" width="1056" /></p>
+</div>
+<div id="aso---entrada-setor-do-passe-abb-9" class="section level4 unnumbered hasAnchor">
+<h4>ASO - Entrada setor do passe ABB!<a href="individual.html#aso---entrada-setor-do-passe-abb-9" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p><img src="_main_files/figure-html/unnamed-chunk-27-107.png" width="1056" /><img src="_main_files/figure-html/unnamed-chunk-27-108.png" width="1056" /><img src="_main_files/figure-html/unnamed-chunk-27-109.png" width="1056" /></p>
+</div>
+<div id="aso---saída-setor-do-passe-abb-4" class="section level4 unnumbered hasAnchor">
+<h4>ASO - Saída setor do passe ABB!<a href="individual.html#aso---saída-setor-do-passe-abb-4" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p><img src="_main_files/figure-html/unnamed-chunk-27-110.png" width="1056" /></p>
+</div>
+</div>
+<div id="fabrizio-gironi" class="section level3 hasAnchor" number="8.1.6">
+<h3><span class="header-section-number">8.1.6</span> 18 Fabrizio Gironi<a href="individual.html#fabrizio-gironi" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="saque-5" class="section level4 hasAnchor" number="8.1.6.1">
+<h4><span class="header-section-number">8.1.6.1</span> Saque<a href="individual.html#saque-5" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p><img src="_main_files/figure-html/unnamed-chunk-27-111.png" width="1056" /></p>
+<p><strong>Saques contra P1; contra P63; contra P542</strong><br />
+<img src="_main_files/figure-html/unnamed-chunk-27-112.png" width="1056" /></p>
+<p><strong>Saques por fase do set</strong><br />
+<img src="_main_files/figure-html/unnamed-chunk-27-113.png" width="1056" /></p>
+</div>
+<div id="ataque-sideout-5" class="section level4 hasAnchor" number="8.1.6.2">
+<h4><span class="header-section-number">8.1.6.2</span> Ataque sideout<a href="individual.html#ataque-sideout-5" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div id="so---todos-os-passes-svar-5" class="section level5 unnumbered hasAnchor">
+<h5>SO - todos os passes S/VAR<a href="individual.html#so---todos-os-passes-svar-5" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<p><img src="_main_files/figure-html/unnamed-chunk-27-114.png" width="1056" /></p>
+</div>
+</div>
+<div id="aso---todos-os-passes-var-5" class="section level4 unnumbered hasAnchor">
+<h4>ASO - todos os passes VAR<a href="individual.html#aso---todos-os-passes-var-5" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p><img src="_main_files/figure-html/unnamed-chunk-27-115.png" width="1056" /></p>
+</div>
+<div id="aso---passes-ab-5" class="section level4 hasAnchor" number="8.1.6.3">
+<h4><span class="header-section-number">8.1.6.3</span> ASO - Passes AB+<a href="individual.html#aso---passes-ab-5" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p><img src="_main_files/figure-html/unnamed-chunk-27-116.png" width="1056" /></p>
+</div>
+<div id="aso---passes-ab-sem-curtas-5" class="section level4 unnumbered hasAnchor">
+<h4>ASO - Passes AB+ Sem Curtas<a href="individual.html#aso---passes-ab-sem-curtas-5" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p><img src="_main_files/figure-html/unnamed-chunk-27-117.png" width="1056" /></p>
+</div>
+<div id="aso---passes-ab-curtas-5" class="section level4 unnumbered hasAnchor">
+<h4>ASO - Passes AB+ Curtas<a href="individual.html#aso---passes-ab-curtas-5" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p><img src="_main_files/figure-html/unnamed-chunk-27-118.png" width="1056" /></p>
+</div>
+<div id="aso---passes-b-c-tt-5" class="section level4 hasAnchor" number="8.1.6.4">
+<h4><span class="header-section-number">8.1.6.4</span> ASO - Passes B-C TT<a href="individual.html#aso---passes-b-c-tt-5" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p><img src="_main_files/figure-html/unnamed-chunk-27-119.png" width="1056" /></p>
+</div>
+<div id="aso---passes-b-c-sem-curtas-5" class="section level4 unnumbered hasAnchor">
+<h4>ASO - Passes B-C Sem Curtas<a href="individual.html#aso---passes-b-c-sem-curtas-5" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p><img src="_main_files/figure-html/unnamed-chunk-27-120.png" width="1056" /></p>
+</div>
+<div id="aso---passes-b-c-curtas-5" class="section level4 unnumbered hasAnchor">
+<h4>ASO - Passes B-C Curtas<a href="individual.html#aso---passes-b-c-curtas-5" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p><img src="_main_files/figure-html/unnamed-chunk-27-121.png" width="1056" /></p>
+</div>
+<div id="aso---passando-e-sem-passar-5" class="section level4 unnumbered hasAnchor">
+<h4>ASO - passando e sem passar<a href="individual.html#aso---passando-e-sem-passar-5" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p><img src="_main_files/figure-html/unnamed-chunk-27-122.png" width="1056" /></p>
+</div>
+<div id="aso---passando-5" class="section level4 unnumbered hasAnchor">
+<h4>ASO - passando<a href="individual.html#aso---passando-5" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p><img src="_main_files/figure-html/unnamed-chunk-27-123.png" width="1056" /></p>
+</div>
+<div id="aso---sem-passar-5" class="section level4 unnumbered hasAnchor">
+<h4>ASO - sem passar<a href="individual.html#aso---sem-passar-5" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p><img src="_main_files/figure-html/unnamed-chunk-27-124.png" width="1056" /></p>
+</div>
+<div id="aso---por-base-de-bloqueio-5" class="section level4 unnumbered hasAnchor">
+<h4>ASO - por base de bloqueio<a href="individual.html#aso---por-base-de-bloqueio-5" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p><img src="_main_files/figure-html/unnamed-chunk-27-125.png" width="1056" /></p>
+</div>
+<div id="aso---base-alta-5" class="section level4 unnumbered hasAnchor">
+<h4>ASO - base alta<a href="individual.html#aso---base-alta-5" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p><img src="_main_files/figure-html/unnamed-chunk-27-126.png" width="1056" /></p>
+</div>
+<div id="aso---base-baixa-5" class="section level4 unnumbered hasAnchor">
+<h4>ASO - base baixa<a href="individual.html#aso---base-baixa-5" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p><img src="_main_files/figure-html/unnamed-chunk-27-127.png" width="1056" /></p>
+</div>
+<div id="aso---entrada-setor-do-passe-abb-10" class="section level4 unnumbered hasAnchor">
+<h4>ASO - Entrada setor do passe ABB!<a href="individual.html#aso---entrada-setor-do-passe-abb-10" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p><img src="_main_files/figure-html/unnamed-chunk-27-128.png" width="1056" /></p>
+</div>
+<div id="aso---entrada-setor-do-passe-abb-11" class="section level4 unnumbered hasAnchor">
+<h4>ASO - Entrada setor do passe ABB!<a href="individual.html#aso---entrada-setor-do-passe-abb-11" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p><img src="_main_files/figure-html/unnamed-chunk-27-129.png" width="1056" /><img src="_main_files/figure-html/unnamed-chunk-27-130.png" width="1056" /><img src="_main_files/figure-html/unnamed-chunk-27-131.png" width="1056" /></p>
+</div>
+<div id="aso---saída-setor-do-passe-abb-5" class="section level4 unnumbered hasAnchor">
+<h4>ASO - Saída setor do passe ABB!<a href="individual.html#aso---saída-setor-do-passe-abb-5" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p><img src="_main_files/figure-html/unnamed-chunk-27-132.png" width="1056" /></p>
+</div>
+</div>
+</div>
+<div id="opostos" class="section level2 hasAnchor" number="8.2">
+<h2><span class="header-section-number">8.2</span> OPOSTOS<a href="individual.html#opostos" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="defesa.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="vazio1.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/USERNAME/REPO/edit/BRANCH/09-Individual.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["_main.pdf", "_main.epub"],
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection",
+"scroll_highlight": true
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

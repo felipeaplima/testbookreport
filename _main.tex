@@ -1,0 +1,1148 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+]{book}
+\usepackage{amsmath,amssymb}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math} % this also loads fontspec
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\ifPDFTeX\else
+  % xetex/luatex font selection
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\usepackage{color}
+\usepackage{fancyvrb}
+\newcommand{\VerbBar}{|}
+\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+% Add ',fontsize=\small' for more characters per line
+\usepackage{framed}
+\definecolor{shadecolor}{RGB}{248,248,248}
+\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{0.94,0.16,0.16}{#1}}
+\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\BuiltInTok}[1]{#1}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
+\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.64,0.00,0.00}{\textbf{#1}}}
+\newcommand{\ExtensionTok}[1]{#1}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\ImportTok}[1]{#1}
+\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\NormalTok}[1]{#1}
+\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{#1}}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
+\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\RegionMarkerTok}[1]{#1}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{#1}}}
+\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\usepackage{longtable,booktabs,array}
+\usepackage{calc} % for calculating minipage widths
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
+\usepackage{graphicx}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+% Set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{5}
+\usepackage{booktabs}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{wrapfig}
+\usepackage{float}
+\usepackage{colortbl}
+\usepackage{pdflscape}
+\usepackage{tabu}
+\usepackage{threeparttable}
+\usepackage{threeparttablex}
+\usepackage[normalem]{ulem}
+\usepackage{makecell}
+\usepackage{xcolor}
+\ifLuaTeX
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+\usepackage[]{natbib}
+\bibliographystyle{plainnat}
+\usepackage{bookmark}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same}
+\hypersetup{
+  pdftitle={Relatório de equipes},
+  pdfauthor={Felipe Lima (Ori)},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+
+\title{Relatório de equipes}
+\author{Felipe Lima (Ori)}
+\date{2024-08-29}
+
+\begin{document}
+\maketitle
+
+{
+\setcounter{tocdepth}{1}
+\tableofcontents
+}
+\chapter{About}\label{about}
+
+This is a \emph{sample} book written in \textbf{Markdown}. You can use anything that Pandoc's Markdown supports; for example, a math equation \(a^2 + b^2 = c^2\).
+
+\section{Usage}\label{usage}
+
+Each \textbf{bookdown} chapter is an .Rmd file, and each .Rmd file can contain one (and only one) chapter. A chapter \emph{must} start with a first-level heading: \texttt{\#\ A\ good\ chapter}, and can contain one (and only one) first-level heading.
+
+Use second-level and higher headings within chapters like: \texttt{\#\#\ A\ short\ section} or \texttt{\#\#\#\ An\ even\ shorter\ section}.
+
+The \texttt{index.Rmd} file is required, and is also your first book chapter. It will be the homepage when you render the book.
+
+\section{Render book}\label{render-book}
+
+You can render the HTML version of this example book without changing anything:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  Find the \textbf{Build} pane in the RStudio IDE, and
+\item
+  Click on \textbf{Build Book}, then select your output format, or select ``All formats'' if you'd like to use multiple formats from the same book source files.
+\end{enumerate}
+
+Or build the book from the R console:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{bookdown}\SpecialCharTok{::}\FunctionTok{render\_book}\NormalTok{()}
+\end{Highlighting}
+\end{Shaded}
+
+To render this example to PDF as a \texttt{bookdown::pdf\_book}, you'll need to install XeLaTeX. You are recommended to install TinyTeX (which includes XeLaTeX): \url{https://yihui.org/tinytex/}.
+
+\section{Preview book}\label{preview-book}
+
+As you work, you may start a local server to live preview this HTML book. This preview will update as you edit the book when you save individual .Rmd files. You can start the server in a work session by using the RStudio add-in ``Preview book'', or from the R console:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{bookdown}\SpecialCharTok{::}\FunctionTok{serve\_book}\NormalTok{()}
+\end{Highlighting}
+\end{Shaded}
+
+\chapter{Apresentação da equipe}\label{apresentauxe7uxe3o-da-equipe}
+
+\begin{verbatim}
+## Warning: Returning more (or less) than 1
+## row per `summarise()` group was
+## deprecated in dplyr 1.1.0.
+## i Please use `reframe()`
+##   instead.
+## i When switching from
+##   `summarise()` to `reframe()`,
+##   remember that `reframe()`
+##   always returns an ungrouped
+##   data frame and adjust
+##   accordingly.
+## Call
+## `lifecycle::last_lifecycle_warnings()`
+## to see where this warning was
+## generated.
+\end{verbatim}
+
+\begin{table}[!h]
+\centering
+\resizebox{\ifdim\width>\linewidth\linewidth\else\width\fi}{!}{
+\begin{tabular}[t]{lllrrrrrrrrrrrrr}
+\toprule
+player\_name & player\_id & team\_id & setsp & AÇÕES & PTO & PS & PA & PB & PTO/SET & ERR & P-E & SE & RE & AE & ERR/SET\\
+\midrule
+\cellcolor{gray!10}{Adriano Fernandes Cavalcante} & \cellcolor{gray!10}{Fer-Adr} & \cellcolor{gray!10}{BRA24} & \cellcolor{gray!10}{27} & \cellcolor{gray!10}{285} & \cellcolor{gray!10}{95} & \cellcolor{gray!10}{4} & \cellcolor{gray!10}{91} & \cellcolor{gray!10}{0} & \cellcolor{gray!10}{3.52} & \cellcolor{gray!10}{17} & \cellcolor{gray!10}{78} & \cellcolor{gray!10}{5} & \cellcolor{gray!10}{0} & \cellcolor{gray!10}{12} & \cellcolor{gray!10}{0.63}\\
+Alan Souza & Sou-Ala & BRA24 & 29 & 382 & 134 & 11 & 123 & 0 & 4.62 & 56 & 78 & 31 & 0 & 25 & 1.93\\
+\cellcolor{gray!10}{Arthur Bento Buczmiejuk} & \cellcolor{gray!10}{Ben-Art} & \cellcolor{gray!10}{BRA24} & \cellcolor{gray!10}{4} & \cellcolor{gray!10}{35} & \cellcolor{gray!10}{14} & \cellcolor{gray!10}{0} & \cellcolor{gray!10}{14} & \cellcolor{gray!10}{0} & \cellcolor{gray!10}{3.50} & \cellcolor{gray!10}{3} & \cellcolor{gray!10}{11} & \cellcolor{gray!10}{3} & \cellcolor{gray!10}{0} & \cellcolor{gray!10}{0} & \cellcolor{gray!10}{0.75}\\
+Bruno Mossa Rezende & Rez-Bru & BRA24 & 33 & 141 & 7 & 3 & 4 & 0 & 0.21 & 13 & -6 & 13 & 0 & 0 & 0.39\\
+\cellcolor{gray!10}{Darlan Ferreira Souza} & \cellcolor{gray!10}{Fer-Dar} & \cellcolor{gray!10}{BRA24} & \cellcolor{gray!10}{65} & \cellcolor{gray!10}{758} & \cellcolor{gray!10}{293} & \cellcolor{gray!10}{23} & \cellcolor{gray!10}{270} & \cellcolor{gray!10}{0} & \cellcolor{gray!10}{4.51} & \cellcolor{gray!10}{136} & \cellcolor{gray!10}{157} & \cellcolor{gray!10}{85} & \cellcolor{gray!10}{0} & \cellcolor{gray!10}{51} & \cellcolor{gray!10}{2.09}\\
+\addlinespace
+Felipe Moreira Roque & Mor-Fel & BRA24 & 2 & 22 & 8 & 2 & 6 & 0 & 4.00 & 1 & 7 & 1 & 0 & 0 & 0.50\\
+\cellcolor{gray!10}{Fernando Gil Kreling} & \cellcolor{gray!10}{Gil-Fer} & \cellcolor{gray!10}{BRA24} & \cellcolor{gray!10}{60} & \cellcolor{gray!10}{221} & \cellcolor{gray!10}{7} & \cellcolor{gray!10}{3} & \cellcolor{gray!10}{4} & \cellcolor{gray!10}{0} & \cellcolor{gray!10}{0.12} & \cellcolor{gray!10}{20} & \cellcolor{gray!10}{-13} & \cellcolor{gray!10}{20} & \cellcolor{gray!10}{0} & \cellcolor{gray!10}{0} & \cellcolor{gray!10}{0.33}\\
+Flavio Resende Gualberto & Res-Fla & BRA24 & 74 & 396 & 91 & 1 & 90 & 0 & 1.23 & 25 & 66 & 19 & 0 & 6 & 0.34\\
+\cellcolor{gray!10}{Henrique Honorato} & \cellcolor{gray!10}{Hon-Hen} & \cellcolor{gray!10}{BRA24} & \cellcolor{gray!10}{1} & \cellcolor{gray!10}{15} & \cellcolor{gray!10}{3} & \cellcolor{gray!10}{0} & \cellcolor{gray!10}{3} & \cellcolor{gray!10}{0} & \cellcolor{gray!10}{3.00} & \cellcolor{gray!10}{0} & \cellcolor{gray!10}{3} & \cellcolor{gray!10}{0} & \cellcolor{gray!10}{0} & \cellcolor{gray!10}{0} & \cellcolor{gray!10}{0.00}\\
+Isac Santos & San-Isa & BRA24 & 25 & 155 & 48 & 7 & 41 & 0 & 1.92 & 18 & 30 & 16 & 0 & 2 & 0.72\\
+\addlinespace
+\cellcolor{gray!10}{Judson Amabel Nunes Da Cunha Jr} & \cellcolor{gray!10}{Nun-Jud} & \cellcolor{gray!10}{BRA24} & \cellcolor{gray!10}{18} & \cellcolor{gray!10}{119} & \cellcolor{gray!10}{28} & \cellcolor{gray!10}{5} & \cellcolor{gray!10}{23} & \cellcolor{gray!10}{0} & \cellcolor{gray!10}{1.56} & \cellcolor{gray!10}{21} & \cellcolor{gray!10}{7} & \cellcolor{gray!10}{18} & \cellcolor{gray!10}{0} & \cellcolor{gray!10}{3} & \cellcolor{gray!10}{1.17}\\
+Lucas Saatkamp & Saa-Luc & BRA24 & 73 & 461 & 130 & 22 & 108 & 0 & 1.78 & 67 & 63 & 57 & 0 & 10 & 0.92\\
+\cellcolor{gray!10}{Lukas Felipe Bergmann} & \cellcolor{gray!10}{Ber-Luk} & \cellcolor{gray!10}{BRA24} & \cellcolor{gray!10}{15} & \cellcolor{gray!10}{163} & \cellcolor{gray!10}{48} & \cellcolor{gray!10}{5} & \cellcolor{gray!10}{43} & \cellcolor{gray!10}{0} & \cellcolor{gray!10}{3.20} & \cellcolor{gray!10}{22} & \cellcolor{gray!10}{26} & \cellcolor{gray!10}{13} & \cellcolor{gray!10}{0} & \cellcolor{gray!10}{9} & \cellcolor{gray!10}{1.47}\\
+Matheus Goncalves & Gon-Mat & BRA24 & 4 & 9 & 2 & 2 & 0 & 0 & 0.50 & 0 & 2 & 0 & 0 & 0 & 0.00\\
+\cellcolor{gray!10}{Mauricio Borges Silva} & \cellcolor{gray!10}{Bor-Mau} & \cellcolor{gray!10}{BRA24} & \cellcolor{gray!10}{18} & \cellcolor{gray!10}{127} & \cellcolor{gray!10}{35} & \cellcolor{gray!10}{6} & \cellcolor{gray!10}{29} & \cellcolor{gray!10}{0} & \cellcolor{gray!10}{1.94} & \cellcolor{gray!10}{18} & \cellcolor{gray!10}{17} & \cellcolor{gray!10}{13} & \cellcolor{gray!10}{0} & \cellcolor{gray!10}{5} & \cellcolor{gray!10}{1.00}\\
+\addlinespace
+Otavio Henrique Rodrigues Pinto & Rod-Ota & BRA24 & 4 & 22 & 6 & 1 & 5 & 0 & 1.50 & 5 & 1 & 3 & 0 & 2 & 1.25\\
+\cellcolor{gray!10}{Ricardo Lucarelli Souza} & \cellcolor{gray!10}{Sou-Ric} & \cellcolor{gray!10}{BRA24} & \cellcolor{gray!10}{74} & \cellcolor{gray!10}{711} & \cellcolor{gray!10}{225} & \cellcolor{gray!10}{16} & \cellcolor{gray!10}{209} & \cellcolor{gray!10}{0} & \cellcolor{gray!10}{3.04} & \cellcolor{gray!10}{74} & \cellcolor{gray!10}{151} & \cellcolor{gray!10}{50} & \cellcolor{gray!10}{0} & \cellcolor{gray!10}{24} & \cellcolor{gray!10}{1.00}\\
+Yoandy Leal Hidalgo & Lea-Yoa & BRA24 & 56 & 558 & 189 & 15 & 174 & 0 & 3.38 & 69 & 120 & 48 & 0 & 21 & 1.23\\
+\bottomrule
+\end{tabular}}
+\end{table}
+
+\subsection*{An unnumbered section}\label{an-unnumbered-section}
+\addcontentsline{toc}{subsection}{An unnumbered section}
+
+Chapters and sections are numbered by default. To un-number a heading, add a \texttt{\{.unnumbered\}} or the shorter \texttt{\{-\}} at the end of the heading, like in this section.
+
+\chapter{Saque}\label{cross}
+
+\section{GERAL}\label{geral}
+
+\begin{table}[!h]
+\centering
+\resizebox{\ifdim\width>\linewidth\linewidth\else\width\fi}{!}{
+\begin{tabular}[t]{rrrrrrrrrrrrrr}
+\toprule
+TOT & VGs \% & = & =\% & / & /\% & -!\% & +\% & \#\% & \# & \#/\% & E/A+X & A+X/S & A/SET\\
+\midrule
+\cellcolor{gray!10}{2222} & \cellcolor{gray!10}{0} & \cellcolor{gray!10}{395} & \cellcolor{gray!10}{17.8} & \cellcolor{gray!10}{101} & \cellcolor{gray!10}{4.5} & \cellcolor{gray!10}{56.5} & \cellcolor{gray!10}{15.5} & \cellcolor{gray!10}{5.7} & \cellcolor{gray!10}{126} & \cellcolor{gray!10}{10.2} & \cellcolor{gray!10}{1.7} & \cellcolor{gray!10}{2.3} & \cellcolor{gray!10}{1.3}\\
+\bottomrule
+\end{tabular}}
+\end{table}
+
+\section{POR TIPO}\label{por-tipo}
+
+\begin{table}[!h]
+\centering
+\resizebox{\ifdim\width>\linewidth\linewidth\else\width\fi}{!}{
+\begin{tabular}[t]{lrrrrrrrrrrrrr}
+\toprule
+\cellcolor{gray!10}{Tipo} & \cellcolor{gray!10}{TOT} & \cellcolor{gray!10}{=} & \cellcolor{gray!10}{=\%} & \cellcolor{gray!10}{/} & \cellcolor{gray!10}{/\%} & \cellcolor{gray!10}{-!\%} & \cellcolor{gray!10}{+\%} & \cellcolor{gray!10}{\#\%} & \cellcolor{gray!10}{\#} & \cellcolor{gray!10}{\#/\%} & \cellcolor{gray!10}{E/A+X} & \cellcolor{gray!10}{A+X/S} & \cellcolor{gray!10}{A/SET}\\
+
+
+\bottomrule
+\end{tabular}}
+\end{table}
+
+\section{POR ATLETA}\label{por-atleta}
+
+\section{GRÁFICOS}\label{gruxe1ficos}
+
+\subsection{VIAGEM}\label{viagem}
+
+\includegraphics{_main_files/figure-latex/unnamed-chunk-7-1.pdf}
+
+\subsection{FLOAT}\label{float}
+
+\includegraphics{_main_files/figure-latex/unnamed-chunk-8-1.pdf}
+
+\subsection{HÍBRIDO}\label{huxedbrido}
+
+\includegraphics{_main_files/figure-latex/unnamed-chunk-9-1.pdf}
+
+\chapter{RECEPÇÃO}\label{recepuxe7uxe3o}
+
+\section{TOTAIS}\label{totais}
+
+\begin{table}[!h]
+\centering
+\resizebox{\ifdim\width>\linewidth\linewidth\else\width\fi}{!}{
+\begin{tabular}[t]{l}
+\toprule
+x\\
+\midrule
+\cellcolor{gray!10}{No data available}\\
+\bottomrule
+\end{tabular}}
+\end{table}
+
+\begin{table}[!h]
+\centering
+\resizebox{\ifdim\width>\linewidth\linewidth\else\width\fi}{!}{
+\begin{tabular}[t]{l}
+\toprule
+x\\
+\midrule
+\cellcolor{gray!10}{No data available}\\
+\bottomrule
+\end{tabular}}
+\end{table}
+
+\pagebreak
+
+\section{DETALHADO}\label{detalhado}
+
+\begin{table}[!h]
+\centering
+\resizebox{\ifdim\width>\linewidth\linewidth\else\width\fi}{!}{
+\begin{tabular}[t]{l}
+\toprule
+x\\
+\midrule
+\cellcolor{gray!10}{No data available}\\
+\bottomrule
+\end{tabular}}
+\end{table}
+
+\begin{table}[!h]
+\centering
+\resizebox{\ifdim\width>\linewidth\linewidth\else\width\fi}{!}{
+\begin{tabular}[t]{l}
+\toprule
+x\\
+\midrule
+\cellcolor{gray!10}{No data available}\\
+\bottomrule
+\end{tabular}}
+\end{table}
+
+\pagebreak
+
+\chapter{ATAQUE}\label{ataque}
+
+\section{TOTAIS}\label{totais-1}
+
+\begin{table}[!h]
+\centering
+\resizebox{\ifdim\width>\linewidth\linewidth\else\width\fi}{!}{
+\begin{tabular}[t]{lrrrrrrrrr}
+\toprule
+team\_id & TOT & EFF\% & P/SET & \#\% & +\% & -\% & /\% & =\% & =/\%\\
+\midrule
+\cellcolor{gray!10}{BRA24} & \cellcolor{gray!10}{2358} & \cellcolor{gray!10}{38.8} & \cellcolor{gray!10}{12.8} & \cellcolor{gray!10}{52.5} & \cellcolor{gray!10}{11.7} & \cellcolor{gray!10}{22.2} & \cellcolor{gray!10}{6.4} & \cellcolor{gray!10}{7.2} & \cellcolor{gray!10}{13.7}\\
+\bottomrule
+\end{tabular}}
+\end{table}
+
+\begin{table}[!h]
+\centering
+\resizebox{\ifdim\width>\linewidth\linewidth\else\width\fi}{!}{
+\begin{tabular}[t]{llrrrrrrrrr}
+\toprule
+player\_name & team\_id & TOT & EFF\% & P/SET & \#\% & +\% & -\% & /\% & =\% & =/\%\\
+\midrule
+\cellcolor{gray!10}{Adriano Fernandes Cavalcante} & \cellcolor{gray!10}{BRA24} & \cellcolor{gray!10}{182} & \cellcolor{gray!10}{37.9} & \cellcolor{gray!10}{3.4} & \cellcolor{gray!10}{50.0} & \cellcolor{gray!10}{12.6} & \cellcolor{gray!10}{25.3} & \cellcolor{gray!10}{5.5} & \cellcolor{gray!10}{6.6} & \cellcolor{gray!10}{12.1}\\
+Alan Souza & BRA24 & 257 & 30.7 & 4.2 & 47.9 & 11.3 & 23.7 & 7.4 & 9.7 & 17.1\\
+\cellcolor{gray!10}{Arthur Bento Buczmiejuk} & \cellcolor{gray!10}{BRA24} & \cellcolor{gray!10}{18} & \cellcolor{gray!10}{72.2} & \cellcolor{gray!10}{3.5} & \cellcolor{gray!10}{77.8} & \cellcolor{gray!10}{11.1} & \cellcolor{gray!10}{5.6} & \cellcolor{gray!10}{5.6} & \cellcolor{gray!10}{0.0} & \cellcolor{gray!10}{5.6}\\
+Bruno Mossa Rezende & BRA24 & 12 & 25.0 & 0.1 & 33.3 & 8.3 & 50.0 & 8.3 & 0.0 & 8.3\\
+\cellcolor{gray!10}{Darlan Ferreira Souza} & \cellcolor{gray!10}{BRA24} & \cellcolor{gray!10}{506} & \cellcolor{gray!10}{36.4} & \cellcolor{gray!10}{4.2} & \cellcolor{gray!10}{53.4} & \cellcolor{gray!10}{9.5} & \cellcolor{gray!10}{20.2} & \cellcolor{gray!10}{6.9} & \cellcolor{gray!10}{10.1} & \cellcolor{gray!10}{17.0}\\
+\addlinespace
+Felipe Moreira Roque & BRA24 & 12 & 25.0 & 3.0 & 50.0 & 8.3 & 16.7 & 25.0 & 0.0 & 25.0\\
+\cellcolor{gray!10}{Fernando Gil Kreling} & \cellcolor{gray!10}{BRA24} & \cellcolor{gray!10}{12} & \cellcolor{gray!10}{25.0} & \cellcolor{gray!10}{0.1} & \cellcolor{gray!10}{33.3} & \cellcolor{gray!10}{8.3} & \cellcolor{gray!10}{50.0} & \cellcolor{gray!10}{8.3} & \cellcolor{gray!10}{0.0} & \cellcolor{gray!10}{8.3}\\
+Flavio Resende Gualberto & BRA24 & 152 & 50.0 & 1.2 & 59.2 & 7.9 & 23.7 & 5.3 & 3.9 & 9.2\\
+\cellcolor{gray!10}{Henrique Honorato} & \cellcolor{gray!10}{BRA24} & \cellcolor{gray!10}{6} & \cellcolor{gray!10}{33.3} & \cellcolor{gray!10}{3.0} & \cellcolor{gray!10}{50.0} & \cellcolor{gray!10}{16.7} & \cellcolor{gray!10}{16.7} & \cellcolor{gray!10}{16.7} & \cellcolor{gray!10}{0.0} & \cellcolor{gray!10}{16.7}\\
+Isac Santos & BRA24 & 71 & 47.9 & 1.6 & 57.7 & 12.7 & 19.7 & 7.0 & 2.8 & 9.9\\
+\addlinespace
+\cellcolor{gray!10}{Judson Amabel Nunes Da Cunha Jr} & \cellcolor{gray!10}{BRA24} & \cellcolor{gray!10}{41} & \cellcolor{gray!10}{43.9} & \cellcolor{gray!10}{1.3} & \cellcolor{gray!10}{56.1} & \cellcolor{gray!10}{7.3} & \cellcolor{gray!10}{24.4} & \cellcolor{gray!10}{4.9} & \cellcolor{gray!10}{7.3} & \cellcolor{gray!10}{12.2}\\
+Lucas Saatkamp & BRA24 & 175 & 50.9 & 1.5 & 61.7 & 14.9 & 12.6 & 5.1 & 5.7 & 10.9\\
+\cellcolor{gray!10}{Lukas Felipe Bergmann} & \cellcolor{gray!10}{BRA24} & \cellcolor{gray!10}{84} & \cellcolor{gray!10}{40.5} & \cellcolor{gray!10}{2.9} & \cellcolor{gray!10}{51.2} & \cellcolor{gray!10}{16.7} & \cellcolor{gray!10}{21.4} & \cellcolor{gray!10}{0.0} & \cellcolor{gray!10}{10.7} & \cellcolor{gray!10}{10.7}\\
+Mauricio Borges Silva & BRA24 & 60 & 36.7 & 1.6 & 48.3 & 16.7 & 23.3 & 3.3 & 8.3 & 11.7\\
+\cellcolor{gray!10}{Otavio Henrique Rodrigues Pinto} & \cellcolor{gray!10}{BRA24} & \cellcolor{gray!10}{9} & \cellcolor{gray!10}{33.3} & \cellcolor{gray!10}{1.2} & \cellcolor{gray!10}{55.6} & \cellcolor{gray!10}{11.1} & \cellcolor{gray!10}{11.1} & \cellcolor{gray!10}{0.0} & \cellcolor{gray!10}{22.2} & \cellcolor{gray!10}{22.2}\\
+\addlinespace
+Ricardo Lucarelli Souza & BRA24 & 414 & 37.9 & 2.8 & 50.5 & 13.3 & 23.7 & 6.8 & 5.8 & 12.6\\
+\cellcolor{gray!10}{Yoandy Leal Hidalgo} & \cellcolor{gray!10}{BRA24} & \cellcolor{gray!10}{347} & \cellcolor{gray!10}{36.3} & \cellcolor{gray!10}{3.1} & \cellcolor{gray!10}{50.1} & \cellcolor{gray!10}{11.5} & \cellcolor{gray!10}{24.5} & \cellcolor{gray!10}{7.8} & \cellcolor{gray!10}{6.1} & \cellcolor{gray!10}{13.8}\\
+\bottomrule
+\end{tabular}}
+\end{table}
+
+\pagebreak
+
+\section{SIDEOUT}\label{sideout}
+
+\begin{table}[!h]
+\centering
+\resizebox{\ifdim\width>\linewidth\linewidth\else\width\fi}{!}{
+\begin{tabular}[t]{lrrrrrrrrr}
+\toprule
+team\_id & TOT & EFF\% & P/SET & \#\% & +\% & -\% & /\% & =\% & =/\%\\
+\midrule
+\cellcolor{gray!10}{BRA24} & \cellcolor{gray!10}{1391} & \cellcolor{gray!10}{40.5} & \cellcolor{gray!10}{7.8} & \cellcolor{gray!10}{54.6} & \cellcolor{gray!10}{11.1} & \cellcolor{gray!10}{20.3} & \cellcolor{gray!10}{6.8} & \cellcolor{gray!10}{7.3} & \cellcolor{gray!10}{14}\\
+\bottomrule
+\end{tabular}}
+\end{table}
+
+\begin{table}[!h]
+\centering
+\resizebox{\ifdim\width>\linewidth\linewidth\else\width\fi}{!}{
+\begin{tabular}[t]{llrrrrrrrrr}
+\toprule
+team\_id & rec\_q & TOT & EFF\% & P/SET & \#\% & +\% & -\% & /\% & =\% & =/\%\\
+\midrule
+\cellcolor{gray!10}{BRA24} & \cellcolor{gray!10}{A} & \cellcolor{gray!10}{346} & \cellcolor{gray!10}{50.6} & \cellcolor{gray!10}{2.2} & \cellcolor{gray!10}{62.1} & \cellcolor{gray!10}{8.7} & \cellcolor{gray!10}{17.6} & \cellcolor{gray!10}{4.3} & \cellcolor{gray!10}{7.2} & \cellcolor{gray!10}{11.6}\\
+BRA24 & B & 351 & 52.1 & 2.3 & 63.0 & 11.1 & 15.1 & 5.7 & 5.1 & 10.8\\
+\cellcolor{gray!10}{BRA24} & \cellcolor{gray!10}{Bm} & \cellcolor{gray!10}{395} & \cellcolor{gray!10}{36.7} & \cellcolor{gray!10}{2.1} & \cellcolor{gray!10}{52.7} & \cellcolor{gray!10}{10.4} & \cellcolor{gray!10}{21.0} & \cellcolor{gray!10}{9.6} & \cellcolor{gray!10}{6.3} & \cellcolor{gray!10}{15.9}\\
+BRA24 & C & 299 & 20.4 & 1.2 & 38.5 & 14.7 & 28.8 & 7.0 & 11.0 & 18.1\\
+\bottomrule
+\end{tabular}}
+\end{table}
+
+\begin{table}[!h]
+\centering
+\resizebox{\ifdim\width>\linewidth\linewidth\else\width\fi}{!}{
+\begin{tabular}[t]{llrrrrrrrr}
+\toprule
+player\_name & team\_id & TOT & EFF\% & P/SET & \#\% & +\% & -\% & /\% & =\%\\
+\midrule
+\cellcolor{gray!10}{Adriano Fernandes Cavalcante} & \cellcolor{gray!10}{BRA24} & \cellcolor{gray!10}{98} & \cellcolor{gray!10}{32.7} & \cellcolor{gray!10}{0.5} & \cellcolor{gray!10}{49.0} & \cellcolor{gray!10}{13.3} & \cellcolor{gray!10}{21.4} & \cellcolor{gray!10}{10.2} & \cellcolor{gray!10}{6.1}\\
+Alan Souza & BRA24 & 155 & 31.0 & 0.8 & 49.7 & 8.4 & 23.2 & 9.0 & 9.7\\
+\cellcolor{gray!10}{Arthur Bento Buczmiejuk} & \cellcolor{gray!10}{BRA24} & \cellcolor{gray!10}{9} & \cellcolor{gray!10}{66.7} & \cellcolor{gray!10}{0.1} & \cellcolor{gray!10}{66.7} & \cellcolor{gray!10}{22.2} & \cellcolor{gray!10}{11.1} & \cellcolor{gray!10}{0.0} & \cellcolor{gray!10}{0.0}\\
+Bruno Mossa Rezende & BRA24 & 3 & 0.0 & 0.0 & 0.0 & 0.0 & 100.0 & 0.0 & 0.0\\
+\cellcolor{gray!10}{Darlan Ferreira Souza} & \cellcolor{gray!10}{BRA24} & \cellcolor{gray!10}{284} & \cellcolor{gray!10}{44.0} & \cellcolor{gray!10}{1.7} & \cellcolor{gray!10}{58.5} & \cellcolor{gray!10}{9.2} & \cellcolor{gray!10}{18.0} & \cellcolor{gray!10}{5.3} & \cellcolor{gray!10}{9.2}\\
+\addlinespace
+Felipe Moreira Roque & BRA24 & 8 & 37.5 & 0.1 & 62.5 & 12.5 & 0.0 & 25.0 & 0.0\\
+\cellcolor{gray!10}{Fernando Gil Kreling} & \cellcolor{gray!10}{BRA24} & \cellcolor{gray!10}{6} & \cellcolor{gray!10}{0.0} & \cellcolor{gray!10}{0.0} & \cellcolor{gray!10}{16.7} & \cellcolor{gray!10}{16.7} & \cellcolor{gray!10}{50.0} & \cellcolor{gray!10}{16.7} & \cellcolor{gray!10}{0.0}\\
+Flavio Resende Gualberto & BRA24 & 108 & 47.2 & 0.6 & 55.6 & 9.3 & 26.9 & 4.6 & 3.7\\
+\cellcolor{gray!10}{Henrique Honorato} & \cellcolor{gray!10}{BRA24} & \cellcolor{gray!10}{3} & \cellcolor{gray!10}{0.0} & \cellcolor{gray!10}{0.0} & \cellcolor{gray!10}{33.3} & \cellcolor{gray!10}{33.3} & \cellcolor{gray!10}{0.0} & \cellcolor{gray!10}{33.3} & \cellcolor{gray!10}{0.0}\\
+Isac Santos & BRA24 & 48 & 41.7 & 0.3 & 56.2 & 8.3 & 20.8 & 10.4 & 4.2\\
+\addlinespace
+\cellcolor{gray!10}{Judson Amabel Nunes Da Cunha Jr} & \cellcolor{gray!10}{BRA24} & \cellcolor{gray!10}{36} & \cellcolor{gray!10}{44.4} & \cellcolor{gray!10}{0.2} & \cellcolor{gray!10}{55.6} & \cellcolor{gray!10}{8.3} & \cellcolor{gray!10}{25.0} & \cellcolor{gray!10}{5.6} & \cellcolor{gray!10}{5.6}\\
+Lucas Saatkamp & BRA24 & 126 & 52.4 & 0.8 & 62.7 & 15.1 & 11.9 & 5.6 & 4.8\\
+\cellcolor{gray!10}{Lukas Felipe Bergmann} & \cellcolor{gray!10}{BRA24} & \cellcolor{gray!10}{47} & \cellcolor{gray!10}{29.8} & \cellcolor{gray!10}{0.2} & \cellcolor{gray!10}{46.8} & \cellcolor{gray!10}{17.0} & \cellcolor{gray!10}{19.1} & \cellcolor{gray!10}{0.0} & \cellcolor{gray!10}{17.0}\\
+Mauricio Borges Silva & BRA24 & 37 & 24.3 & 0.2 & 43.2 & 13.5 & 24.3 & 5.4 & 13.5\\
+\cellcolor{gray!10}{Otavio Henrique Rodrigues Pinto} & \cellcolor{gray!10}{BRA24} & \cellcolor{gray!10}{4} & \cellcolor{gray!10}{50.0} & \cellcolor{gray!10}{0.0} & \cellcolor{gray!10}{75.0} & \cellcolor{gray!10}{0.0} & \cellcolor{gray!10}{0.0} & \cellcolor{gray!10}{0.0} & \cellcolor{gray!10}{25.0}\\
+\addlinespace
+Ricardo Lucarelli Souza & BRA24 & 222 & 42.3 & 1.2 & 54.5 & 13.1 & 20.3 & 6.3 & 5.9\\
+\cellcolor{gray!10}{Yoandy Leal Hidalgo} & \cellcolor{gray!10}{BRA24} & \cellcolor{gray!10}{197} & \cellcolor{gray!10}{39.6} & \cellcolor{gray!10}{1.1} & \cellcolor{gray!10}{54.3} & \cellcolor{gray!10}{9.6} & \cellcolor{gray!10}{21.3} & \cellcolor{gray!10}{8.1} & \cellcolor{gray!10}{6.6}\\
+\bottomrule
+\end{tabular}}
+\end{table}
+
+\begin{table}[!h]
+\centering
+\resizebox{\ifdim\width>\linewidth\linewidth\else\width\fi}{!}{
+\begin{tabular}[t]{lllrrrrrrrr}
+\toprule
+player\_name & team\_id & rec\_q & TOT & EFF\% & P/SET & \#\% & +\% & -\% & /\% & =\%\\
+\midrule
+\cellcolor{gray!10}{Adriano Fernandes Cavalcante} & \cellcolor{gray!10}{BRA24} & \cellcolor{gray!10}{A} & \cellcolor{gray!10}{23} & \cellcolor{gray!10}{43.5} & \cellcolor{gray!10}{0.1} & \cellcolor{gray!10}{60.9} & \cellcolor{gray!10}{8.7} & \cellcolor{gray!10}{13.0} & \cellcolor{gray!10}{8.7} & \cellcolor{gray!10}{8.7}\\
+Adriano Fernandes Cavalcante & BRA24 & B & 24 & 41.7 & 0.2 & 62.5 & 8.3 & 8.3 & 12.5 & 8.3\\
+\cellcolor{gray!10}{Adriano Fernandes Cavalcante} & \cellcolor{gray!10}{BRA24} & \cellcolor{gray!10}{Bm} & \cellcolor{gray!10}{29} & \cellcolor{gray!10}{24.1} & \cellcolor{gray!10}{0.1} & \cellcolor{gray!10}{41.4} & \cellcolor{gray!10}{20.7} & \cellcolor{gray!10}{20.7} & \cellcolor{gray!10}{13.8} & \cellcolor{gray!10}{3.4}\\
+Adriano Fernandes Cavalcante & BRA24 & C & 22 & 22.7 & 0.1 & 31.8 & 13.6 & 45.5 & 4.5 & 4.5\\
+\cellcolor{gray!10}{Alan Souza} & \cellcolor{gray!10}{BRA24} & \cellcolor{gray!10}{A} & \cellcolor{gray!10}{47} & \cellcolor{gray!10}{48.9} & \cellcolor{gray!10}{0.3} & \cellcolor{gray!10}{57.4} & \cellcolor{gray!10}{8.5} & \cellcolor{gray!10}{25.5} & \cellcolor{gray!10}{4.3} & \cellcolor{gray!10}{4.3}\\
+\addlinespace
+Alan Souza & BRA24 & B & 27 & 48.1 & 0.2 & 63.0 & 7.4 & 14.8 & 3.7 & 11.1\\
+\cellcolor{gray!10}{Alan Souza} & \cellcolor{gray!10}{BRA24} & \cellcolor{gray!10}{Bm} & \cellcolor{gray!10}{45} & \cellcolor{gray!10}{26.7} & \cellcolor{gray!10}{0.2} & \cellcolor{gray!10}{51.1} & \cellcolor{gray!10}{0.0} & \cellcolor{gray!10}{24.4} & \cellcolor{gray!10}{13.3} & \cellcolor{gray!10}{11.1}\\
+Alan Souza & BRA24 & C & 36 & 0.0 & 0.1 & 27.8 & 19.4 & 25.0 & 13.9 & 13.9\\
+\cellcolor{gray!10}{Arthur Bento Buczmiejuk} & \cellcolor{gray!10}{BRA24} & \cellcolor{gray!10}{A} & \cellcolor{gray!10}{1} & \cellcolor{gray!10}{100.0} & \cellcolor{gray!10}{0.0} & \cellcolor{gray!10}{100.0} & \cellcolor{gray!10}{0.0} & \cellcolor{gray!10}{0.0} & \cellcolor{gray!10}{0.0} & \cellcolor{gray!10}{0.0}\\
+Arthur Bento Buczmiejuk & BRA24 & B & 1 & 0.0 & 0.0 & 0.0 & 100.0 & 0.0 & 0.0 & 0.0\\
+\addlinespace
+\cellcolor{gray!10}{Arthur Bento Buczmiejuk} & \cellcolor{gray!10}{BRA24} & \cellcolor{gray!10}{Bm} & \cellcolor{gray!10}{5} & \cellcolor{gray!10}{100.0} & \cellcolor{gray!10}{0.1} & \cellcolor{gray!10}{100.0} & \cellcolor{gray!10}{0.0} & \cellcolor{gray!10}{0.0} & \cellcolor{gray!10}{0.0} & \cellcolor{gray!10}{0.0}\\
+Arthur Bento Buczmiejuk & BRA24 & C & 2 & 0.0 & 0.0 & 0.0 & 50.0 & 50.0 & 0.0 & 0.0\\
+\cellcolor{gray!10}{Bruno Mossa Rezende} & \cellcolor{gray!10}{BRA24} & \cellcolor{gray!10}{A} & \cellcolor{gray!10}{3} & \cellcolor{gray!10}{0.0} & \cellcolor{gray!10}{0.0} & \cellcolor{gray!10}{0.0} & \cellcolor{gray!10}{0.0} & \cellcolor{gray!10}{100.0} & \cellcolor{gray!10}{0.0} & \cellcolor{gray!10}{0.0}\\
+Darlan Ferreira Souza & BRA24 & A & 66 & 54.5 & 0.5 & 68.2 & 6.1 & 12.1 & 3.0 & 10.6\\
+\cellcolor{gray!10}{Darlan Ferreira Souza} & \cellcolor{gray!10}{BRA24} & \cellcolor{gray!10}{B} & \cellcolor{gray!10}{64} & \cellcolor{gray!10}{59.4} & \cellcolor{gray!10}{0.4} & \cellcolor{gray!10}{67.2} & \cellcolor{gray!10}{6.2} & \cellcolor{gray!10}{18.8} & \cellcolor{gray!10}{3.1} & \cellcolor{gray!10}{4.7}\\
+\addlinespace
+Darlan Ferreira Souza & BRA24 & Bm & 85 & 36.5 & 0.5 & 55.3 & 10.6 & 15.3 & 9.4 & 9.4\\
+\cellcolor{gray!10}{Darlan Ferreira Souza} & \cellcolor{gray!10}{BRA24} & \cellcolor{gray!10}{C} & \cellcolor{gray!10}{69} & \cellcolor{gray!10}{29.0} & \cellcolor{gray!10}{0.3} & \cellcolor{gray!10}{44.9} & \cellcolor{gray!10}{13.0} & \cellcolor{gray!10}{26.1} & \cellcolor{gray!10}{4.3} & \cellcolor{gray!10}{11.6}\\
+Felipe Moreira Roque & BRA24 & A & 1 & 100.0 & 0.0 & 100.0 & 0.0 & 0.0 & 0.0 & 0.0\\
+\cellcolor{gray!10}{Felipe Moreira Roque} & \cellcolor{gray!10}{BRA24} & \cellcolor{gray!10}{Bm} & \cellcolor{gray!10}{4} & \cellcolor{gray!10}{50.0} & \cellcolor{gray!10}{0.0} & \cellcolor{gray!10}{75.0} & \cellcolor{gray!10}{0.0} & \cellcolor{gray!10}{0.0} & \cellcolor{gray!10}{25.0} & \cellcolor{gray!10}{0.0}\\
+Felipe Moreira Roque & BRA24 & C & 3 & 0.0 & 0.0 & 33.3 & 33.3 & 0.0 & 33.3 & 0.0\\
+\addlinespace
+\cellcolor{gray!10}{Fernando Gil Kreling} & \cellcolor{gray!10}{BRA24} & \cellcolor{gray!10}{A} & \cellcolor{gray!10}{1} & \cellcolor{gray!10}{100.0} & \cellcolor{gray!10}{0.0} & \cellcolor{gray!10}{100.0} & \cellcolor{gray!10}{0.0} & \cellcolor{gray!10}{0.0} & \cellcolor{gray!10}{0.0} & \cellcolor{gray!10}{0.0}\\
+Fernando Gil Kreling & BRA24 & Bm & 1 & -100.0 & 0.0 & 0.0 & 0.0 & 0.0 & 100.0 & 0.0\\
+\cellcolor{gray!10}{Fernando Gil Kreling} & \cellcolor{gray!10}{BRA24} & \cellcolor{gray!10}{C} & \cellcolor{gray!10}{4} & \cellcolor{gray!10}{0.0} & \cellcolor{gray!10}{0.0} & \cellcolor{gray!10}{0.0} & \cellcolor{gray!10}{25.0} & \cellcolor{gray!10}{75.0} & \cellcolor{gray!10}{0.0} & \cellcolor{gray!10}{0.0}\\
+Flavio Resende Gualberto & BRA24 & A & 36 & 41.7 & 0.2 & 55.6 & 8.3 & 22.2 & 11.1 & 2.8\\
+\cellcolor{gray!10}{Flavio Resende Gualberto} & \cellcolor{gray!10}{BRA24} & \cellcolor{gray!10}{B} & \cellcolor{gray!10}{41} & \cellcolor{gray!10}{56.1} & \cellcolor{gray!10}{0.3} & \cellcolor{gray!10}{63.4} & \cellcolor{gray!10}{12.2} & \cellcolor{gray!10}{17.1} & \cellcolor{gray!10}{2.4} & \cellcolor{gray!10}{4.9}\\
+\addlinespace
+Flavio Resende Gualberto & BRA24 & Bm & 30 & 43.3 & 0.1 & 46.7 & 6.7 & 43.3 & 0.0 & 3.3\\
+\cellcolor{gray!10}{Flavio Resende Gualberto} & \cellcolor{gray!10}{BRA24} & \cellcolor{gray!10}{C} & \cellcolor{gray!10}{1} & \cellcolor{gray!10}{0.0} & \cellcolor{gray!10}{0.0} & \cellcolor{gray!10}{0.0} & \cellcolor{gray!10}{0.0} & \cellcolor{gray!10}{100.0} & \cellcolor{gray!10}{0.0} & \cellcolor{gray!10}{0.0}\\
+Henrique Honorato & BRA24 & B & 1 & 0.0 & 0.0 & 0.0 & 100.0 & 0.0 & 0.0 & 0.0\\
+\cellcolor{gray!10}{Henrique Honorato} & \cellcolor{gray!10}{BRA24} & \cellcolor{gray!10}{Bm} & \cellcolor{gray!10}{1} & \cellcolor{gray!10}{100.0} & \cellcolor{gray!10}{0.0} & \cellcolor{gray!10}{100.0} & \cellcolor{gray!10}{0.0} & \cellcolor{gray!10}{0.0} & \cellcolor{gray!10}{0.0} & \cellcolor{gray!10}{0.0}\\
+Henrique Honorato & BRA24 & C & 1 & -100.0 & 0.0 & 0.0 & 0.0 & 0.0 & 100.0 & 0.0\\
+\addlinespace
+\cellcolor{gray!10}{Isac Santos} & \cellcolor{gray!10}{BRA24} & \cellcolor{gray!10}{A} & \cellcolor{gray!10}{14} & \cellcolor{gray!10}{57.1} & \cellcolor{gray!10}{0.1} & \cellcolor{gray!10}{64.3} & \cellcolor{gray!10}{14.3} & \cellcolor{gray!10}{14.3} & \cellcolor{gray!10}{0.0} & \cellcolor{gray!10}{7.1}\\
+Isac Santos & BRA24 & B & 22 & 40.9 & 0.1 & 54.5 & 9.1 & 22.7 & 9.1 & 4.5\\
+\cellcolor{gray!10}{Isac Santos} & \cellcolor{gray!10}{BRA24} & \cellcolor{gray!10}{Bm} & \cellcolor{gray!10}{12} & \cellcolor{gray!10}{25.0} & \cellcolor{gray!10}{0.1} & \cellcolor{gray!10}{50.0} & \cellcolor{gray!10}{0.0} & \cellcolor{gray!10}{25.0} & \cellcolor{gray!10}{25.0} & \cellcolor{gray!10}{0.0}\\
+Judson Amabel Nunes Da Cunha Jr & BRA24 & A & 17 & 64.7 & 0.1 & 64.7 & 5.9 & 29.4 & 0.0 & 0.0\\
+\cellcolor{gray!10}{Judson Amabel Nunes Da Cunha Jr} & \cellcolor{gray!10}{BRA24} & \cellcolor{gray!10}{B} & \cellcolor{gray!10}{12} & \cellcolor{gray!10}{16.7} & \cellcolor{gray!10}{0.0} & \cellcolor{gray!10}{33.3} & \cellcolor{gray!10}{16.7} & \cellcolor{gray!10}{33.3} & \cellcolor{gray!10}{8.3} & \cellcolor{gray!10}{8.3}\\
+\addlinespace
+Judson Amabel Nunes Da Cunha Jr & BRA24 & Bm & 6 & 33.3 & 0.0 & 66.7 & 0.0 & 0.0 & 16.7 & 16.7\\
+\cellcolor{gray!10}{Judson Amabel Nunes Da Cunha Jr} & \cellcolor{gray!10}{BRA24} & \cellcolor{gray!10}{C} & \cellcolor{gray!10}{1} & \cellcolor{gray!10}{100.0} & \cellcolor{gray!10}{0.0} & \cellcolor{gray!10}{100.0} & \cellcolor{gray!10}{0.0} & \cellcolor{gray!10}{0.0} & \cellcolor{gray!10}{0.0} & \cellcolor{gray!10}{0.0}\\
+Lucas Saatkamp & BRA24 & A & 34 & 64.7 & 0.3 & 73.5 & 11.8 & 5.9 & 5.9 & 2.9\\
+\cellcolor{gray!10}{Lucas Saatkamp} & \cellcolor{gray!10}{BRA24} & \cellcolor{gray!10}{B} & \cellcolor{gray!10}{53} & \cellcolor{gray!10}{49.1} & \cellcolor{gray!10}{0.3} & \cellcolor{gray!10}{62.3} & \cellcolor{gray!10}{15.1} & \cellcolor{gray!10}{9.4} & \cellcolor{gray!10}{7.5} & \cellcolor{gray!10}{5.7}\\
+Lucas Saatkamp & BRA24 & Bm & 39 & 46.2 & 0.2 & 53.8 & 17.9 & 20.5 & 2.6 & 5.1\\
+\addlinespace
+\cellcolor{gray!10}{Lukas Felipe Bergmann} & \cellcolor{gray!10}{BRA24} & \cellcolor{gray!10}{A} & \cellcolor{gray!10}{7} & \cellcolor{gray!10}{14.3} & \cellcolor{gray!10}{0.0} & \cellcolor{gray!10}{42.9} & \cellcolor{gray!10}{0.0} & \cellcolor{gray!10}{28.6} & \cellcolor{gray!10}{0.0} & \cellcolor{gray!10}{28.6}\\
+Lukas Felipe Bergmann & BRA24 & B & 6 & 66.7 & 0.0 & 66.7 & 0.0 & 33.3 & 0.0 & 0.0\\
+\cellcolor{gray!10}{Lukas Felipe Bergmann} & \cellcolor{gray!10}{BRA24} & \cellcolor{gray!10}{Bm} & \cellcolor{gray!10}{16} & \cellcolor{gray!10}{56.2} & \cellcolor{gray!10}{0.1} & \cellcolor{gray!10}{62.5} & \cellcolor{gray!10}{18.8} & \cellcolor{gray!10}{12.5} & \cellcolor{gray!10}{0.0} & \cellcolor{gray!10}{6.2}\\
+Lukas Felipe Bergmann & BRA24 & C & 18 & 0.0 & 0.1 & 27.8 & 27.8 & 16.7 & 0.0 & 27.8\\
+\cellcolor{gray!10}{Mauricio Borges Silva} & \cellcolor{gray!10}{BRA24} & \cellcolor{gray!10}{A} & \cellcolor{gray!10}{10} & \cellcolor{gray!10}{10.0} & \cellcolor{gray!10}{0.0} & \cellcolor{gray!10}{30.0} & \cellcolor{gray!10}{30.0} & \cellcolor{gray!10}{20.0} & \cellcolor{gray!10}{0.0} & \cellcolor{gray!10}{20.0}\\
+\addlinespace
+Mauricio Borges Silva & BRA24 & B & 10 & 50.0 & 0.1 & 70.0 & 0.0 & 10.0 & 10.0 & 10.0\\
+\cellcolor{gray!10}{Mauricio Borges Silva} & \cellcolor{gray!10}{BRA24} & \cellcolor{gray!10}{Bm} & \cellcolor{gray!10}{8} & \cellcolor{gray!10}{50.0} & \cellcolor{gray!10}{0.1} & \cellcolor{gray!10}{62.5} & \cellcolor{gray!10}{12.5} & \cellcolor{gray!10}{12.5} & \cellcolor{gray!10}{0.0} & \cellcolor{gray!10}{12.5}\\
+Mauricio Borges Silva & BRA24 & C & 9 & -11.1 & 0.0 & 11.1 & 11.1 & 55.6 & 11.1 & 11.1\\
+\cellcolor{gray!10}{Otavio Henrique Rodrigues Pinto} & \cellcolor{gray!10}{BRA24} & \cellcolor{gray!10}{A} & \cellcolor{gray!10}{1} & \cellcolor{gray!10}{-100.0} & \cellcolor{gray!10}{0.0} & \cellcolor{gray!10}{0.0} & \cellcolor{gray!10}{0.0} & \cellcolor{gray!10}{0.0} & \cellcolor{gray!10}{0.0} & \cellcolor{gray!10}{100.0}\\
+Otavio Henrique Rodrigues Pinto & BRA24 & B & 3 & 100.0 & 0.0 & 100.0 & 0.0 & 0.0 & 0.0 & 0.0\\
+\addlinespace
+\cellcolor{gray!10}{Ricardo Lucarelli Souza} & \cellcolor{gray!10}{BRA24} & \cellcolor{gray!10}{A} & \cellcolor{gray!10}{40} & \cellcolor{gray!10}{57.5} & \cellcolor{gray!10}{0.3} & \cellcolor{gray!10}{67.5} & \cellcolor{gray!10}{15.0} & \cellcolor{gray!10}{7.5} & \cellcolor{gray!10}{0.0} & \cellcolor{gray!10}{10.0}\\
+Ricardo Lucarelli Souza & BRA24 & B & 50 & 60.0 & 0.3 & 66.0 & 16.0 & 12.0 & 6.0 & 0.0\\
+\cellcolor{gray!10}{Ricardo Lucarelli Souza} & \cellcolor{gray!10}{BRA24} & \cellcolor{gray!10}{Bm} & \cellcolor{gray!10}{57} & \cellcolor{gray!10}{33.3} & \cellcolor{gray!10}{0.3} & \cellcolor{gray!10}{50.9} & \cellcolor{gray!10}{10.5} & \cellcolor{gray!10}{21.1} & \cellcolor{gray!10}{14.0} & \cellcolor{gray!10}{3.5}\\
+Ricardo Lucarelli Souza & BRA24 & C & 75 & 29.3 & 0.3 & 42.7 & 12.0 & 32.0 & 4.0 & 9.3\\
+\cellcolor{gray!10}{Yoandy Leal Hidalgo} & \cellcolor{gray!10}{BRA24} & \cellcolor{gray!10}{A} & \cellcolor{gray!10}{45} & \cellcolor{gray!10}{51.1} & \cellcolor{gray!10}{0.3} & \cellcolor{gray!10}{62.2} & \cellcolor{gray!10}{2.2} & \cellcolor{gray!10}{24.4} & \cellcolor{gray!10}{6.7} & \cellcolor{gray!10}{4.4}\\
+\addlinespace
+Yoandy Leal Hidalgo & BRA24 & B & 37 & 54.1 & 0.2 & 64.9 & 10.8 & 13.5 & 5.4 & 5.4\\
+\cellcolor{gray!10}{Yoandy Leal Hidalgo} & \cellcolor{gray!10}{BRA24} & \cellcolor{gray!10}{Bm} & \cellcolor{gray!10}{57} & \cellcolor{gray!10}{35.1} & \cellcolor{gray!10}{0.3} & \cellcolor{gray!10}{49.1} & \cellcolor{gray!10}{12.3} & \cellcolor{gray!10}{24.6} & \cellcolor{gray!10}{8.8} & \cellcolor{gray!10}{5.3}\\
+Yoandy Leal Hidalgo & BRA24 & C & 58 & 25.9 & 0.3 & 46.6 & 12.1 & 20.7 & 10.3 & 10.3\\
+\bottomrule
+\end{tabular}}
+\end{table}
+
+\pagebreak
+
+\section{TRANSIÇÃO}\label{transiuxe7uxe3o}
+
+\begin{table}[!h]
+\centering
+\resizebox{\ifdim\width>\linewidth\linewidth\else\width\fi}{!}{
+\begin{tabular}[t]{lrrrrrrrr}
+\toprule
+team\_id & TOT & EFF\% & P/SET & \#\% & +\% & -\% & /\% & =\%\\
+\midrule
+\cellcolor{gray!10}{BRA24} & \cellcolor{gray!10}{967} & \cellcolor{gray!10}{36.3} & \cellcolor{gray!10}{4.9} & \cellcolor{gray!10}{49.4} & \cellcolor{gray!10}{12.6} & \cellcolor{gray!10}{24.8} & \cellcolor{gray!10}{6} & \cellcolor{gray!10}{7.1}\\
+\bottomrule
+\end{tabular}}
+\end{table}
+
+\begin{table}[!h]
+\centering
+\resizebox{\ifdim\width>\linewidth\linewidth\else\width\fi}{!}{
+\begin{tabular}[t]{llrrrrrrrr}
+\toprule
+player\_name & team\_id & TOT & EFF\% & P/SET & \#\% & +\% & -\% & /\% & =\%\\
+\midrule
+\cellcolor{gray!10}{Adriano Fernandes Cavalcante} & \cellcolor{gray!10}{BRA24} & \cellcolor{gray!10}{84} & \cellcolor{gray!10}{44.0} & \cellcolor{gray!10}{0.4} & \cellcolor{gray!10}{51.2} & \cellcolor{gray!10}{11.9} & \cellcolor{gray!10}{29.8} & \cellcolor{gray!10}{0.0} & \cellcolor{gray!10}{7.1}\\
+Alan Souza & BRA24 & 102 & 30.4 & 0.5 & 45.1 & 15.7 & 24.5 & 4.9 & 9.8\\
+\cellcolor{gray!10}{Arthur Bento Buczmiejuk} & \cellcolor{gray!10}{BRA24} & \cellcolor{gray!10}{9} & \cellcolor{gray!10}{77.8} & \cellcolor{gray!10}{0.1} & \cellcolor{gray!10}{88.9} & \cellcolor{gray!10}{0.0} & \cellcolor{gray!10}{0.0} & \cellcolor{gray!10}{11.1} & \cellcolor{gray!10}{0.0}\\
+Bruno Mossa Rezende & BRA24 & 9 & 33.3 & 0.0 & 44.4 & 11.1 & 33.3 & 11.1 & 0.0\\
+\cellcolor{gray!10}{Darlan Ferreira Souza} & \cellcolor{gray!10}{BRA24} & \cellcolor{gray!10}{222} & \cellcolor{gray!10}{26.6} & \cellcolor{gray!10}{1.1} & \cellcolor{gray!10}{46.8} & \cellcolor{gray!10}{9.9} & \cellcolor{gray!10}{23.0} & \cellcolor{gray!10}{9.0} & \cellcolor{gray!10}{11.3}\\
+\addlinespace
+Felipe Moreira Roque & BRA24 & 4 & 0.0 & 0.0 & 25.0 & 0.0 & 50.0 & 25.0 & 0.0\\
+\cellcolor{gray!10}{Fernando Gil Kreling} & \cellcolor{gray!10}{BRA24} & \cellcolor{gray!10}{6} & \cellcolor{gray!10}{50.0} & \cellcolor{gray!10}{0.0} & \cellcolor{gray!10}{50.0} & \cellcolor{gray!10}{0.0} & \cellcolor{gray!10}{50.0} & \cellcolor{gray!10}{0.0} & \cellcolor{gray!10}{0.0}\\
+Flavio Resende Gualberto & BRA24 & 44 & 56.8 & 0.3 & 68.2 & 4.5 & 15.9 & 6.8 & 4.5\\
+\cellcolor{gray!10}{Henrique Honorato} & \cellcolor{gray!10}{BRA24} & \cellcolor{gray!10}{3} & \cellcolor{gray!10}{66.7} & \cellcolor{gray!10}{0.0} & \cellcolor{gray!10}{66.7} & \cellcolor{gray!10}{0.0} & \cellcolor{gray!10}{33.3} & \cellcolor{gray!10}{0.0} & \cellcolor{gray!10}{0.0}\\
+Isac Santos & BRA24 & 23 & 60.9 & 0.1 & 60.9 & 21.7 & 17.4 & 0.0 & 0.0\\
+\addlinespace
+\cellcolor{gray!10}{Judson Amabel Nunes Da Cunha Jr} & \cellcolor{gray!10}{BRA24} & \cellcolor{gray!10}{5} & \cellcolor{gray!10}{40.0} & \cellcolor{gray!10}{0.0} & \cellcolor{gray!10}{60.0} & \cellcolor{gray!10}{0.0} & \cellcolor{gray!10}{20.0} & \cellcolor{gray!10}{0.0} & \cellcolor{gray!10}{20.0}\\
+Lucas Saatkamp & BRA24 & 49 & 46.9 & 0.3 & 59.2 & 14.3 & 14.3 & 4.1 & 8.2\\
+\cellcolor{gray!10}{Lukas Felipe Bergmann} & \cellcolor{gray!10}{BRA24} & \cellcolor{gray!10}{37} & \cellcolor{gray!10}{54.1} & \cellcolor{gray!10}{0.2} & \cellcolor{gray!10}{56.8} & \cellcolor{gray!10}{16.2} & \cellcolor{gray!10}{24.3} & \cellcolor{gray!10}{0.0} & \cellcolor{gray!10}{2.7}\\
+Mauricio Borges Silva & BRA24 & 23 & 56.5 & 0.1 & 56.5 & 21.7 & 21.7 & 0.0 & 0.0\\
+\cellcolor{gray!10}{Otavio Henrique Rodrigues Pinto} & \cellcolor{gray!10}{BRA24} & \cellcolor{gray!10}{5} & \cellcolor{gray!10}{20.0} & \cellcolor{gray!10}{0.0} & \cellcolor{gray!10}{40.0} & \cellcolor{gray!10}{20.0} & \cellcolor{gray!10}{20.0} & \cellcolor{gray!10}{0.0} & \cellcolor{gray!10}{20.0}\\
+\addlinespace
+Ricardo Lucarelli Souza & BRA24 & 192 & 32.8 & 0.9 & 45.8 & 13.5 & 27.6 & 7.3 & 5.7\\
+\cellcolor{gray!10}{Yoandy Leal Hidalgo} & \cellcolor{gray!10}{BRA24} & \cellcolor{gray!10}{150} & \cellcolor{gray!10}{32.0} & \cellcolor{gray!10}{0.7} & \cellcolor{gray!10}{44.7} & \cellcolor{gray!10}{14.0} & \cellcolor{gray!10}{28.7} & \cellcolor{gray!10}{7.3} & \cellcolor{gray!10}{5.3}\\
+\bottomrule
+\end{tabular}}
+\end{table}
+
+\section{DETALHADO}\label{detalhado-1}
+
+\begin{table}[!h]
+\centering
+\resizebox{\ifdim\width>\linewidth\linewidth\else\width\fi}{!}{
+\begin{tabular}[t]{llrrrrrrrr}
+\toprule
+team\_id & attack\_phase & TOT & EFF\% & P/SET & \#\% & +\% & -\% & /\% & =\%\\
+\midrule
+\cellcolor{gray!10}{BRA24} & \cellcolor{gray!10}{Reception} & \cellcolor{gray!10}{1391} & \cellcolor{gray!10}{40.5} & \cellcolor{gray!10}{7.8} & \cellcolor{gray!10}{54.6} & \cellcolor{gray!10}{11.1} & \cellcolor{gray!10}{20.3} & \cellcolor{gray!10}{6.8} & \cellcolor{gray!10}{7.3}\\
+BRA24 & Transition breakpoint & 639 & 34.1 & 3.2 & 48.2 & 13.1 & 24.6 & 6.3 & 7.8\\
+\cellcolor{gray!10}{BRA24} & \cellcolor{gray!10}{Transition sideout} & \cellcolor{gray!10}{328} & \cellcolor{gray!10}{40.5} & \cellcolor{gray!10}{1.8} & \cellcolor{gray!10}{51.8} & \cellcolor{gray!10}{11.6} & \cellcolor{gray!10}{25.3} & \cellcolor{gray!10}{5.5} & \cellcolor{gray!10}{5.8}\\
+\bottomrule
+\end{tabular}}
+\end{table}
+
+\begin{table}[!h]
+\centering
+\resizebox{\ifdim\width>\linewidth\linewidth\else\width\fi}{!}{
+\begin{tabular}[t]{lllrrrrrrrr}
+\toprule
+player\_name & team\_id & attack\_phase & TOT & EFF\% & P/SET & \#\% & +\% & -\% & /\% & =\%\\
+\midrule
+\cellcolor{gray!10}{Adriano Fernandes Cavalcante} & \cellcolor{gray!10}{BRA24} & \cellcolor{gray!10}{Reception} & \cellcolor{gray!10}{98} & \cellcolor{gray!10}{32.7} & \cellcolor{gray!10}{0.5} & \cellcolor{gray!10}{49.0} & \cellcolor{gray!10}{13.3} & \cellcolor{gray!10}{21.4} & \cellcolor{gray!10}{10.2} & \cellcolor{gray!10}{6.1}\\
+Adriano Fernandes Cavalcante & BRA24 & Transition breakpoint & 51 & 35.3 & 0.2 & 45.1 & 11.8 & 33.3 & 0.0 & 9.8\\
+\cellcolor{gray!10}{Adriano Fernandes Cavalcante} & \cellcolor{gray!10}{BRA24} & \cellcolor{gray!10}{Transition sideout} & \cellcolor{gray!10}{33} & \cellcolor{gray!10}{57.6} & \cellcolor{gray!10}{0.2} & \cellcolor{gray!10}{60.6} & \cellcolor{gray!10}{12.1} & \cellcolor{gray!10}{24.2} & \cellcolor{gray!10}{0.0} & \cellcolor{gray!10}{3.0}\\
+Alan Souza & BRA24 & Reception & 155 & 31.0 & 0.8 & 49.7 & 8.4 & 23.2 & 9.0 & 9.7\\
+\cellcolor{gray!10}{Alan Souza} & \cellcolor{gray!10}{BRA24} & \cellcolor{gray!10}{Transition breakpoint} & \cellcolor{gray!10}{66} & \cellcolor{gray!10}{19.7} & \cellcolor{gray!10}{0.2} & \cellcolor{gray!10}{34.8} & \cellcolor{gray!10}{16.7} & \cellcolor{gray!10}{33.3} & \cellcolor{gray!10}{4.5} & \cellcolor{gray!10}{10.6}\\
+\addlinespace
+Alan Souza & BRA24 & Transition sideout & 36 & 50.0 & 0.2 & 63.9 & 13.9 & 8.3 & 5.6 & 8.3\\
+\cellcolor{gray!10}{Arthur Bento Buczmiejuk} & \cellcolor{gray!10}{BRA24} & \cellcolor{gray!10}{Reception} & \cellcolor{gray!10}{9} & \cellcolor{gray!10}{66.7} & \cellcolor{gray!10}{0.1} & \cellcolor{gray!10}{66.7} & \cellcolor{gray!10}{22.2} & \cellcolor{gray!10}{11.1} & \cellcolor{gray!10}{0.0} & \cellcolor{gray!10}{0.0}\\
+Arthur Bento Buczmiejuk & BRA24 & Transition breakpoint & 8 & 75.0 & 0.1 & 87.5 & 0.0 & 0.0 & 12.5 & 0.0\\
+\cellcolor{gray!10}{Arthur Bento Buczmiejuk} & \cellcolor{gray!10}{BRA24} & \cellcolor{gray!10}{Transition sideout} & \cellcolor{gray!10}{1} & \cellcolor{gray!10}{100.0} & \cellcolor{gray!10}{0.0} & \cellcolor{gray!10}{100.0} & \cellcolor{gray!10}{0.0} & \cellcolor{gray!10}{0.0} & \cellcolor{gray!10}{0.0} & \cellcolor{gray!10}{0.0}\\
+Bruno Mossa Rezende & BRA24 & Reception & 3 & 0.0 & 0.0 & 0.0 & 0.0 & 100.0 & 0.0 & 0.0\\
+\addlinespace
+\cellcolor{gray!10}{Bruno Mossa Rezende} & \cellcolor{gray!10}{BRA24} & \cellcolor{gray!10}{Transition breakpoint} & \cellcolor{gray!10}{4} & \cellcolor{gray!10}{0.0} & \cellcolor{gray!10}{0.0} & \cellcolor{gray!10}{25.0} & \cellcolor{gray!10}{25.0} & \cellcolor{gray!10}{25.0} & \cellcolor{gray!10}{25.0} & \cellcolor{gray!10}{0.0}\\
+Bruno Mossa Rezende & BRA24 & Transition sideout & 5 & 60.0 & 0.0 & 60.0 & 0.0 & 40.0 & 0.0 & 0.0\\
+\cellcolor{gray!10}{Darlan Ferreira Souza} & \cellcolor{gray!10}{BRA24} & \cellcolor{gray!10}{Reception} & \cellcolor{gray!10}{284} & \cellcolor{gray!10}{44.0} & \cellcolor{gray!10}{1.7} & \cellcolor{gray!10}{58.5} & \cellcolor{gray!10}{9.2} & \cellcolor{gray!10}{18.0} & \cellcolor{gray!10}{5.3} & \cellcolor{gray!10}{9.2}\\
+Darlan Ferreira Souza & BRA24 & Transition breakpoint & 150 & 28.0 & 0.8 & 48.7 & 8.7 & 22.0 & 10.7 & 10.0\\
+\cellcolor{gray!10}{Darlan Ferreira Souza} & \cellcolor{gray!10}{BRA24} & \cellcolor{gray!10}{Transition sideout} & \cellcolor{gray!10}{72} & \cellcolor{gray!10}{23.6} & \cellcolor{gray!10}{0.3} & \cellcolor{gray!10}{43.1} & \cellcolor{gray!10}{12.5} & \cellcolor{gray!10}{25.0} & \cellcolor{gray!10}{5.6} & \cellcolor{gray!10}{13.9}\\
+\addlinespace
+Felipe Moreira Roque & BRA24 & Reception & 8 & 37.5 & 0.1 & 62.5 & 12.5 & 0.0 & 25.0 & 0.0\\
+\cellcolor{gray!10}{Felipe Moreira Roque} & \cellcolor{gray!10}{BRA24} & \cellcolor{gray!10}{Transition breakpoint} & \cellcolor{gray!10}{4} & \cellcolor{gray!10}{0.0} & \cellcolor{gray!10}{0.0} & \cellcolor{gray!10}{25.0} & \cellcolor{gray!10}{0.0} & \cellcolor{gray!10}{50.0} & \cellcolor{gray!10}{25.0} & \cellcolor{gray!10}{0.0}\\
+Fernando Gil Kreling & BRA24 & Reception & 6 & 0.0 & 0.0 & 16.7 & 16.7 & 50.0 & 16.7 & 0.0\\
+\cellcolor{gray!10}{Fernando Gil Kreling} & \cellcolor{gray!10}{BRA24} & \cellcolor{gray!10}{Transition breakpoint} & \cellcolor{gray!10}{3} & \cellcolor{gray!10}{66.7} & \cellcolor{gray!10}{0.0} & \cellcolor{gray!10}{66.7} & \cellcolor{gray!10}{0.0} & \cellcolor{gray!10}{33.3} & \cellcolor{gray!10}{0.0} & \cellcolor{gray!10}{0.0}\\
+Fernando Gil Kreling & BRA24 & Transition sideout & 3 & 33.3 & 0.0 & 33.3 & 0.0 & 66.7 & 0.0 & 0.0\\
+\addlinespace
+\cellcolor{gray!10}{Flavio Resende Gualberto} & \cellcolor{gray!10}{BRA24} & \cellcolor{gray!10}{Reception} & \cellcolor{gray!10}{108} & \cellcolor{gray!10}{47.2} & \cellcolor{gray!10}{0.6} & \cellcolor{gray!10}{55.6} & \cellcolor{gray!10}{9.3} & \cellcolor{gray!10}{26.9} & \cellcolor{gray!10}{4.6} & \cellcolor{gray!10}{3.7}\\
+Flavio Resende Gualberto & BRA24 & Transition breakpoint & 29 & 58.6 & 0.2 & 72.4 & 3.4 & 10.3 & 10.3 & 3.4\\
+\cellcolor{gray!10}{Flavio Resende Gualberto} & \cellcolor{gray!10}{BRA24} & \cellcolor{gray!10}{Transition sideout} & \cellcolor{gray!10}{15} & \cellcolor{gray!10}{53.3} & \cellcolor{gray!10}{0.1} & \cellcolor{gray!10}{60.0} & \cellcolor{gray!10}{6.7} & \cellcolor{gray!10}{26.7} & \cellcolor{gray!10}{0.0} & \cellcolor{gray!10}{6.7}\\
+Henrique Honorato & BRA24 & Reception & 3 & 0.0 & 0.0 & 33.3 & 33.3 & 0.0 & 33.3 & 0.0\\
+\cellcolor{gray!10}{Henrique Honorato} & \cellcolor{gray!10}{BRA24} & \cellcolor{gray!10}{Transition sideout} & \cellcolor{gray!10}{3} & \cellcolor{gray!10}{66.7} & \cellcolor{gray!10}{0.0} & \cellcolor{gray!10}{66.7} & \cellcolor{gray!10}{0.0} & \cellcolor{gray!10}{33.3} & \cellcolor{gray!10}{0.0} & \cellcolor{gray!10}{0.0}\\
+\addlinespace
+Isac Santos & BRA24 & Reception & 48 & 41.7 & 0.3 & 56.2 & 8.3 & 20.8 & 10.4 & 4.2\\
+\cellcolor{gray!10}{Isac Santos} & \cellcolor{gray!10}{BRA24} & \cellcolor{gray!10}{Transition breakpoint} & \cellcolor{gray!10}{15} & \cellcolor{gray!10}{73.3} & \cellcolor{gray!10}{0.1} & \cellcolor{gray!10}{73.3} & \cellcolor{gray!10}{20.0} & \cellcolor{gray!10}{6.7} & \cellcolor{gray!10}{0.0} & \cellcolor{gray!10}{0.0}\\
+Isac Santos & BRA24 & Transition sideout & 8 & 37.5 & 0.0 & 37.5 & 25.0 & 37.5 & 0.0 & 0.0\\
+\cellcolor{gray!10}{Judson Amabel Nunes Da Cunha Jr} & \cellcolor{gray!10}{BRA24} & \cellcolor{gray!10}{Reception} & \cellcolor{gray!10}{36} & \cellcolor{gray!10}{44.4} & \cellcolor{gray!10}{0.2} & \cellcolor{gray!10}{55.6} & \cellcolor{gray!10}{8.3} & \cellcolor{gray!10}{25.0} & \cellcolor{gray!10}{5.6} & \cellcolor{gray!10}{5.6}\\
+Judson Amabel Nunes Da Cunha Jr & BRA24 & Transition breakpoint & 4 & 25.0 & 0.0 & 50.0 & 0.0 & 25.0 & 0.0 & 25.0\\
+\addlinespace
+\cellcolor{gray!10}{Judson Amabel Nunes Da Cunha Jr} & \cellcolor{gray!10}{BRA24} & \cellcolor{gray!10}{Transition sideout} & \cellcolor{gray!10}{1} & \cellcolor{gray!10}{100.0} & \cellcolor{gray!10}{0.0} & \cellcolor{gray!10}{100.0} & \cellcolor{gray!10}{0.0} & \cellcolor{gray!10}{0.0} & \cellcolor{gray!10}{0.0} & \cellcolor{gray!10}{0.0}\\
+Lucas Saatkamp & BRA24 & Reception & 126 & 52.4 & 0.8 & 62.7 & 15.1 & 11.9 & 5.6 & 4.8\\
+\cellcolor{gray!10}{Lucas Saatkamp} & \cellcolor{gray!10}{BRA24} & \cellcolor{gray!10}{Transition breakpoint} & \cellcolor{gray!10}{28} & \cellcolor{gray!10}{46.4} & \cellcolor{gray!10}{0.2} & \cellcolor{gray!10}{60.7} & \cellcolor{gray!10}{10.7} & \cellcolor{gray!10}{14.3} & \cellcolor{gray!10}{3.6} & \cellcolor{gray!10}{10.7}\\
+Lucas Saatkamp & BRA24 & Transition sideout & 21 & 47.6 & 0.1 & 57.1 & 19.0 & 14.3 & 4.8 & 4.8\\
+\cellcolor{gray!10}{Lukas Felipe Bergmann} & \cellcolor{gray!10}{BRA24} & \cellcolor{gray!10}{Reception} & \cellcolor{gray!10}{47} & \cellcolor{gray!10}{29.8} & \cellcolor{gray!10}{0.2} & \cellcolor{gray!10}{46.8} & \cellcolor{gray!10}{17.0} & \cellcolor{gray!10}{19.1} & \cellcolor{gray!10}{0.0} & \cellcolor{gray!10}{17.0}\\
+\addlinespace
+Lukas Felipe Bergmann & BRA24 & Transition breakpoint & 26 & 46.2 & 0.1 & 50.0 & 19.2 & 26.9 & 0.0 & 3.8\\
+\cellcolor{gray!10}{Lukas Felipe Bergmann} & \cellcolor{gray!10}{BRA24} & \cellcolor{gray!10}{Transition sideout} & \cellcolor{gray!10}{11} & \cellcolor{gray!10}{72.7} & \cellcolor{gray!10}{0.1} & \cellcolor{gray!10}{72.7} & \cellcolor{gray!10}{9.1} & \cellcolor{gray!10}{18.2} & \cellcolor{gray!10}{0.0} & \cellcolor{gray!10}{0.0}\\
+Mauricio Borges Silva & BRA24 & Reception & 37 & 24.3 & 0.2 & 43.2 & 13.5 & 24.3 & 5.4 & 13.5\\
+\cellcolor{gray!10}{Mauricio Borges Silva} & \cellcolor{gray!10}{BRA24} & \cellcolor{gray!10}{Transition breakpoint} & \cellcolor{gray!10}{16} & \cellcolor{gray!10}{62.5} & \cellcolor{gray!10}{0.1} & \cellcolor{gray!10}{62.5} & \cellcolor{gray!10}{18.8} & \cellcolor{gray!10}{18.8} & \cellcolor{gray!10}{0.0} & \cellcolor{gray!10}{0.0}\\
+Mauricio Borges Silva & BRA24 & Transition sideout & 7 & 42.9 & 0.0 & 42.9 & 28.6 & 28.6 & 0.0 & 0.0\\
+\addlinespace
+\cellcolor{gray!10}{Otavio Henrique Rodrigues Pinto} & \cellcolor{gray!10}{BRA24} & \cellcolor{gray!10}{Reception} & \cellcolor{gray!10}{4} & \cellcolor{gray!10}{50.0} & \cellcolor{gray!10}{0.0} & \cellcolor{gray!10}{75.0} & \cellcolor{gray!10}{0.0} & \cellcolor{gray!10}{0.0} & \cellcolor{gray!10}{0.0} & \cellcolor{gray!10}{25.0}\\
+Otavio Henrique Rodrigues Pinto & BRA24 & Transition breakpoint & 4 & 0.0 & 0.0 & 25.0 & 25.0 & 25.0 & 0.0 & 25.0\\
+\cellcolor{gray!10}{Otavio Henrique Rodrigues Pinto} & \cellcolor{gray!10}{BRA24} & \cellcolor{gray!10}{Transition sideout} & \cellcolor{gray!10}{1} & \cellcolor{gray!10}{100.0} & \cellcolor{gray!10}{0.0} & \cellcolor{gray!10}{100.0} & \cellcolor{gray!10}{0.0} & \cellcolor{gray!10}{0.0} & \cellcolor{gray!10}{0.0} & \cellcolor{gray!10}{0.0}\\
+Ricardo Lucarelli Souza & BRA24 & Reception & 222 & 42.3 & 1.2 & 54.5 & 13.1 & 20.3 & 6.3 & 5.9\\
+\cellcolor{gray!10}{Ricardo Lucarelli Souza} & \cellcolor{gray!10}{BRA24} & \cellcolor{gray!10}{Transition breakpoint} & \cellcolor{gray!10}{128} & \cellcolor{gray!10}{30.5} & \cellcolor{gray!10}{0.6} & \cellcolor{gray!10}{46.1} & \cellcolor{gray!10}{17.2} & \cellcolor{gray!10}{21.1} & \cellcolor{gray!10}{8.6} & \cellcolor{gray!10}{7.0}\\
+\addlinespace
+Ricardo Lucarelli Souza & BRA24 & Transition sideout & 64 & 37.5 & 0.3 & 45.3 & 6.2 & 40.6 & 4.7 & 3.1\\
+\cellcolor{gray!10}{Yoandy Leal Hidalgo} & \cellcolor{gray!10}{BRA24} & \cellcolor{gray!10}{Reception} & \cellcolor{gray!10}{197} & \cellcolor{gray!10}{39.6} & \cellcolor{gray!10}{1.1} & \cellcolor{gray!10}{54.3} & \cellcolor{gray!10}{9.6} & \cellcolor{gray!10}{21.3} & \cellcolor{gray!10}{8.1} & \cellcolor{gray!10}{6.6}\\
+Yoandy Leal Hidalgo & BRA24 & Transition breakpoint & 103 & 33.0 & 0.5 & 42.7 & 14.6 & 33.0 & 2.9 & 6.8\\
+\cellcolor{gray!10}{Yoandy Leal Hidalgo} & \cellcolor{gray!10}{BRA24} & \cellcolor{gray!10}{Transition sideout} & \cellcolor{gray!10}{47} & \cellcolor{gray!10}{29.8} & \cellcolor{gray!10}{0.2} & \cellcolor{gray!10}{48.9} & \cellcolor{gray!10}{12.8} & \cellcolor{gray!10}{19.1} & \cellcolor{gray!10}{17.0} & \cellcolor{gray!10}{2.1}\\
+\bottomrule
+\end{tabular}}
+\end{table}
+
+\chapter{BLOQUEIO}\label{bloqueio}
+
+\begin{table}[!h]
+\centering
+\resizebox{\ifdim\width>\linewidth\linewidth\else\width\fi}{!}{
+\begin{tabular}[t]{lrrrrrrrr}
+\toprule
+\cellcolor{gray!10}{team\_id} & \cellcolor{gray!10}{TOT} & \cellcolor{gray!10}{\#} & \cellcolor{gray!10}{+} & \cellcolor{gray!10}{\# S} & \cellcolor{gray!10}{+ S} & \cellcolor{gray!10}{\#+ S} & \cellcolor{gray!10}{-} & \cellcolor{gray!10}{=}\\
+
+
+\bottomrule
+\end{tabular}}
+\end{table}
+
+\begin{table}[!h]
+\centering
+\resizebox{\ifdim\width>\linewidth\linewidth\else\width\fi}{!}{
+\begin{tabular}[t]{llrrrrrrrr}
+\toprule
+\cellcolor{gray!10}{player\_name} & \cellcolor{gray!10}{team\_id} & \cellcolor{gray!10}{TOT} & \cellcolor{gray!10}{\#} & \cellcolor{gray!10}{+} & \cellcolor{gray!10}{\# S} & \cellcolor{gray!10}{+ S} & \cellcolor{gray!10}{\#+ S} & \cellcolor{gray!10}{-} & \cellcolor{gray!10}{=}\\
+
+
+\bottomrule
+\end{tabular}}
+\end{table}
+
+\pagebreak
+
+\chapter{DEFESA}\label{defesa}
+
+\begin{table}[!h]
+\centering
+\resizebox{\ifdim\width>\linewidth\linewidth\else\width\fi}{!}{
+\begin{tabular}[t]{lrrrrrrrrr}
+\toprule
+\cellcolor{gray!10}{team\_id} & \cellcolor{gray!10}{TOT} & \cellcolor{gray!10}{\#+} & \cellcolor{gray!10}{\#+ S} & \cellcolor{gray!10}{\#} & \cellcolor{gray!10}{+} & \cellcolor{gray!10}{\# S} & \cellcolor{gray!10}{+ S} & \cellcolor{gray!10}{-} & \cellcolor{gray!10}{\% COB}\\
+
+
+\bottomrule
+\end{tabular}}
+\end{table}
+
+\begin{table}[!h]
+\centering
+\resizebox{\ifdim\width>\linewidth\linewidth\else\width\fi}{!}{
+\begin{tabular}[t]{llrrrrrrrrr}
+\toprule
+\cellcolor{gray!10}{player\_name} & \cellcolor{gray!10}{team\_id} & \cellcolor{gray!10}{TOT} & \cellcolor{gray!10}{\#+} & \cellcolor{gray!10}{\#+ S} & \cellcolor{gray!10}{\#} & \cellcolor{gray!10}{+} & \cellcolor{gray!10}{\# S} & \cellcolor{gray!10}{+ S} & \cellcolor{gray!10}{-} & \cellcolor{gray!10}{\% COB}\\
+
+
+\bottomrule
+\end{tabular}}
+\end{table}
+
+\chapter{INDIVIDUAL}\label{individual}
+
+\section{PONTEIROS}\label{ponteiros}
+
+\subsection{02 Lukas Felipe Bergmann}\label{lukas-felipe-bergmann}
+
+\subsubsection{Saque}\label{saque}
+
+\includegraphics{_main_files/figure-latex/unnamed-chunk-24-1.pdf}
+
+\textbf{Saques contra P1; contra P63; contra P542}\\
+\includegraphics{_main_files/figure-latex/unnamed-chunk-24-2.pdf}
+
+\textbf{Saques por fase do set}\\
+\includegraphics{_main_files/figure-latex/unnamed-chunk-24-3.pdf} \pagebreak
+
+\subsubsection{Ataque sideout}\label{ataque-sideout}
+
+\paragraph*{SO - todos os passes S/VAR}\label{so---todos-os-passes-svar}
+\addcontentsline{toc}{paragraph}{SO - todos os passes S/VAR}
+
+\includegraphics{_main_files/figure-latex/unnamed-chunk-24-4.pdf}
+
+\subsubsection*{Ataque sideout - todos os passes VAR}\label{ataque-sideout---todos-os-passes-var}
+\addcontentsline{toc}{subsubsection}{Ataque sideout - todos os passes VAR}
+
+\includegraphics{_main_files/figure-latex/unnamed-chunk-24-5.pdf}
+
+\subsubsection{Ataque sideout - Passes AB+}\label{ataque-sideout---passes-ab}
+
+\includegraphics{_main_files/figure-latex/unnamed-chunk-24-6.pdf}
+
+\subsubsection*{Ataque sideout - Passes AB+ Sem Curtas}\label{ataque-sideout---passes-ab-sem-curtas}
+\addcontentsline{toc}{subsubsection}{Ataque sideout - Passes AB+ Sem Curtas}
+
+\includegraphics{_main_files/figure-latex/unnamed-chunk-24-7.pdf}
+
+\subsubsection*{Ataque sideout - Passes AB+ Curtas}\label{ataque-sideout---passes-ab-curtas}
+\addcontentsline{toc}{subsubsection}{Ataque sideout - Passes AB+ Curtas}
+
+\includegraphics{_main_files/figure-latex/unnamed-chunk-24-8.pdf}
+
+\subsubsection{Ataque sideout - Passes B-C TT}\label{ataque-sideout---passes-b-c-tt}
+
+\includegraphics{_main_files/figure-latex/unnamed-chunk-24-9.pdf}
+
+\subsubsection*{Ataque sideout - Passes B-C Sem Curtas}\label{ataque-sideout---passes-b-c-sem-curtas}
+\addcontentsline{toc}{subsubsection}{Ataque sideout - Passes B-C Sem Curtas}
+
+\includegraphics{_main_files/figure-latex/unnamed-chunk-24-10.pdf}
+
+\subsubsection*{Ataque sideout - Passes B-C Curtas}\label{ataque-sideout---passes-b-c-curtas}
+\addcontentsline{toc}{subsubsection}{Ataque sideout - Passes B-C Curtas}
+
+\includegraphics{_main_files/figure-latex/unnamed-chunk-24-11.pdf}
+
+\subsubsection*{Ataque sideout - passando e sem passar}\label{ataque-sideout---passando-e-sem-passar}
+\addcontentsline{toc}{subsubsection}{Ataque sideout - passando e sem passar}
+
+\includegraphics{_main_files/figure-latex/unnamed-chunk-24-12.pdf}
+
+\subsubsection*{Ataque sideout - passando}\label{ataque-sideout---passando}
+\addcontentsline{toc}{subsubsection}{Ataque sideout - passando}
+
+\includegraphics{_main_files/figure-latex/unnamed-chunk-24-13.pdf}
+
+\subsubsection*{Ataque sideout - sem passar}\label{ataque-sideout---sem-passar}
+\addcontentsline{toc}{subsubsection}{Ataque sideout - sem passar}
+
+\includegraphics{_main_files/figure-latex/unnamed-chunk-24-14.pdf}
+
+\subsubsection*{Ataque sideout - por base de bloqueio}\label{ataque-sideout---por-base-de-bloqueio}
+\addcontentsline{toc}{subsubsection}{Ataque sideout - por base de bloqueio}
+
+\includegraphics{_main_files/figure-latex/unnamed-chunk-24-15.pdf}
+
+\subsubsection*{Ataque sideout - base alta}\label{ataque-sideout---base-alta}
+\addcontentsline{toc}{subsubsection}{Ataque sideout - base alta}
+
+\includegraphics{_main_files/figure-latex/unnamed-chunk-24-16.pdf}
+
+\subsubsection*{Ataque sideout - base baixa}\label{ataque-sideout---base-baixa}
+\addcontentsline{toc}{subsubsection}{Ataque sideout - base baixa}
+
+\includegraphics{_main_files/figure-latex/unnamed-chunk-24-17.pdf} \newpage
+
+\subsection{06 Adriano Fernandes Cavalcante}\label{adriano-fernandes-cavalcante}
+
+\subsubsection{Saque}\label{saque-1}
+
+\includegraphics{_main_files/figure-latex/unnamed-chunk-24-18.pdf}
+
+\textbf{Saques contra P1; contra P63; contra P542}\\
+\includegraphics{_main_files/figure-latex/unnamed-chunk-24-19.pdf}
+
+\textbf{Saques por fase do set}\\
+\includegraphics{_main_files/figure-latex/unnamed-chunk-24-20.pdf} \pagebreak
+
+\subsubsection{Ataque sideout}\label{ataque-sideout-1}
+
+\paragraph*{SO - todos os passes S/VAR}\label{so---todos-os-passes-svar-1}
+\addcontentsline{toc}{paragraph}{SO - todos os passes S/VAR}
+
+\includegraphics{_main_files/figure-latex/unnamed-chunk-24-21.pdf}
+
+\subsubsection*{Ataque sideout - todos os passes VAR}\label{ataque-sideout---todos-os-passes-var-1}
+\addcontentsline{toc}{subsubsection}{Ataque sideout - todos os passes VAR}
+
+\includegraphics{_main_files/figure-latex/unnamed-chunk-24-22.pdf}
+
+\subsubsection{Ataque sideout - Passes AB+}\label{ataque-sideout---passes-ab-1}
+
+\includegraphics{_main_files/figure-latex/unnamed-chunk-24-23.pdf}
+
+\subsubsection*{Ataque sideout - Passes AB+ Sem Curtas}\label{ataque-sideout---passes-ab-sem-curtas-1}
+\addcontentsline{toc}{subsubsection}{Ataque sideout - Passes AB+ Sem Curtas}
+
+\includegraphics{_main_files/figure-latex/unnamed-chunk-24-24.pdf}
+
+\subsubsection*{Ataque sideout - Passes AB+ Curtas}\label{ataque-sideout---passes-ab-curtas-1}
+\addcontentsline{toc}{subsubsection}{Ataque sideout - Passes AB+ Curtas}
+
+\includegraphics{_main_files/figure-latex/unnamed-chunk-24-25.pdf}
+
+\subsubsection{Ataque sideout - Passes B-C TT}\label{ataque-sideout---passes-b-c-tt-1}
+
+\includegraphics{_main_files/figure-latex/unnamed-chunk-24-26.pdf}
+
+\subsubsection*{Ataque sideout - Passes B-C Sem Curtas}\label{ataque-sideout---passes-b-c-sem-curtas-1}
+\addcontentsline{toc}{subsubsection}{Ataque sideout - Passes B-C Sem Curtas}
+
+\includegraphics{_main_files/figure-latex/unnamed-chunk-24-27.pdf}
+
+\subsubsection*{Ataque sideout - Passes B-C Curtas}\label{ataque-sideout---passes-b-c-curtas-1}
+\addcontentsline{toc}{subsubsection}{Ataque sideout - Passes B-C Curtas}
+
+\includegraphics{_main_files/figure-latex/unnamed-chunk-24-28.pdf}
+
+\subsubsection*{Ataque sideout - passando e sem passar}\label{ataque-sideout---passando-e-sem-passar-1}
+\addcontentsline{toc}{subsubsection}{Ataque sideout - passando e sem passar}
+
+\includegraphics{_main_files/figure-latex/unnamed-chunk-24-29.pdf}
+
+\subsubsection*{Ataque sideout - passando}\label{ataque-sideout---passando-1}
+\addcontentsline{toc}{subsubsection}{Ataque sideout - passando}
+
+\includegraphics{_main_files/figure-latex/unnamed-chunk-24-30.pdf}
+
+\subsubsection*{Ataque sideout - sem passar}\label{ataque-sideout---sem-passar-1}
+\addcontentsline{toc}{subsubsection}{Ataque sideout - sem passar}
+
+\includegraphics{_main_files/figure-latex/unnamed-chunk-24-31.pdf}
+
+\subsubsection*{Ataque sideout - por base de bloqueio}\label{ataque-sideout---por-base-de-bloqueio-1}
+\addcontentsline{toc}{subsubsection}{Ataque sideout - por base de bloqueio}
+
+\includegraphics{_main_files/figure-latex/unnamed-chunk-24-32.pdf}
+
+\subsubsection*{Ataque sideout - base alta}\label{ataque-sideout---base-alta-1}
+\addcontentsline{toc}{subsubsection}{Ataque sideout - base alta}
+
+\includegraphics{_main_files/figure-latex/unnamed-chunk-24-33.pdf}
+
+\subsubsection*{Ataque sideout - base baixa}\label{ataque-sideout---base-baixa-1}
+\addcontentsline{toc}{subsubsection}{Ataque sideout - base baixa}
+
+\includegraphics{_main_files/figure-latex/unnamed-chunk-24-34.pdf} \newpage
+
+\subsection{09 Yoandy Leal Hidalgo}\label{yoandy-leal-hidalgo}
+
+\subsubsection{Saque}\label{saque-2}
+
+\includegraphics{_main_files/figure-latex/unnamed-chunk-24-35.pdf}
+
+\textbf{Saques contra P1; contra P63; contra P542}\\
+\includegraphics{_main_files/figure-latex/unnamed-chunk-24-36.pdf}
+
+\textbf{Saques por fase do set}\\
+\includegraphics{_main_files/figure-latex/unnamed-chunk-24-37.pdf} \pagebreak
+
+\subsubsection{Ataque sideout}\label{ataque-sideout-2}
+
+\paragraph*{SO - todos os passes S/VAR}\label{so---todos-os-passes-svar-2}
+\addcontentsline{toc}{paragraph}{SO - todos os passes S/VAR}
+
+\includegraphics{_main_files/figure-latex/unnamed-chunk-24-38.pdf}
+
+\subsubsection*{Ataque sideout - todos os passes VAR}\label{ataque-sideout---todos-os-passes-var-2}
+\addcontentsline{toc}{subsubsection}{Ataque sideout - todos os passes VAR}
+
+\includegraphics{_main_files/figure-latex/unnamed-chunk-24-39.pdf}
+
+\subsubsection{Ataque sideout - Passes AB+}\label{ataque-sideout---passes-ab-2}
+
+\includegraphics{_main_files/figure-latex/unnamed-chunk-24-40.pdf}
+
+\subsubsection*{Ataque sideout - Passes AB+ Sem Curtas}\label{ataque-sideout---passes-ab-sem-curtas-2}
+\addcontentsline{toc}{subsubsection}{Ataque sideout - Passes AB+ Sem Curtas}
+
+\includegraphics{_main_files/figure-latex/unnamed-chunk-24-41.pdf}
+
+\subsubsection*{Ataque sideout - Passes AB+ Curtas}\label{ataque-sideout---passes-ab-curtas-2}
+\addcontentsline{toc}{subsubsection}{Ataque sideout - Passes AB+ Curtas}
+
+\includegraphics{_main_files/figure-latex/unnamed-chunk-24-42.pdf}
+
+\subsubsection{Ataque sideout - Passes B-C TT}\label{ataque-sideout---passes-b-c-tt-2}
+
+\includegraphics{_main_files/figure-latex/unnamed-chunk-24-43.pdf}
+
+\subsubsection*{Ataque sideout - Passes B-C Sem Curtas}\label{ataque-sideout---passes-b-c-sem-curtas-2}
+\addcontentsline{toc}{subsubsection}{Ataque sideout - Passes B-C Sem Curtas}
+
+\includegraphics{_main_files/figure-latex/unnamed-chunk-24-44.pdf}
+
+\subsubsection*{Ataque sideout - Passes B-C Curtas}\label{ataque-sideout---passes-b-c-curtas-2}
+\addcontentsline{toc}{subsubsection}{Ataque sideout - Passes B-C Curtas}
+
+\includegraphics{_main_files/figure-latex/unnamed-chunk-24-45.pdf}
+
+\subsubsection*{Ataque sideout - passando e sem passar}\label{ataque-sideout---passando-e-sem-passar-2}
+\addcontentsline{toc}{subsubsection}{Ataque sideout - passando e sem passar}
+
+\includegraphics{_main_files/figure-latex/unnamed-chunk-24-46.pdf}
+
+\subsubsection*{Ataque sideout - passando}\label{ataque-sideout---passando-2}
+\addcontentsline{toc}{subsubsection}{Ataque sideout - passando}
+
+\includegraphics{_main_files/figure-latex/unnamed-chunk-24-47.pdf}
+
+\subsubsection*{Ataque sideout - sem passar}\label{ataque-sideout---sem-passar-2}
+\addcontentsline{toc}{subsubsection}{Ataque sideout - sem passar}
+
+\includegraphics{_main_files/figure-latex/unnamed-chunk-24-48.pdf}
+
+\subsubsection*{Ataque sideout - por base de bloqueio}\label{ataque-sideout---por-base-de-bloqueio-2}
+\addcontentsline{toc}{subsubsection}{Ataque sideout - por base de bloqueio}
+
+\includegraphics{_main_files/figure-latex/unnamed-chunk-24-49.pdf}
+
+\subsubsection*{Ataque sideout - base alta}\label{ataque-sideout---base-alta-2}
+\addcontentsline{toc}{subsubsection}{Ataque sideout - base alta}
+
+\includegraphics{_main_files/figure-latex/unnamed-chunk-24-50.pdf}
+
+\subsubsection*{Ataque sideout - base baixa}\label{ataque-sideout---base-baixa-2}
+\addcontentsline{toc}{subsubsection}{Ataque sideout - base baixa}
+
+\includegraphics{_main_files/figure-latex/unnamed-chunk-24-51.pdf} \newpage
+
+\subsection{18 Ricardo Lucarelli Souza}\label{ricardo-lucarelli-souza}
+
+\subsubsection{Saque}\label{saque-3}
+
+\includegraphics{_main_files/figure-latex/unnamed-chunk-24-52.pdf}
+
+\textbf{Saques contra P1; contra P63; contra P542}\\
+\includegraphics{_main_files/figure-latex/unnamed-chunk-24-53.pdf}
+
+\textbf{Saques por fase do set}\\
+\includegraphics{_main_files/figure-latex/unnamed-chunk-24-54.pdf} \pagebreak
+
+\subsubsection{Ataque sideout}\label{ataque-sideout-3}
+
+\paragraph*{SO - todos os passes S/VAR}\label{so---todos-os-passes-svar-3}
+\addcontentsline{toc}{paragraph}{SO - todos os passes S/VAR}
+
+\includegraphics{_main_files/figure-latex/unnamed-chunk-24-55.pdf}
+
+\subsubsection*{Ataque sideout - todos os passes VAR}\label{ataque-sideout---todos-os-passes-var-3}
+\addcontentsline{toc}{subsubsection}{Ataque sideout - todos os passes VAR}
+
+\includegraphics{_main_files/figure-latex/unnamed-chunk-24-56.pdf}
+
+\subsubsection{Ataque sideout - Passes AB+}\label{ataque-sideout---passes-ab-3}
+
+\includegraphics{_main_files/figure-latex/unnamed-chunk-24-57.pdf}
+
+\subsubsection*{Ataque sideout - Passes AB+ Sem Curtas}\label{ataque-sideout---passes-ab-sem-curtas-3}
+\addcontentsline{toc}{subsubsection}{Ataque sideout - Passes AB+ Sem Curtas}
+
+\includegraphics{_main_files/figure-latex/unnamed-chunk-24-58.pdf}
+
+\subsubsection*{Ataque sideout - Passes AB+ Curtas}\label{ataque-sideout---passes-ab-curtas-3}
+\addcontentsline{toc}{subsubsection}{Ataque sideout - Passes AB+ Curtas}
+
+\includegraphics{_main_files/figure-latex/unnamed-chunk-24-59.pdf}
+
+\subsubsection{Ataque sideout - Passes B-C TT}\label{ataque-sideout---passes-b-c-tt-3}
+
+\includegraphics{_main_files/figure-latex/unnamed-chunk-24-60.pdf}
+
+\subsubsection*{Ataque sideout - Passes B-C Sem Curtas}\label{ataque-sideout---passes-b-c-sem-curtas-3}
+\addcontentsline{toc}{subsubsection}{Ataque sideout - Passes B-C Sem Curtas}
+
+\includegraphics{_main_files/figure-latex/unnamed-chunk-24-61.pdf}
+
+\subsubsection*{Ataque sideout - Passes B-C Curtas}\label{ataque-sideout---passes-b-c-curtas-3}
+\addcontentsline{toc}{subsubsection}{Ataque sideout - Passes B-C Curtas}
+
+\includegraphics{_main_files/figure-latex/unnamed-chunk-24-62.pdf}
+
+\subsubsection*{Ataque sideout - passando e sem passar}\label{ataque-sideout---passando-e-sem-passar-3}
+\addcontentsline{toc}{subsubsection}{Ataque sideout - passando e sem passar}
+
+\includegraphics{_main_files/figure-latex/unnamed-chunk-24-63.pdf}
+
+\subsubsection*{Ataque sideout - passando}\label{ataque-sideout---passando-3}
+\addcontentsline{toc}{subsubsection}{Ataque sideout - passando}
+
+\includegraphics{_main_files/figure-latex/unnamed-chunk-24-64.pdf}
+
+\subsubsection*{Ataque sideout - sem passar}\label{ataque-sideout---sem-passar-3}
+\addcontentsline{toc}{subsubsection}{Ataque sideout - sem passar}
+
+\includegraphics{_main_files/figure-latex/unnamed-chunk-24-65.pdf}
+
+\subsubsection*{Ataque sideout - por base de bloqueio}\label{ataque-sideout---por-base-de-bloqueio-3}
+\addcontentsline{toc}{subsubsection}{Ataque sideout - por base de bloqueio}
+
+\includegraphics{_main_files/figure-latex/unnamed-chunk-24-66.pdf}
+
+\subsubsection*{Ataque sideout - base alta}\label{ataque-sideout---base-alta-3}
+\addcontentsline{toc}{subsubsection}{Ataque sideout - base alta}
+
+\includegraphics{_main_files/figure-latex/unnamed-chunk-24-67.pdf}
+
+\subsubsection*{Ataque sideout - base baixa}\label{ataque-sideout---base-baixa-3}
+\addcontentsline{toc}{subsubsection}{Ataque sideout - base baixa}
+
+\includegraphics{_main_files/figure-latex/unnamed-chunk-24-68.pdf} \newpage
+
+\subsection{20 Arthur Bento Buczmiejuk}\label{arthur-bento-buczmiejuk}
+
+\subsubsection{Saque}\label{saque-4}
+
+\includegraphics{_main_files/figure-latex/unnamed-chunk-24-69.pdf}
+
+\textbf{Saques contra P1; contra P63; contra P542}\\
+\includegraphics{_main_files/figure-latex/unnamed-chunk-24-70.pdf}
+
+\textbf{Saques por fase do set}\\
+\includegraphics{_main_files/figure-latex/unnamed-chunk-24-71.pdf} \pagebreak
+
+\subsubsection{Ataque sideout}\label{ataque-sideout-4}
+
+\paragraph*{SO - todos os passes S/VAR}\label{so---todos-os-passes-svar-4}
+\addcontentsline{toc}{paragraph}{SO - todos os passes S/VAR}
+
+\includegraphics{_main_files/figure-latex/unnamed-chunk-24-72.pdf}
+
+\subsubsection*{Ataque sideout - todos os passes VAR}\label{ataque-sideout---todos-os-passes-var-4}
+\addcontentsline{toc}{subsubsection}{Ataque sideout - todos os passes VAR}
+
+\includegraphics{_main_files/figure-latex/unnamed-chunk-24-73.pdf}
+
+\subsubsection{Ataque sideout - Passes AB+}\label{ataque-sideout---passes-ab-4}
+
+\includegraphics{_main_files/figure-latex/unnamed-chunk-24-74.pdf}
+
+\subsubsection*{Ataque sideout - Passes AB+ Sem Curtas}\label{ataque-sideout---passes-ab-sem-curtas-4}
+\addcontentsline{toc}{subsubsection}{Ataque sideout - Passes AB+ Sem Curtas}
+
+\includegraphics{_main_files/figure-latex/unnamed-chunk-24-75.pdf}
+
+\subsubsection*{Ataque sideout - Passes AB+ Curtas}\label{ataque-sideout---passes-ab-curtas-4}
+\addcontentsline{toc}{subsubsection}{Ataque sideout - Passes AB+ Curtas}
+
+\includegraphics{_main_files/figure-latex/unnamed-chunk-24-76.pdf}
+
+\subsubsection{Ataque sideout - Passes B-C TT}\label{ataque-sideout---passes-b-c-tt-4}
+
+\includegraphics{_main_files/figure-latex/unnamed-chunk-24-77.pdf}
+
+\subsubsection*{Ataque sideout - Passes B-C Sem Curtas}\label{ataque-sideout---passes-b-c-sem-curtas-4}
+\addcontentsline{toc}{subsubsection}{Ataque sideout - Passes B-C Sem Curtas}
+
+\includegraphics{_main_files/figure-latex/unnamed-chunk-24-78.pdf}
+
+\subsubsection*{Ataque sideout - Passes B-C Curtas}\label{ataque-sideout---passes-b-c-curtas-4}
+\addcontentsline{toc}{subsubsection}{Ataque sideout - Passes B-C Curtas}
+
+\includegraphics{_main_files/figure-latex/unnamed-chunk-24-79.pdf}
+
+\subsubsection*{Ataque sideout - passando e sem passar}\label{ataque-sideout---passando-e-sem-passar-4}
+\addcontentsline{toc}{subsubsection}{Ataque sideout - passando e sem passar}
+
+\includegraphics{_main_files/figure-latex/unnamed-chunk-24-80.pdf}
+
+\subsubsection*{Ataque sideout - passando}\label{ataque-sideout---passando-4}
+\addcontentsline{toc}{subsubsection}{Ataque sideout - passando}
+
+\includegraphics{_main_files/figure-latex/unnamed-chunk-24-81.pdf}
+
+\subsubsection*{Ataque sideout - sem passar}\label{ataque-sideout---sem-passar-4}
+\addcontentsline{toc}{subsubsection}{Ataque sideout - sem passar}
+
+\includegraphics{_main_files/figure-latex/unnamed-chunk-24-82.pdf}
+
+\subsubsection*{Ataque sideout - por base de bloqueio}\label{ataque-sideout---por-base-de-bloqueio-4}
+\addcontentsline{toc}{subsubsection}{Ataque sideout - por base de bloqueio}
+
+\includegraphics{_main_files/figure-latex/unnamed-chunk-24-83.pdf}
+
+\subsubsection*{Ataque sideout - base alta}\label{ataque-sideout---base-alta-4}
+\addcontentsline{toc}{subsubsection}{Ataque sideout - base alta}
+
+\includegraphics{_main_files/figure-latex/unnamed-chunk-24-84.pdf}
+
+\subsubsection*{Ataque sideout - base baixa}\label{ataque-sideout---base-baixa-4}
+\addcontentsline{toc}{subsubsection}{Ataque sideout - base baixa}
+
+\includegraphics{_main_files/figure-latex/unnamed-chunk-24-85.pdf} \newpage
+
+\section{OPOSTOS}\label{opostos}
+
+\chapter{Vazio1}\label{vazio1}
+
+Vazio
+
+  \bibliography{book.bib,packages.bib}
+
+\end{document}
