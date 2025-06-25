@@ -1,0 +1,786 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 12 Centrais | Relatório de equipes</title>
+  <meta name="description" content="Relatório de estudo do adversário" />
+  <meta name="generator" content="bookdown 0.43 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 12 Centrais | Relatório de equipes" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:description" content="Relatório de estudo do adversário" />
+  <meta name="github-repo" content="rstudio/bookdown-demo" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 12 Centrais | Relatório de equipes" />
+  
+  <meta name="twitter:description" content="Relatório de estudo do adversário" />
+  
+
+<meta name="author" content="Felipe Lima (Ori)" />
+
+
+<meta name="date" content="2025-06-24" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="opostos.html"/>
+<link rel="next" href="mapa-de-calor.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+<script src="libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
+
+
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">A Minimal Book Example</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Sobre</a></li>
+<li class="chapter" data-level="2" data-path="11-Centrais.html"><a href="#apresenta%C3%A7%C3%A3o-da-equipe"><i class="fa fa-check"></i><b>2</b> Apresentação da equipe</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="apresentação-da-equipe.html"><a href="apresentação-da-equipe.html"><i class="fa fa-check"></i><b>2.1</b> RESUMO</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="11-Centrais.html"><a href="#estudo-de-rota%C3%A7%C3%A3o"><i class="fa fa-check"></i><b>3</b> Estudo de rotação</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="estudo-de-rotação.html"><a href="estudo-de-rotação.html"><i class="fa fa-check"></i><b>3.1</b> Geral</a>
+<ul>
+<li class="chapter" data-level="3.1.1" data-path="estudo-de-rotação.html"><a href="estudo-de-rotação.html#sacando"><i class="fa fa-check"></i><b>3.1.1</b> Sacando</a></li>
+<li class="chapter" data-level="3.1.2" data-path="estudo-de-rotação.html"><a href="estudo-de-rotação.html#recebendo"><i class="fa fa-check"></i><b>3.1.2</b> Recebendo</a></li>
+<li class="chapter" data-level="3.1.3" data-path="estudo-de-rotação.html"><a href="estudo-de-rotação.html#first-set"><i class="fa fa-check"></i><b>3.1.3</b> First set</a></li>
+<li class="chapter" data-level="3.1.4" data-path="estudo-de-rotação.html"><a href="estudo-de-rotação.html#tie-break"><i class="fa fa-check"></i><b>3.1.4</b> Tie-break</a></li>
+<li class="chapter" data-level="3.1.5" data-path="estudo-de-rotação.html"><a href="estudo-de-rotação.html#last-8-matches"><i class="fa fa-check"></i><b>3.1.5</b> Last 8 matches</a></li>
+<li class="chapter" data-level="3.1.6" data-path="estudo-de-rotação.html"><a href="estudo-de-rotação.html#serving"><i class="fa fa-check"></i><b>3.1.6</b> Serving</a></li>
+<li class="chapter" data-level="3.1.7" data-path="estudo-de-rotação.html"><a href="estudo-de-rotação.html#receiving"><i class="fa fa-check"></i><b>3.1.7</b> Receiving</a></li>
+</ul></li>
+<li class="chapter" data-level="3.2" data-path="estudo-de-rotação.html"><a href="estudo-de-rotação.html#line-up"><i class="fa fa-check"></i><b>3.2</b> Line-up</a>
+<ul>
+<li class="chapter" data-level="3.2.1" data-path="estudo-de-rotação.html"><a href="estudo-de-rotação.html#general"><i class="fa fa-check"></i><b>3.2.1</b> General</a></li>
+<li class="chapter" data-level="3.2.2" data-path="estudo-de-rotação.html"><a href="estudo-de-rotação.html#roles"><i class="fa fa-check"></i><b>3.2.2</b> Roles</a></li>
+<li class="chapter" data-level="3.2.3" data-path="estudo-de-rotação.html"><a href="estudo-de-rotação.html#first-set-1"><i class="fa fa-check"></i><b>3.2.3</b> First set</a></li>
+<li class="chapter" data-level="3.2.4" data-path="estudo-de-rotação.html"><a href="estudo-de-rotação.html#first-set-by-match"><i class="fa fa-check"></i><b>3.2.4</b> First Set by Match</a></li>
+<li class="chapter" data-level="3.2.5" data-path="estudo-de-rotação.html"><a href="estudo-de-rotação.html#lineup-by-match-5-last"><i class="fa fa-check"></i><b>3.2.5</b> Lineup by Match (5 last)</a></li>
+<li class="chapter" data-level="3.2.6" data-path="estudo-de-rotação.html"><a href="estudo-de-rotação.html#rotations-by-match"><i class="fa fa-check"></i><b>3.2.6</b> Rotations by match</a></li>
+<li class="chapter" data-level="3.2.7" data-path="estudo-de-rotação.html"><a href="estudo-de-rotação.html#fase-de-bp"><i class="fa fa-check"></i><b>3.2.7</b> Fase de BP</a></li>
+<li class="chapter" data-level="3.2.8" data-path="estudo-de-rotação.html"><a href="estudo-de-rotação.html#fase-de-so"><i class="fa fa-check"></i><b>3.2.8</b> Fase de SO</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="distribuicao---inicio.html"><a href="distribuicao---inicio.html"><i class="fa fa-check"></i><b>4</b> Distribuicao - inicio</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="distribuicao---inicio.html"><a href="distribuicao---inicio.html#yu-y.c."><i class="fa fa-check"></i><b>4.1</b> 07 Yu Y.C.</a>
+<ul>
+<li class="chapter" data-level="4.1.1" data-path="distribuicao---inicio.html"><a href="distribuicao---inicio.html#geral-1"><i class="fa fa-check"></i><b>4.1.1</b> Geral</a>
+<ul>
+<li class="chapter" data-level="4.1.1.1" data-path="distribuicao---inicio.html"><a href="distribuicao---inicio.html#por-passe"><i class="fa fa-check"></i><b>4.1.1.1</b> Por passe</a></li>
+<li class="chapter" data-level="4.1.1.2" data-path="distribuicao---inicio.html"><a href="distribuicao---inicio.html#por-chamada"><i class="fa fa-check"></i><b>4.1.1.2</b> Por Chamada</a></li>
+<li class="chapter" data-level="4.1.1.3" data-path="distribuicao---inicio.html"><a href="distribuicao---inicio.html#por-setor"><i class="fa fa-check"></i><b>4.1.1.3</b> Por Setor</a></li>
+<li class="chapter" data-level="4.1.1.4" data-path="distribuicao---inicio.html"><a href="distribuicao---inicio.html#por-origem-do-passe"><i class="fa fa-check"></i><b>4.1.1.4</b> Por origem do passe</a></li>
+<li class="chapter" data-level="4.1.1.5" data-path="distribuicao---inicio.html"><a href="distribuicao---inicio.html#por-placar"><i class="fa fa-check"></i><b>4.1.1.5</b> Por placar</a></li>
+<li class="chapter" data-level="4.1.1.6" data-path="distribuicao---inicio.html"><a href="distribuicao---inicio.html#por-base"><i class="fa fa-check"></i><b>4.1.1.6</b> Por base</a></li>
+<li class="chapter" data-level="4.1.1.7" data-path="distribuicao---inicio.html"><a href="distribuicao---inicio.html#por-passador-excluindo-p1-z4"><i class="fa fa-check"></i><b>4.1.1.7</b> Por Passador (excluindo P1 z4)</a></li>
+<li class="chapter" data-level="4.1.1.8" data-path="11-Centrais.html"><a href="#contra-ataque---por-situa%C3%A7%C3%A3o"><i class="fa fa-check"></i><b>4.1.1.8</b> Contra ataque - Por situação</a></li>
+</ul></li>
+<li class="chapter" data-level="4.1.2" data-path="11-Centrais.html"><a href="#posi%C3%A7%C3%A3o-1"><i class="fa fa-check"></i><b>4.1.2</b> Posição 1</a>
+<ul>
+<li class="chapter" data-level="4.1.2.1" data-path="distribuicao---inicio.html"><a href="distribuicao---inicio.html#por-passe-1"><i class="fa fa-check"></i><b>4.1.2.1</b> Por passe</a></li>
+<li class="chapter" data-level="4.1.2.2" data-path="distribuicao---inicio.html"><a href="distribuicao---inicio.html#por-chamada-1"><i class="fa fa-check"></i><b>4.1.2.2</b> Por Chamada</a></li>
+<li class="chapter" data-level="4.1.2.3" data-path="distribuicao---inicio.html"><a href="distribuicao---inicio.html#por-setor-1"><i class="fa fa-check"></i><b>4.1.2.3</b> Por Setor</a></li>
+<li class="chapter" data-level="4.1.2.4" data-path="distribuicao---inicio.html"><a href="distribuicao---inicio.html#por-origem-do-passe-1"><i class="fa fa-check"></i><b>4.1.2.4</b> Por origem do passe</a></li>
+<li class="chapter" data-level="4.1.2.5" data-path="distribuicao---inicio.html"><a href="distribuicao---inicio.html#por-placar-1"><i class="fa fa-check"></i><b>4.1.2.5</b> Por placar</a></li>
+<li class="chapter" data-level="4.1.2.6" data-path="distribuicao---inicio.html"><a href="distribuicao---inicio.html#por-base-1"><i class="fa fa-check"></i><b>4.1.2.6</b> Por base</a></li>
+<li class="chapter" data-level="4.1.2.7" data-path="distribuicao---inicio.html"><a href="distribuicao---inicio.html#por-passador"><i class="fa fa-check"></i><b>4.1.2.7</b> Por Passador</a></li>
+</ul></li>
+<li class="chapter" data-level="4.1.3" data-path="11-Centrais.html"><a href="#posi%C3%A7%C3%A3o-6"><i class="fa fa-check"></i><b>4.1.3</b> Posição 6</a>
+<ul>
+<li class="chapter" data-level="4.1.3.1" data-path="distribuicao---inicio.html"><a href="distribuicao---inicio.html#por-passe-2"><i class="fa fa-check"></i><b>4.1.3.1</b> Por passe</a></li>
+<li class="chapter" data-level="4.1.3.2" data-path="distribuicao---inicio.html"><a href="distribuicao---inicio.html#por-chamada-2"><i class="fa fa-check"></i><b>4.1.3.2</b> Por Chamada</a></li>
+<li class="chapter" data-level="4.1.3.3" data-path="distribuicao---inicio.html"><a href="distribuicao---inicio.html#por-setor-2"><i class="fa fa-check"></i><b>4.1.3.3</b> Por Setor</a></li>
+<li class="chapter" data-level="4.1.3.4" data-path="distribuicao---inicio.html"><a href="distribuicao---inicio.html#por-origem-do-passe-2"><i class="fa fa-check"></i><b>4.1.3.4</b> Por origem do passe</a></li>
+<li class="chapter" data-level="4.1.3.5" data-path="distribuicao---inicio.html"><a href="distribuicao---inicio.html#por-placar-2"><i class="fa fa-check"></i><b>4.1.3.5</b> Por placar</a></li>
+<li class="chapter" data-level="4.1.3.6" data-path="distribuicao---inicio.html"><a href="distribuicao---inicio.html#por-base-2"><i class="fa fa-check"></i><b>4.1.3.6</b> Por base</a></li>
+<li class="chapter" data-level="4.1.3.7" data-path="distribuicao---inicio.html"><a href="distribuicao---inicio.html#por-passador-1"><i class="fa fa-check"></i><b>4.1.3.7</b> Por Passador</a></li>
+</ul></li>
+<li class="chapter" data-level="4.1.4" data-path="11-Centrais.html"><a href="#posi%C3%A7%C3%A3o-5"><i class="fa fa-check"></i><b>4.1.4</b> Posição 5</a>
+<ul>
+<li class="chapter" data-level="4.1.4.1" data-path="distribuicao---inicio.html"><a href="distribuicao---inicio.html#por-passe-3"><i class="fa fa-check"></i><b>4.1.4.1</b> Por passe</a></li>
+<li class="chapter" data-level="4.1.4.2" data-path="distribuicao---inicio.html"><a href="distribuicao---inicio.html#por-chamada-3"><i class="fa fa-check"></i><b>4.1.4.2</b> Por Chamada</a></li>
+<li class="chapter" data-level="4.1.4.3" data-path="distribuicao---inicio.html"><a href="distribuicao---inicio.html#por-setor-3"><i class="fa fa-check"></i><b>4.1.4.3</b> Por Setor</a></li>
+<li class="chapter" data-level="4.1.4.4" data-path="distribuicao---inicio.html"><a href="distribuicao---inicio.html#por-origem-do-passe-3"><i class="fa fa-check"></i><b>4.1.4.4</b> Por origem do passe</a></li>
+<li class="chapter" data-level="4.1.4.5" data-path="distribuicao---inicio.html"><a href="distribuicao---inicio.html#por-placar-3"><i class="fa fa-check"></i><b>4.1.4.5</b> Por placar</a></li>
+<li class="chapter" data-level="4.1.4.6" data-path="distribuicao---inicio.html"><a href="distribuicao---inicio.html#por-base-3"><i class="fa fa-check"></i><b>4.1.4.6</b> Por base</a></li>
+<li class="chapter" data-level="4.1.4.7" data-path="distribuicao---inicio.html"><a href="distribuicao---inicio.html#por-passador-2"><i class="fa fa-check"></i><b>4.1.4.7</b> Por Passador</a></li>
+</ul></li>
+<li class="chapter" data-level="4.1.5" data-path="11-Centrais.html"><a href="#posi%C3%A7%C3%A3o-4"><i class="fa fa-check"></i><b>4.1.5</b> Posição 4</a>
+<ul>
+<li class="chapter" data-level="4.1.5.1" data-path="distribuicao---inicio.html"><a href="distribuicao---inicio.html#por-passe-4"><i class="fa fa-check"></i><b>4.1.5.1</b> Por passe</a></li>
+<li class="chapter" data-level="4.1.5.2" data-path="distribuicao---inicio.html"><a href="distribuicao---inicio.html#por-chamada-4"><i class="fa fa-check"></i><b>4.1.5.2</b> Por Chamada</a></li>
+<li class="chapter" data-level="4.1.5.3" data-path="distribuicao---inicio.html"><a href="distribuicao---inicio.html#por-setor-4"><i class="fa fa-check"></i><b>4.1.5.3</b> Por Setor</a></li>
+<li class="chapter" data-level="4.1.5.4" data-path="distribuicao---inicio.html"><a href="distribuicao---inicio.html#por-origem-do-passe-4"><i class="fa fa-check"></i><b>4.1.5.4</b> Por origem do passe</a></li>
+<li class="chapter" data-level="4.1.5.5" data-path="distribuicao---inicio.html"><a href="distribuicao---inicio.html#por-placar-4"><i class="fa fa-check"></i><b>4.1.5.5</b> Por placar</a></li>
+<li class="chapter" data-level="4.1.5.6" data-path="distribuicao---inicio.html"><a href="distribuicao---inicio.html#por-base-4"><i class="fa fa-check"></i><b>4.1.5.6</b> Por base</a></li>
+<li class="chapter" data-level="4.1.5.7" data-path="distribuicao---inicio.html"><a href="distribuicao---inicio.html#por-passador-3"><i class="fa fa-check"></i><b>4.1.5.7</b> Por Passador</a></li>
+</ul></li>
+<li class="chapter" data-level="4.1.6" data-path="11-Centrais.html"><a href="#posi%C3%A7%C3%A3o-3"><i class="fa fa-check"></i><b>4.1.6</b> Posição 3</a>
+<ul>
+<li class="chapter" data-level="4.1.6.1" data-path="distribuicao---inicio.html"><a href="distribuicao---inicio.html#por-passe-5"><i class="fa fa-check"></i><b>4.1.6.1</b> Por passe</a></li>
+<li class="chapter" data-level="4.1.6.2" data-path="distribuicao---inicio.html"><a href="distribuicao---inicio.html#por-chamada-5"><i class="fa fa-check"></i><b>4.1.6.2</b> Por Chamada</a></li>
+<li class="chapter" data-level="4.1.6.3" data-path="distribuicao---inicio.html"><a href="distribuicao---inicio.html#por-setor-5"><i class="fa fa-check"></i><b>4.1.6.3</b> Por Setor</a></li>
+<li class="chapter" data-level="4.1.6.4" data-path="distribuicao---inicio.html"><a href="distribuicao---inicio.html#por-origem-do-passe-5"><i class="fa fa-check"></i><b>4.1.6.4</b> Por origem do passe</a></li>
+<li class="chapter" data-level="4.1.6.5" data-path="distribuicao---inicio.html"><a href="distribuicao---inicio.html#por-placar-5"><i class="fa fa-check"></i><b>4.1.6.5</b> Por placar</a></li>
+<li class="chapter" data-level="4.1.6.6" data-path="distribuicao---inicio.html"><a href="distribuicao---inicio.html#por-base-5"><i class="fa fa-check"></i><b>4.1.6.6</b> Por base</a></li>
+<li class="chapter" data-level="4.1.6.7" data-path="distribuicao---inicio.html"><a href="distribuicao---inicio.html#por-passador-4"><i class="fa fa-check"></i><b>4.1.6.7</b> Por Passador</a></li>
+</ul></li>
+<li class="chapter" data-level="4.1.7" data-path="11-Centrais.html"><a href="#posi%C3%A7%C3%A3o-2"><i class="fa fa-check"></i><b>4.1.7</b> Posição 2</a>
+<ul>
+<li class="chapter" data-level="4.1.7.1" data-path="distribuicao---inicio.html"><a href="distribuicao---inicio.html#por-passe-6"><i class="fa fa-check"></i><b>4.1.7.1</b> Por passe</a></li>
+<li class="chapter" data-level="4.1.7.2" data-path="distribuicao---inicio.html"><a href="distribuicao---inicio.html#por-chamada-6"><i class="fa fa-check"></i><b>4.1.7.2</b> Por Chamada</a></li>
+<li class="chapter" data-level="4.1.7.3" data-path="distribuicao---inicio.html"><a href="distribuicao---inicio.html#por-setor-6"><i class="fa fa-check"></i><b>4.1.7.3</b> Por Setor</a></li>
+<li class="chapter" data-level="4.1.7.4" data-path="distribuicao---inicio.html"><a href="distribuicao---inicio.html#por-origem-do-passe-6"><i class="fa fa-check"></i><b>4.1.7.4</b> Por origem do passe</a></li>
+<li class="chapter" data-level="4.1.7.5" data-path="distribuicao---inicio.html"><a href="distribuicao---inicio.html#por-placar-6"><i class="fa fa-check"></i><b>4.1.7.5</b> Por placar</a></li>
+<li class="chapter" data-level="4.1.7.6" data-path="distribuicao---inicio.html"><a href="distribuicao---inicio.html#por-base-6"><i class="fa fa-check"></i><b>4.1.7.6</b> Por base</a></li>
+<li class="chapter" data-level="4.1.7.7" data-path="distribuicao---inicio.html"><a href="distribuicao---inicio.html#por-passador-5"><i class="fa fa-check"></i><b>4.1.7.7</b> Por Passador</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4.2" data-path="distribuicao---inicio.html"><a href="distribuicao---inicio.html#wang-h.b."><i class="fa fa-check"></i><b>4.2</b> 03 Wang H.B.</a>
+<ul>
+<li class="chapter" data-level="4.2.1" data-path="distribuicao---inicio.html"><a href="distribuicao---inicio.html#geral-2"><i class="fa fa-check"></i><b>4.2.1</b> Geral</a>
+<ul>
+<li class="chapter" data-level="4.2.1.1" data-path="distribuicao---inicio.html"><a href="distribuicao---inicio.html#por-passe-7"><i class="fa fa-check"></i><b>4.2.1.1</b> Por passe</a></li>
+<li class="chapter" data-level="4.2.1.2" data-path="distribuicao---inicio.html"><a href="distribuicao---inicio.html#por-chamada-7"><i class="fa fa-check"></i><b>4.2.1.2</b> Por Chamada</a></li>
+<li class="chapter" data-level="4.2.1.3" data-path="distribuicao---inicio.html"><a href="distribuicao---inicio.html#por-setor-7"><i class="fa fa-check"></i><b>4.2.1.3</b> Por Setor</a></li>
+<li class="chapter" data-level="4.2.1.4" data-path="distribuicao---inicio.html"><a href="distribuicao---inicio.html#por-origem-do-passe-7"><i class="fa fa-check"></i><b>4.2.1.4</b> Por origem do passe</a></li>
+<li class="chapter" data-level="4.2.1.5" data-path="distribuicao---inicio.html"><a href="distribuicao---inicio.html#por-placar-7"><i class="fa fa-check"></i><b>4.2.1.5</b> Por placar</a></li>
+<li class="chapter" data-level="4.2.1.6" data-path="distribuicao---inicio.html"><a href="distribuicao---inicio.html#por-base-7"><i class="fa fa-check"></i><b>4.2.1.6</b> Por base</a></li>
+<li class="chapter" data-level="4.2.1.7" data-path="distribuicao---inicio.html"><a href="distribuicao---inicio.html#por-passador-excluindo-p1-z4-1"><i class="fa fa-check"></i><b>4.2.1.7</b> Por Passador (excluindo P1 z4)</a></li>
+<li class="chapter" data-level="4.2.1.8" data-path="11-Centrais.html"><a href="#contra-ataque---por-situa%C3%A7%C3%A3o-1"><i class="fa fa-check"></i><b>4.2.1.8</b> Contra ataque - Por situação</a></li>
+</ul></li>
+<li class="chapter" data-level="4.2.2" data-path="11-Centrais.html"><a href="#posi%C3%A7%C3%A3o-1-1"><i class="fa fa-check"></i><b>4.2.2</b> Posição 1</a>
+<ul>
+<li class="chapter" data-level="4.2.2.1" data-path="distribuicao---inicio.html"><a href="distribuicao---inicio.html#por-passe-8"><i class="fa fa-check"></i><b>4.2.2.1</b> Por passe</a></li>
+<li class="chapter" data-level="4.2.2.2" data-path="distribuicao---inicio.html"><a href="distribuicao---inicio.html#por-chamada-8"><i class="fa fa-check"></i><b>4.2.2.2</b> Por Chamada</a></li>
+<li class="chapter" data-level="4.2.2.3" data-path="distribuicao---inicio.html"><a href="distribuicao---inicio.html#por-setor-8"><i class="fa fa-check"></i><b>4.2.2.3</b> Por Setor</a></li>
+<li class="chapter" data-level="4.2.2.4" data-path="distribuicao---inicio.html"><a href="distribuicao---inicio.html#por-origem-do-passe-8"><i class="fa fa-check"></i><b>4.2.2.4</b> Por origem do passe</a></li>
+<li class="chapter" data-level="4.2.2.5" data-path="distribuicao---inicio.html"><a href="distribuicao---inicio.html#por-placar-8"><i class="fa fa-check"></i><b>4.2.2.5</b> Por placar</a></li>
+<li class="chapter" data-level="4.2.2.6" data-path="distribuicao---inicio.html"><a href="distribuicao---inicio.html#por-base-8"><i class="fa fa-check"></i><b>4.2.2.6</b> Por base</a></li>
+<li class="chapter" data-level="4.2.2.7" data-path="distribuicao---inicio.html"><a href="distribuicao---inicio.html#por-passador-6"><i class="fa fa-check"></i><b>4.2.2.7</b> Por Passador</a></li>
+</ul></li>
+<li class="chapter" data-level="4.2.3" data-path="11-Centrais.html"><a href="#posi%C3%A7%C3%A3o-6-1"><i class="fa fa-check"></i><b>4.2.3</b> Posição 6</a>
+<ul>
+<li class="chapter" data-level="4.2.3.1" data-path="distribuicao---inicio.html"><a href="distribuicao---inicio.html#por-passe-9"><i class="fa fa-check"></i><b>4.2.3.1</b> Por passe</a></li>
+<li class="chapter" data-level="4.2.3.2" data-path="distribuicao---inicio.html"><a href="distribuicao---inicio.html#por-chamada-9"><i class="fa fa-check"></i><b>4.2.3.2</b> Por Chamada</a></li>
+<li class="chapter" data-level="4.2.3.3" data-path="distribuicao---inicio.html"><a href="distribuicao---inicio.html#por-setor-9"><i class="fa fa-check"></i><b>4.2.3.3</b> Por Setor</a></li>
+<li class="chapter" data-level="4.2.3.4" data-path="distribuicao---inicio.html"><a href="distribuicao---inicio.html#por-origem-do-passe-9"><i class="fa fa-check"></i><b>4.2.3.4</b> Por origem do passe</a></li>
+<li class="chapter" data-level="4.2.3.5" data-path="distribuicao---inicio.html"><a href="distribuicao---inicio.html#por-placar-9"><i class="fa fa-check"></i><b>4.2.3.5</b> Por placar</a></li>
+<li class="chapter" data-level="4.2.3.6" data-path="distribuicao---inicio.html"><a href="distribuicao---inicio.html#por-base-9"><i class="fa fa-check"></i><b>4.2.3.6</b> Por base</a></li>
+<li class="chapter" data-level="4.2.3.7" data-path="distribuicao---inicio.html"><a href="distribuicao---inicio.html#por-passador-7"><i class="fa fa-check"></i><b>4.2.3.7</b> Por Passador</a></li>
+</ul></li>
+<li class="chapter" data-level="4.2.4" data-path="11-Centrais.html"><a href="#posi%C3%A7%C3%A3o-5-1"><i class="fa fa-check"></i><b>4.2.4</b> Posição 5</a>
+<ul>
+<li class="chapter" data-level="4.2.4.1" data-path="distribuicao---inicio.html"><a href="distribuicao---inicio.html#por-passe-10"><i class="fa fa-check"></i><b>4.2.4.1</b> Por passe</a></li>
+<li class="chapter" data-level="4.2.4.2" data-path="distribuicao---inicio.html"><a href="distribuicao---inicio.html#por-chamada-10"><i class="fa fa-check"></i><b>4.2.4.2</b> Por Chamada</a></li>
+<li class="chapter" data-level="4.2.4.3" data-path="distribuicao---inicio.html"><a href="distribuicao---inicio.html#por-setor-10"><i class="fa fa-check"></i><b>4.2.4.3</b> Por Setor</a></li>
+<li class="chapter" data-level="4.2.4.4" data-path="distribuicao---inicio.html"><a href="distribuicao---inicio.html#por-origem-do-passe-10"><i class="fa fa-check"></i><b>4.2.4.4</b> Por origem do passe</a></li>
+<li class="chapter" data-level="4.2.4.5" data-path="distribuicao---inicio.html"><a href="distribuicao---inicio.html#por-placar-10"><i class="fa fa-check"></i><b>4.2.4.5</b> Por placar</a></li>
+<li class="chapter" data-level="4.2.4.6" data-path="distribuicao---inicio.html"><a href="distribuicao---inicio.html#por-base-10"><i class="fa fa-check"></i><b>4.2.4.6</b> Por base</a></li>
+<li class="chapter" data-level="4.2.4.7" data-path="distribuicao---inicio.html"><a href="distribuicao---inicio.html#por-passador-8"><i class="fa fa-check"></i><b>4.2.4.7</b> Por Passador</a></li>
+</ul></li>
+<li class="chapter" data-level="4.2.5" data-path="11-Centrais.html"><a href="#posi%C3%A7%C3%A3o-4-1"><i class="fa fa-check"></i><b>4.2.5</b> Posição 4</a>
+<ul>
+<li class="chapter" data-level="4.2.5.1" data-path="distribuicao---inicio.html"><a href="distribuicao---inicio.html#por-passe-11"><i class="fa fa-check"></i><b>4.2.5.1</b> Por passe</a></li>
+<li class="chapter" data-level="4.2.5.2" data-path="distribuicao---inicio.html"><a href="distribuicao---inicio.html#por-chamada-11"><i class="fa fa-check"></i><b>4.2.5.2</b> Por Chamada</a></li>
+<li class="chapter" data-level="4.2.5.3" data-path="distribuicao---inicio.html"><a href="distribuicao---inicio.html#por-setor-11"><i class="fa fa-check"></i><b>4.2.5.3</b> Por Setor</a></li>
+<li class="chapter" data-level="4.2.5.4" data-path="distribuicao---inicio.html"><a href="distribuicao---inicio.html#por-origem-do-passe-11"><i class="fa fa-check"></i><b>4.2.5.4</b> Por origem do passe</a></li>
+<li class="chapter" data-level="4.2.5.5" data-path="distribuicao---inicio.html"><a href="distribuicao---inicio.html#por-placar-11"><i class="fa fa-check"></i><b>4.2.5.5</b> Por placar</a></li>
+<li class="chapter" data-level="4.2.5.6" data-path="distribuicao---inicio.html"><a href="distribuicao---inicio.html#por-base-11"><i class="fa fa-check"></i><b>4.2.5.6</b> Por base</a></li>
+<li class="chapter" data-level="4.2.5.7" data-path="distribuicao---inicio.html"><a href="distribuicao---inicio.html#por-passador-9"><i class="fa fa-check"></i><b>4.2.5.7</b> Por Passador</a></li>
+</ul></li>
+<li class="chapter" data-level="4.2.6" data-path="11-Centrais.html"><a href="#posi%C3%A7%C3%A3o-3-1"><i class="fa fa-check"></i><b>4.2.6</b> Posição 3</a>
+<ul>
+<li class="chapter" data-level="4.2.6.1" data-path="distribuicao---inicio.html"><a href="distribuicao---inicio.html#por-passe-12"><i class="fa fa-check"></i><b>4.2.6.1</b> Por passe</a></li>
+<li class="chapter" data-level="4.2.6.2" data-path="distribuicao---inicio.html"><a href="distribuicao---inicio.html#por-chamada-12"><i class="fa fa-check"></i><b>4.2.6.2</b> Por Chamada</a></li>
+<li class="chapter" data-level="4.2.6.3" data-path="distribuicao---inicio.html"><a href="distribuicao---inicio.html#por-setor-12"><i class="fa fa-check"></i><b>4.2.6.3</b> Por Setor</a></li>
+<li class="chapter" data-level="4.2.6.4" data-path="distribuicao---inicio.html"><a href="distribuicao---inicio.html#por-origem-do-passe-12"><i class="fa fa-check"></i><b>4.2.6.4</b> Por origem do passe</a></li>
+<li class="chapter" data-level="4.2.6.5" data-path="distribuicao---inicio.html"><a href="distribuicao---inicio.html#por-placar-12"><i class="fa fa-check"></i><b>4.2.6.5</b> Por placar</a></li>
+<li class="chapter" data-level="4.2.6.6" data-path="distribuicao---inicio.html"><a href="distribuicao---inicio.html#por-base-12"><i class="fa fa-check"></i><b>4.2.6.6</b> Por base</a></li>
+<li class="chapter" data-level="4.2.6.7" data-path="distribuicao---inicio.html"><a href="distribuicao---inicio.html#por-passador-10"><i class="fa fa-check"></i><b>4.2.6.7</b> Por Passador</a></li>
+</ul></li>
+<li class="chapter" data-level="4.2.7" data-path="11-Centrais.html"><a href="#posi%C3%A7%C3%A3o-2-1"><i class="fa fa-check"></i><b>4.2.7</b> Posição 2</a>
+<ul>
+<li class="chapter" data-level="4.2.7.1" data-path="distribuicao---inicio.html"><a href="distribuicao---inicio.html#por-passe-13"><i class="fa fa-check"></i><b>4.2.7.1</b> Por passe</a></li>
+<li class="chapter" data-level="4.2.7.2" data-path="distribuicao---inicio.html"><a href="distribuicao---inicio.html#por-chamada-13"><i class="fa fa-check"></i><b>4.2.7.2</b> Por Chamada</a></li>
+<li class="chapter" data-level="4.2.7.3" data-path="distribuicao---inicio.html"><a href="distribuicao---inicio.html#por-setor-13"><i class="fa fa-check"></i><b>4.2.7.3</b> Por Setor</a></li>
+<li class="chapter" data-level="4.2.7.4" data-path="distribuicao---inicio.html"><a href="distribuicao---inicio.html#por-origem-do-passe-13"><i class="fa fa-check"></i><b>4.2.7.4</b> Por origem do passe</a></li>
+<li class="chapter" data-level="4.2.7.5" data-path="distribuicao---inicio.html"><a href="distribuicao---inicio.html#por-placar-13"><i class="fa fa-check"></i><b>4.2.7.5</b> Por placar</a></li>
+<li class="chapter" data-level="4.2.7.6" data-path="distribuicao---inicio.html"><a href="distribuicao---inicio.html#por-base-13"><i class="fa fa-check"></i><b>4.2.7.6</b> Por base</a></li>
+<li class="chapter" data-level="4.2.7.7" data-path="distribuicao---inicio.html"><a href="distribuicao---inicio.html#por-passador-11"><i class="fa fa-check"></i><b>4.2.7.7</b> Por Passador</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4.3" data-path="distribuicao---inicio.html"><a href="distribuicao---inicio.html#na"><i class="fa fa-check"></i><b>4.3</b> NA</a>
+<ul>
+<li class="chapter" data-level="4.3.1" data-path="distribuicao---inicio.html"><a href="distribuicao---inicio.html#geral-3"><i class="fa fa-check"></i><b>4.3.1</b> Geral</a>
+<ul>
+<li class="chapter" data-level="4.3.1.1" data-path="distribuicao---inicio.html"><a href="distribuicao---inicio.html#por-passe-14"><i class="fa fa-check"></i><b>4.3.1.1</b> Por passe</a></li>
+<li class="chapter" data-level="4.3.1.2" data-path="distribuicao---inicio.html"><a href="distribuicao---inicio.html#por-chamada-14"><i class="fa fa-check"></i><b>4.3.1.2</b> Por Chamada</a></li>
+<li class="chapter" data-level="4.3.1.3" data-path="distribuicao---inicio.html"><a href="distribuicao---inicio.html#por-setor-14"><i class="fa fa-check"></i><b>4.3.1.3</b> Por Setor</a></li>
+<li class="chapter" data-level="4.3.1.4" data-path="distribuicao---inicio.html"><a href="distribuicao---inicio.html#por-origem-do-passe-14"><i class="fa fa-check"></i><b>4.3.1.4</b> Por origem do passe</a></li>
+<li class="chapter" data-level="4.3.1.5" data-path="distribuicao---inicio.html"><a href="distribuicao---inicio.html#por-placar-14"><i class="fa fa-check"></i><b>4.3.1.5</b> Por placar</a></li>
+<li class="chapter" data-level="4.3.1.6" data-path="distribuicao---inicio.html"><a href="distribuicao---inicio.html#por-base-14"><i class="fa fa-check"></i><b>4.3.1.6</b> Por base</a></li>
+<li class="chapter" data-level="4.3.1.7" data-path="distribuicao---inicio.html"><a href="distribuicao---inicio.html#por-passador-excluindo-p1-z4-2"><i class="fa fa-check"></i><b>4.3.1.7</b> Por Passador (excluindo P1 z4)</a></li>
+<li class="chapter" data-level="4.3.1.8" data-path="11-Centrais.html"><a href="#contra-ataque---por-situa%C3%A7%C3%A3o-2"><i class="fa fa-check"></i><b>4.3.1.8</b> Contra ataque - Por situação</a></li>
+</ul></li>
+<li class="chapter" data-level="4.3.2" data-path="11-Centrais.html"><a href="#posi%C3%A7%C3%A3o-1-2"><i class="fa fa-check"></i><b>4.3.2</b> Posição 1</a>
+<ul>
+<li class="chapter" data-level="4.3.2.1" data-path="distribuicao---inicio.html"><a href="distribuicao---inicio.html#por-passe-15"><i class="fa fa-check"></i><b>4.3.2.1</b> Por passe</a></li>
+<li class="chapter" data-level="4.3.2.2" data-path="distribuicao---inicio.html"><a href="distribuicao---inicio.html#por-chamada-15"><i class="fa fa-check"></i><b>4.3.2.2</b> Por Chamada</a></li>
+<li class="chapter" data-level="4.3.2.3" data-path="distribuicao---inicio.html"><a href="distribuicao---inicio.html#por-setor-15"><i class="fa fa-check"></i><b>4.3.2.3</b> Por Setor</a></li>
+<li class="chapter" data-level="4.3.2.4" data-path="distribuicao---inicio.html"><a href="distribuicao---inicio.html#por-origem-do-passe-15"><i class="fa fa-check"></i><b>4.3.2.4</b> Por origem do passe</a></li>
+<li class="chapter" data-level="4.3.2.5" data-path="distribuicao---inicio.html"><a href="distribuicao---inicio.html#por-placar-15"><i class="fa fa-check"></i><b>4.3.2.5</b> Por placar</a></li>
+<li class="chapter" data-level="4.3.2.6" data-path="distribuicao---inicio.html"><a href="distribuicao---inicio.html#por-base-15"><i class="fa fa-check"></i><b>4.3.2.6</b> Por base</a></li>
+<li class="chapter" data-level="4.3.2.7" data-path="distribuicao---inicio.html"><a href="distribuicao---inicio.html#por-passador-12"><i class="fa fa-check"></i><b>4.3.2.7</b> Por Passador</a></li>
+</ul></li>
+<li class="chapter" data-level="4.3.3" data-path="11-Centrais.html"><a href="#posi%C3%A7%C3%A3o-6-2"><i class="fa fa-check"></i><b>4.3.3</b> Posição 6</a>
+<ul>
+<li class="chapter" data-level="4.3.3.1" data-path="distribuicao---inicio.html"><a href="distribuicao---inicio.html#por-passe-16"><i class="fa fa-check"></i><b>4.3.3.1</b> Por passe</a></li>
+<li class="chapter" data-level="4.3.3.2" data-path="distribuicao---inicio.html"><a href="distribuicao---inicio.html#por-chamada-16"><i class="fa fa-check"></i><b>4.3.3.2</b> Por Chamada</a></li>
+<li class="chapter" data-level="4.3.3.3" data-path="distribuicao---inicio.html"><a href="distribuicao---inicio.html#por-setor-16"><i class="fa fa-check"></i><b>4.3.3.3</b> Por Setor</a></li>
+<li class="chapter" data-level="4.3.3.4" data-path="distribuicao---inicio.html"><a href="distribuicao---inicio.html#por-origem-do-passe-16"><i class="fa fa-check"></i><b>4.3.3.4</b> Por origem do passe</a></li>
+<li class="chapter" data-level="4.3.3.5" data-path="distribuicao---inicio.html"><a href="distribuicao---inicio.html#por-placar-16"><i class="fa fa-check"></i><b>4.3.3.5</b> Por placar</a></li>
+<li class="chapter" data-level="4.3.3.6" data-path="distribuicao---inicio.html"><a href="distribuicao---inicio.html#por-base-16"><i class="fa fa-check"></i><b>4.3.3.6</b> Por base</a></li>
+<li class="chapter" data-level="4.3.3.7" data-path="distribuicao---inicio.html"><a href="distribuicao---inicio.html#por-passador-13"><i class="fa fa-check"></i><b>4.3.3.7</b> Por Passador</a></li>
+</ul></li>
+<li class="chapter" data-level="4.3.4" data-path="11-Centrais.html"><a href="#posi%C3%A7%C3%A3o-5-2"><i class="fa fa-check"></i><b>4.3.4</b> Posição 5</a>
+<ul>
+<li class="chapter" data-level="4.3.4.1" data-path="distribuicao---inicio.html"><a href="distribuicao---inicio.html#por-passe-17"><i class="fa fa-check"></i><b>4.3.4.1</b> Por passe</a></li>
+<li class="chapter" data-level="4.3.4.2" data-path="distribuicao---inicio.html"><a href="distribuicao---inicio.html#por-chamada-17"><i class="fa fa-check"></i><b>4.3.4.2</b> Por Chamada</a></li>
+<li class="chapter" data-level="4.3.4.3" data-path="distribuicao---inicio.html"><a href="distribuicao---inicio.html#por-setor-17"><i class="fa fa-check"></i><b>4.3.4.3</b> Por Setor</a></li>
+<li class="chapter" data-level="4.3.4.4" data-path="distribuicao---inicio.html"><a href="distribuicao---inicio.html#por-origem-do-passe-17"><i class="fa fa-check"></i><b>4.3.4.4</b> Por origem do passe</a></li>
+<li class="chapter" data-level="4.3.4.5" data-path="distribuicao---inicio.html"><a href="distribuicao---inicio.html#por-placar-17"><i class="fa fa-check"></i><b>4.3.4.5</b> Por placar</a></li>
+<li class="chapter" data-level="4.3.4.6" data-path="distribuicao---inicio.html"><a href="distribuicao---inicio.html#por-base-17"><i class="fa fa-check"></i><b>4.3.4.6</b> Por base</a></li>
+<li class="chapter" data-level="4.3.4.7" data-path="distribuicao---inicio.html"><a href="distribuicao---inicio.html#por-passador-14"><i class="fa fa-check"></i><b>4.3.4.7</b> Por Passador</a></li>
+</ul></li>
+<li class="chapter" data-level="4.3.5" data-path="11-Centrais.html"><a href="#posi%C3%A7%C3%A3o-4-2"><i class="fa fa-check"></i><b>4.3.5</b> Posição 4</a>
+<ul>
+<li class="chapter" data-level="4.3.5.1" data-path="distribuicao---inicio.html"><a href="distribuicao---inicio.html#por-passe-18"><i class="fa fa-check"></i><b>4.3.5.1</b> Por passe</a></li>
+<li class="chapter" data-level="4.3.5.2" data-path="distribuicao---inicio.html"><a href="distribuicao---inicio.html#por-chamada-18"><i class="fa fa-check"></i><b>4.3.5.2</b> Por Chamada</a></li>
+<li class="chapter" data-level="4.3.5.3" data-path="distribuicao---inicio.html"><a href="distribuicao---inicio.html#por-setor-18"><i class="fa fa-check"></i><b>4.3.5.3</b> Por Setor</a></li>
+<li class="chapter" data-level="4.3.5.4" data-path="distribuicao---inicio.html"><a href="distribuicao---inicio.html#por-origem-do-passe-18"><i class="fa fa-check"></i><b>4.3.5.4</b> Por origem do passe</a></li>
+<li class="chapter" data-level="4.3.5.5" data-path="distribuicao---inicio.html"><a href="distribuicao---inicio.html#por-placar-18"><i class="fa fa-check"></i><b>4.3.5.5</b> Por placar</a></li>
+<li class="chapter" data-level="4.3.5.6" data-path="distribuicao---inicio.html"><a href="distribuicao---inicio.html#por-base-18"><i class="fa fa-check"></i><b>4.3.5.6</b> Por base</a></li>
+<li class="chapter" data-level="4.3.5.7" data-path="distribuicao---inicio.html"><a href="distribuicao---inicio.html#por-passador-15"><i class="fa fa-check"></i><b>4.3.5.7</b> Por Passador</a></li>
+</ul></li>
+<li class="chapter" data-level="4.3.6" data-path="11-Centrais.html"><a href="#posi%C3%A7%C3%A3o-3-2"><i class="fa fa-check"></i><b>4.3.6</b> Posição 3</a>
+<ul>
+<li class="chapter" data-level="4.3.6.1" data-path="distribuicao---inicio.html"><a href="distribuicao---inicio.html#por-passe-19"><i class="fa fa-check"></i><b>4.3.6.1</b> Por passe</a></li>
+<li class="chapter" data-level="4.3.6.2" data-path="distribuicao---inicio.html"><a href="distribuicao---inicio.html#por-chamada-19"><i class="fa fa-check"></i><b>4.3.6.2</b> Por Chamada</a></li>
+<li class="chapter" data-level="4.3.6.3" data-path="distribuicao---inicio.html"><a href="distribuicao---inicio.html#por-setor-19"><i class="fa fa-check"></i><b>4.3.6.3</b> Por Setor</a></li>
+<li class="chapter" data-level="4.3.6.4" data-path="distribuicao---inicio.html"><a href="distribuicao---inicio.html#por-origem-do-passe-19"><i class="fa fa-check"></i><b>4.3.6.4</b> Por origem do passe</a></li>
+<li class="chapter" data-level="4.3.6.5" data-path="distribuicao---inicio.html"><a href="distribuicao---inicio.html#por-placar-19"><i class="fa fa-check"></i><b>4.3.6.5</b> Por placar</a></li>
+<li class="chapter" data-level="4.3.6.6" data-path="distribuicao---inicio.html"><a href="distribuicao---inicio.html#por-base-19"><i class="fa fa-check"></i><b>4.3.6.6</b> Por base</a></li>
+<li class="chapter" data-level="4.3.6.7" data-path="distribuicao---inicio.html"><a href="distribuicao---inicio.html#por-passador-16"><i class="fa fa-check"></i><b>4.3.6.7</b> Por Passador</a></li>
+</ul></li>
+<li class="chapter" data-level="4.3.7" data-path="11-Centrais.html"><a href="#posi%C3%A7%C3%A3o-2-2"><i class="fa fa-check"></i><b>4.3.7</b> Posição 2</a>
+<ul>
+<li class="chapter" data-level="4.3.7.1" data-path="distribuicao---inicio.html"><a href="distribuicao---inicio.html#por-passe-20"><i class="fa fa-check"></i><b>4.3.7.1</b> Por passe</a></li>
+<li class="chapter" data-level="4.3.7.2" data-path="distribuicao---inicio.html"><a href="distribuicao---inicio.html#por-chamada-20"><i class="fa fa-check"></i><b>4.3.7.2</b> Por Chamada</a></li>
+<li class="chapter" data-level="4.3.7.3" data-path="distribuicao---inicio.html"><a href="distribuicao---inicio.html#por-setor-20"><i class="fa fa-check"></i><b>4.3.7.3</b> Por Setor</a></li>
+<li class="chapter" data-level="4.3.7.4" data-path="distribuicao---inicio.html"><a href="distribuicao---inicio.html#por-origem-do-passe-20"><i class="fa fa-check"></i><b>4.3.7.4</b> Por origem do passe</a></li>
+<li class="chapter" data-level="4.3.7.5" data-path="distribuicao---inicio.html"><a href="distribuicao---inicio.html#por-placar-20"><i class="fa fa-check"></i><b>4.3.7.5</b> Por placar</a></li>
+<li class="chapter" data-level="4.3.7.6" data-path="distribuicao---inicio.html"><a href="distribuicao---inicio.html#por-base-20"><i class="fa fa-check"></i><b>4.3.7.6</b> Por base</a></li>
+<li class="chapter" data-level="4.3.7.7" data-path="distribuicao---inicio.html"><a href="distribuicao---inicio.html#por-passador-17"><i class="fa fa-check"></i><b>4.3.7.7</b> Por Passador</a></li>
+</ul></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="cross.html"><a href="cross.html"><i class="fa fa-check"></i><b>5</b> Saque</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="cross.html"><a href="cross.html#geral-4"><i class="fa fa-check"></i><b>5.1</b> Geral</a></li>
+<li class="chapter" data-level="5.2" data-path="cross.html"><a href="cross.html#por-jogo"><i class="fa fa-check"></i><b>5.2</b> Por jogo</a></li>
+<li class="chapter" data-level="5.3" data-path="cross.html"><a href="cross.html#por-tipo"><i class="fa fa-check"></i><b>5.3</b> Por tipo</a></li>
+<li class="chapter" data-level="5.4" data-path="cross.html"><a href="cross.html#por-atleta"><i class="fa fa-check"></i><b>5.4</b> Por atleta</a>
+<ul>
+<li class="chapter" data-level="5.4.1" data-path="11-Centrais.html"><a href="#gr%C3%A1ficos"><i class="fa fa-check"></i><b>5.4.1</b> Gráficos</a>
+<ul>
+<li class="chapter" data-level="5.4.1.1" data-path="cross.html"><a href="cross.html#viagem-total"><i class="fa fa-check"></i><b>5.4.1.1</b> Viagem total</a></li>
+</ul></li>
+<li class="chapter" data-level="5.4.2" data-path="cross.html"><a href="cross.html#viagem-peso"><i class="fa fa-check"></i><b>5.4.2</b> Viagem peso</a>
+<ul>
+<li class="chapter" data-level="5.4.2.1" data-path="cross.html"><a href="cross.html#viagem-dirigido"><i class="fa fa-check"></i><b>5.4.2.1</b> Viagem dirigido</a></li>
+<li class="chapter" data-level="5.4.2.2" data-path="cross.html"><a href="cross.html#flutuado"><i class="fa fa-check"></i><b>5.4.2.2</b> Flutuado</a></li>
+<li class="chapter" data-level="5.4.2.3" data-path="11-Centrais.html"><a href="#h%C3%ADbrido"><i class="fa fa-check"></i><b>5.4.2.3</b> Híbrido</a></li>
+</ul></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="11-Centrais.html"><a href="#recep%C3%A7%C3%A3o"><i class="fa fa-check"></i><b>6</b> Recepção</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="recepção.html"><a href="recepção.html"><i class="fa fa-check"></i><b>6.1</b> Totais</a></li>
+<li class="chapter" data-level="6.2" data-path="recepção.html"><a href="recepção.html#detalhado"><i class="fa fa-check"></i><b>6.2</b> DETALHADO</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="ataque.html"><a href="ataque.html"><i class="fa fa-check"></i><b>7</b> Ataque</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="ataque.html"><a href="ataque.html#geral-5"><i class="fa fa-check"></i><b>7.1</b> Geral</a></li>
+<li class="chapter" data-level="7.2" data-path="ataque.html"><a href="ataque.html#sideout"><i class="fa fa-check"></i><b>7.2</b> SIDEOUT</a>
+<ul>
+<li class="chapter" data-level="7.2.1" data-path="ataque.html"><a href="ataque.html#por-passe-21"><i class="fa fa-check"></i><b>7.2.1</b> POR PASSE</a></li>
+</ul></li>
+<li class="chapter" data-level="7.3" data-path="11-Centrais.html"><a href="#transi%C3%A7%C3%A3o"><i class="fa fa-check"></i><b>7.3</b> TRANSIÇÃO</a></li>
+<li class="chapter" data-level="7.4" data-path="ataque.html"><a href="ataque.html#detalhado-1"><i class="fa fa-check"></i><b>7.4</b> DETALHADO</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="bloqueio.html"><a href="bloqueio.html"><i class="fa fa-check"></i><b>8</b> BLOQUEIO</a></li>
+<li class="chapter" data-level="9" data-path="defesa.html"><a href="defesa.html"><i class="fa fa-check"></i><b>9</b> DEFESA</a></li>
+<li class="chapter" data-level="10" data-path="ponteiros.html"><a href="ponteiros.html"><i class="fa fa-check"></i><b>10</b> Ponteiros</a>
+<ul>
+<li class="chapter" data-level="10.1" data-path="ponteiros.html"><a href="ponteiros.html#yu-y.t."><i class="fa fa-check"></i><b>10.1</b> 06 Yu Y.T.</a>
+<ul>
+<li class="chapter" data-level="10.1.1" data-path="ponteiros.html"><a href="ponteiros.html#saque"><i class="fa fa-check"></i><b>10.1.1</b> Saque</a></li>
+<li class="chapter" data-level="10.1.2" data-path="ponteiros.html"><a href="ponteiros.html#ataque-sideout"><i class="fa fa-check"></i><b>10.1.2</b> Ataque sideout</a>
+<ul>
+<li class="chapter" data-level="10.1.2.1" data-path="ponteiros.html"><a href="ponteiros.html#aso---por-passe"><i class="fa fa-check"></i><b>10.1.2.1</b> ASO - Por passe</a></li>
+</ul></li>
+<li class="chapter" data-level="10.1.3" data-path="ponteiros.html"><a href="ponteiros.html#aso---passando-e-sem"><i class="fa fa-check"></i><b>10.1.3</b> ASO - passando e sem</a></li>
+<li class="chapter" data-level="10.1.4" data-path="ponteiros.html"><a href="ponteiros.html#aso---por-base"><i class="fa fa-check"></i><b>10.1.4</b> ASO - por base</a></li>
+<li class="chapter" data-level="10.1.5" data-path="ponteiros.html"><a href="ponteiros.html#aso---entrada-setor"><i class="fa fa-check"></i><b>10.1.5</b> ASO - Entrada setor</a></li>
+<li class="chapter" data-level="10.1.6" data-path="11-Centrais.html"><a href="#aso---sa%C3%ADda-setor"><i class="fa fa-check"></i><b>10.1.6</b> ASO - Saída setor</a></li>
+<li class="chapter" data-level="10.1.7" data-path="11-Centrais.html"><a href="#ataque-transi%C3%A7%C3%A3o"><i class="fa fa-check"></i><b>10.1.7</b> Ataque transição</a>
+<ul>
+<li class="chapter" data-level="10.1.7.1" data-path="11-Centrais.html"><a href="#atr---por-situa%C3%A7%C3%A3o"><i class="fa fa-check"></i><b>10.1.7.1</b> ATR - Por situação</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="10.2" data-path="ponteiros.html"><a href="ponteiros.html#ji-d.s."><i class="fa fa-check"></i><b>10.2</b> 10 Ji D.S.</a>
+<ul>
+<li class="chapter" data-level="10.2.1" data-path="ponteiros.html"><a href="ponteiros.html#saque-1"><i class="fa fa-check"></i><b>10.2.1</b> Saque</a></li>
+<li class="chapter" data-level="10.2.2" data-path="ponteiros.html"><a href="ponteiros.html#ataque-sideout-1"><i class="fa fa-check"></i><b>10.2.2</b> Ataque sideout</a>
+<ul>
+<li class="chapter" data-level="10.2.2.1" data-path="ponteiros.html"><a href="ponteiros.html#aso---por-passe-1"><i class="fa fa-check"></i><b>10.2.2.1</b> ASO - Por passe</a></li>
+</ul></li>
+<li class="chapter" data-level="10.2.3" data-path="ponteiros.html"><a href="ponteiros.html#aso---passando-e-sem-1"><i class="fa fa-check"></i><b>10.2.3</b> ASO - passando e sem</a></li>
+<li class="chapter" data-level="10.2.4" data-path="ponteiros.html"><a href="ponteiros.html#aso---por-base-1"><i class="fa fa-check"></i><b>10.2.4</b> ASO - por base</a></li>
+<li class="chapter" data-level="10.2.5" data-path="ponteiros.html"><a href="ponteiros.html#aso---entrada-setor-1"><i class="fa fa-check"></i><b>10.2.5</b> ASO - Entrada setor</a></li>
+<li class="chapter" data-level="10.2.6" data-path="11-Centrais.html"><a href="#aso---sa%C3%ADda-setor-1"><i class="fa fa-check"></i><b>10.2.6</b> ASO - Saída setor</a></li>
+<li class="chapter" data-level="10.2.7" data-path="11-Centrais.html"><a href="#ataque-transi%C3%A7%C3%A3o-1"><i class="fa fa-check"></i><b>10.2.7</b> Ataque transição</a>
+<ul>
+<li class="chapter" data-level="10.2.7.1" data-path="11-Centrais.html"><a href="#atr---por-situa%C3%A7%C3%A3o-1"><i class="fa fa-check"></i><b>10.2.7.1</b> ATR - Por situação</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="10.3" data-path="ponteiros.html"><a href="ponteiros.html#wang-b."><i class="fa fa-check"></i><b>10.3</b> 23 Wang B.</a>
+<ul>
+<li class="chapter" data-level="10.3.1" data-path="ponteiros.html"><a href="ponteiros.html#saque-2"><i class="fa fa-check"></i><b>10.3.1</b> Saque</a></li>
+<li class="chapter" data-level="10.3.2" data-path="ponteiros.html"><a href="ponteiros.html#ataque-sideout-2"><i class="fa fa-check"></i><b>10.3.2</b> Ataque sideout</a>
+<ul>
+<li class="chapter" data-level="10.3.2.1" data-path="ponteiros.html"><a href="ponteiros.html#aso---por-passe-2"><i class="fa fa-check"></i><b>10.3.2.1</b> ASO - Por passe</a></li>
+</ul></li>
+<li class="chapter" data-level="10.3.3" data-path="ponteiros.html"><a href="ponteiros.html#aso---passando-e-sem-2"><i class="fa fa-check"></i><b>10.3.3</b> ASO - passando e sem</a></li>
+<li class="chapter" data-level="10.3.4" data-path="ponteiros.html"><a href="ponteiros.html#aso---por-base-2"><i class="fa fa-check"></i><b>10.3.4</b> ASO - por base</a></li>
+<li class="chapter" data-level="10.3.5" data-path="ponteiros.html"><a href="ponteiros.html#aso---entrada-setor-2"><i class="fa fa-check"></i><b>10.3.5</b> ASO - Entrada setor</a></li>
+<li class="chapter" data-level="10.3.6" data-path="11-Centrais.html"><a href="#aso---sa%C3%ADda-setor-2"><i class="fa fa-check"></i><b>10.3.6</b> ASO - Saída setor</a></li>
+<li class="chapter" data-level="10.3.7" data-path="11-Centrais.html"><a href="#ataque-transi%C3%A7%C3%A3o-2"><i class="fa fa-check"></i><b>10.3.7</b> Ataque transição</a>
+<ul>
+<li class="chapter" data-level="10.3.7.1" data-path="11-Centrais.html"><a href="#atr---por-situa%C3%A7%C3%A3o-2"><i class="fa fa-check"></i><b>10.3.7.1</b> ATR - Por situação</a></li>
+</ul></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="opostos.html"><a href="opostos.html"><i class="fa fa-check"></i><b>11</b> Opostos</a>
+<ul>
+<li class="chapter" data-level="11.1" data-path="opostos.html"><a href="opostos.html#wen-z.-h."><i class="fa fa-check"></i><b>11.1</b> 01 Wen Z. H.</a>
+<ul>
+<li class="chapter" data-level="11.1.1" data-path="opostos.html"><a href="opostos.html#saque-3"><i class="fa fa-check"></i><b>11.1.1</b> Saque</a></li>
+<li class="chapter" data-level="11.1.2" data-path="opostos.html"><a href="opostos.html#ataque-sideout-3"><i class="fa fa-check"></i><b>11.1.2</b> Ataque sideout</a>
+<ul>
+<li class="chapter" data-level="11.1.2.1" data-path="opostos.html"><a href="opostos.html#aso---por-passe-3"><i class="fa fa-check"></i><b>11.1.2.1</b> ASO - Por passe</a></li>
+</ul></li>
+<li class="chapter" data-level="11.1.3" data-path="opostos.html"><a href="opostos.html#aso---por-base-3"><i class="fa fa-check"></i><b>11.1.3</b> ASO - por base</a></li>
+<li class="chapter" data-level="11.1.4" data-path="opostos.html"><a href="opostos.html#aso---saida-frente-setor"><i class="fa fa-check"></i><b>11.1.4</b> ASO - Saida frente setor</a></li>
+<li class="chapter" data-level="11.1.5" data-path="opostos.html"><a href="opostos.html#aso---saida-fundo-setor"><i class="fa fa-check"></i><b>11.1.5</b> ASO - Saida fundo setor</a></li>
+<li class="chapter" data-level="11.1.6" data-path="opostos.html"><a href="opostos.html#aso---entrada-setor-3"><i class="fa fa-check"></i><b>11.1.6</b> ASO - Entrada setor</a></li>
+<li class="chapter" data-level="11.1.7" data-path="11-Centrais.html"><a href="#ataque-transi%C3%A7%C3%A3o-3"><i class="fa fa-check"></i><b>11.1.7</b> Ataque transição</a>
+<ul>
+<li class="chapter" data-level="11.1.7.1" data-path="11-Centrais.html"><a href="#atr---por-situa%C3%A7%C3%A3o-3"><i class="fa fa-check"></i><b>11.1.7.1</b> ATR - Por situação</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="11.2" data-path="opostos.html"><a href="opostos.html#jiang-c."><i class="fa fa-check"></i><b>11.2</b> 02 Jiang C.</a>
+<ul>
+<li class="chapter" data-level="11.2.1" data-path="opostos.html"><a href="opostos.html#saque-4"><i class="fa fa-check"></i><b>11.2.1</b> Saque</a></li>
+<li class="chapter" data-level="11.2.2" data-path="opostos.html"><a href="opostos.html#ataque-sideout-4"><i class="fa fa-check"></i><b>11.2.2</b> Ataque sideout</a>
+<ul>
+<li class="chapter" data-level="11.2.2.1" data-path="opostos.html"><a href="opostos.html#aso---por-passe-4"><i class="fa fa-check"></i><b>11.2.2.1</b> ASO - Por passe</a></li>
+</ul></li>
+<li class="chapter" data-level="11.2.3" data-path="opostos.html"><a href="opostos.html#aso---por-base-4"><i class="fa fa-check"></i><b>11.2.3</b> ASO - por base</a></li>
+<li class="chapter" data-level="11.2.4" data-path="opostos.html"><a href="opostos.html#aso---saida-frente-setor-1"><i class="fa fa-check"></i><b>11.2.4</b> ASO - Saida frente setor</a></li>
+<li class="chapter" data-level="11.2.5" data-path="opostos.html"><a href="opostos.html#aso---saida-fundo-setor-1"><i class="fa fa-check"></i><b>11.2.5</b> ASO - Saida fundo setor</a></li>
+<li class="chapter" data-level="11.2.6" data-path="opostos.html"><a href="opostos.html#aso---entrada-setor-4"><i class="fa fa-check"></i><b>11.2.6</b> ASO - Entrada setor</a></li>
+<li class="chapter" data-level="11.2.7" data-path="11-Centrais.html"><a href="#ataque-transi%C3%A7%C3%A3o-4"><i class="fa fa-check"></i><b>11.2.7</b> Ataque transição</a>
+<ul>
+<li class="chapter" data-level="11.2.7.1" data-path="11-Centrais.html"><a href="#atr---por-situa%C3%A7%C3%A3o-4"><i class="fa fa-check"></i><b>11.2.7.1</b> ATR - Por situação</a></li>
+</ul></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="12" data-path="centrais.html"><a href="centrais.html"><i class="fa fa-check"></i><b>12</b> Centrais</a>
+<ul>
+<li class="chapter" data-level="12.1" data-path="centrais.html"><a href="centrais.html#li-y.z."><i class="fa fa-check"></i><b>12.1</b> 09 Li Y.Z.</a>
+<ul>
+<li class="chapter" data-level="12.1.1" data-path="centrais.html"><a href="centrais.html#saque-5"><i class="fa fa-check"></i><b>12.1.1</b> Saque</a></li>
+<li class="chapter" data-level="12.1.2" data-path="centrais.html"><a href="centrais.html#ataque-sideout-5"><i class="fa fa-check"></i><b>12.1.2</b> Ataque sideout</a>
+<ul>
+<li class="chapter" data-level="12.1.2.1" data-path="centrais.html"><a href="centrais.html#aso---por-passe-5"><i class="fa fa-check"></i><b>12.1.2.1</b> ASO - Por passe</a></li>
+</ul></li>
+<li class="chapter" data-level="12.1.3" data-path="centrais.html"><a href="centrais.html#aso---passando-e-sem-3"><i class="fa fa-check"></i><b>12.1.3</b> ASO - passando e sem</a></li>
+<li class="chapter" data-level="12.1.4" data-path="centrais.html"><a href="centrais.html#aso---por-base-5"><i class="fa fa-check"></i><b>12.1.4</b> ASO - por base</a></li>
+<li class="chapter" data-level="12.1.5" data-path="centrais.html"><a href="centrais.html#aso---entrada-setor-5"><i class="fa fa-check"></i><b>12.1.5</b> ASO - Entrada setor</a></li>
+<li class="chapter" data-level="12.1.6" data-path="11-Centrais.html"><a href="#ataque-transi%C3%A7%C3%A3o-5"><i class="fa fa-check"></i><b>12.1.6</b> Ataque transição</a></li>
+</ul></li>
+<li class="chapter" data-level="12.2" data-path="centrais.html"><a href="centrais.html#peng-s.k."><i class="fa fa-check"></i><b>12.2</b> 15 Peng S.K.</a>
+<ul>
+<li class="chapter" data-level="12.2.1" data-path="centrais.html"><a href="centrais.html#saque-6"><i class="fa fa-check"></i><b>12.2.1</b> Saque</a></li>
+<li class="chapter" data-level="12.2.2" data-path="centrais.html"><a href="centrais.html#ataque-sideout-6"><i class="fa fa-check"></i><b>12.2.2</b> Ataque sideout</a>
+<ul>
+<li class="chapter" data-level="12.2.2.1" data-path="centrais.html"><a href="centrais.html#aso---por-passe-6"><i class="fa fa-check"></i><b>12.2.2.1</b> ASO - Por passe</a></li>
+</ul></li>
+<li class="chapter" data-level="12.2.3" data-path="centrais.html"><a href="centrais.html#aso---passando-e-sem-4"><i class="fa fa-check"></i><b>12.2.3</b> ASO - passando e sem</a></li>
+<li class="chapter" data-level="12.2.4" data-path="centrais.html"><a href="centrais.html#aso---por-base-6"><i class="fa fa-check"></i><b>12.2.4</b> ASO - por base</a></li>
+<li class="chapter" data-level="12.2.5" data-path="centrais.html"><a href="centrais.html#aso---entrada-setor-6"><i class="fa fa-check"></i><b>12.2.5</b> ASO - Entrada setor</a></li>
+<li class="chapter" data-level="12.2.6" data-path="11-Centrais.html"><a href="#ataque-transi%C3%A7%C3%A3o-6"><i class="fa fa-check"></i><b>12.2.6</b> Ataque transição</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="13" data-path="mapa-de-calor.html"><a href="mapa-de-calor.html"><i class="fa fa-check"></i><b>13</b> Mapa de calor</a>
+<ul>
+<li class="chapter" data-level="13.1" data-path="mapa-de-calor.html"><a href="mapa-de-calor.html#yu-y.t.-1"><i class="fa fa-check"></i><b>13.1</b> 06 Yu Y.T.</a>
+<ul>
+<li class="chapter" data-level="13.1.1" data-path="mapa-de-calor.html"><a href="mapa-de-calor.html#saque-7"><i class="fa fa-check"></i><b>13.1.1</b> Saque</a></li>
+<li class="chapter" data-level="13.1.2" data-path="mapa-de-calor.html"><a href="mapa-de-calor.html#ataque-sideout-7"><i class="fa fa-check"></i><b>13.1.2</b> Ataque sideout</a>
+<ul>
+<li class="chapter" data-level="13.1.2.1" data-path="mapa-de-calor.html"><a href="mapa-de-calor.html#aso---por-passe-7"><i class="fa fa-check"></i><b>13.1.2.1</b> ASO - Por passe</a></li>
+</ul></li>
+<li class="chapter" data-level="13.1.3" data-path="mapa-de-calor.html"><a href="mapa-de-calor.html#aso---passando-e-sem-5"><i class="fa fa-check"></i><b>13.1.3</b> ASO - passando e sem</a></li>
+<li class="chapter" data-level="13.1.4" data-path="mapa-de-calor.html"><a href="mapa-de-calor.html#aso---por-base-7"><i class="fa fa-check"></i><b>13.1.4</b> ASO - por base</a></li>
+<li class="chapter" data-level="13.1.5" data-path="mapa-de-calor.html"><a href="mapa-de-calor.html#aso---entrada-setor-7"><i class="fa fa-check"></i><b>13.1.5</b> ASO - Entrada setor</a></li>
+<li class="chapter" data-level="13.1.6" data-path="11-Centrais.html"><a href="#aso---sa%C3%ADda-setor-3"><i class="fa fa-check"></i><b>13.1.6</b> ASO - Saída setor</a></li>
+<li class="chapter" data-level="13.1.7" data-path="11-Centrais.html"><a href="#ataque-transi%C3%A7%C3%A3o-7"><i class="fa fa-check"></i><b>13.1.7</b> Ataque transição</a>
+<ul>
+<li class="chapter" data-level="13.1.7.1" data-path="11-Centrais.html"><a href="#atr---por-situa%C3%A7%C3%A3o-5"><i class="fa fa-check"></i><b>13.1.7.1</b> ATR - Por situação</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="13.2" data-path="mapa-de-calor.html"><a href="mapa-de-calor.html#ji-d.s.-1"><i class="fa fa-check"></i><b>13.2</b> 10 Ji D.S.</a>
+<ul>
+<li class="chapter" data-level="13.2.1" data-path="mapa-de-calor.html"><a href="mapa-de-calor.html#saque-8"><i class="fa fa-check"></i><b>13.2.1</b> Saque</a></li>
+<li class="chapter" data-level="13.2.2" data-path="mapa-de-calor.html"><a href="mapa-de-calor.html#ataque-sideout-8"><i class="fa fa-check"></i><b>13.2.2</b> Ataque sideout</a>
+<ul>
+<li class="chapter" data-level="13.2.2.1" data-path="mapa-de-calor.html"><a href="mapa-de-calor.html#aso---por-passe-8"><i class="fa fa-check"></i><b>13.2.2.1</b> ASO - Por passe</a></li>
+</ul></li>
+<li class="chapter" data-level="13.2.3" data-path="mapa-de-calor.html"><a href="mapa-de-calor.html#aso---passando-e-sem-6"><i class="fa fa-check"></i><b>13.2.3</b> ASO - passando e sem</a></li>
+<li class="chapter" data-level="13.2.4" data-path="mapa-de-calor.html"><a href="mapa-de-calor.html#aso---por-base-8"><i class="fa fa-check"></i><b>13.2.4</b> ASO - por base</a></li>
+<li class="chapter" data-level="13.2.5" data-path="mapa-de-calor.html"><a href="mapa-de-calor.html#aso---entrada-setor-8"><i class="fa fa-check"></i><b>13.2.5</b> ASO - Entrada setor</a></li>
+<li class="chapter" data-level="13.2.6" data-path="11-Centrais.html"><a href="#aso---sa%C3%ADda-setor-4"><i class="fa fa-check"></i><b>13.2.6</b> ASO - Saída setor</a></li>
+<li class="chapter" data-level="13.2.7" data-path="11-Centrais.html"><a href="#ataque-transi%C3%A7%C3%A3o-8"><i class="fa fa-check"></i><b>13.2.7</b> Ataque transição</a>
+<ul>
+<li class="chapter" data-level="13.2.7.1" data-path="11-Centrais.html"><a href="#atr---por-situa%C3%A7%C3%A3o-6"><i class="fa fa-check"></i><b>13.2.7.1</b> ATR - Por situação</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="13.3" data-path="mapa-de-calor.html"><a href="mapa-de-calor.html#wang-b.-1"><i class="fa fa-check"></i><b>13.3</b> 23 Wang B.</a>
+<ul>
+<li class="chapter" data-level="13.3.1" data-path="mapa-de-calor.html"><a href="mapa-de-calor.html#saque-9"><i class="fa fa-check"></i><b>13.3.1</b> Saque</a></li>
+<li class="chapter" data-level="13.3.2" data-path="mapa-de-calor.html"><a href="mapa-de-calor.html#ataque-sideout-9"><i class="fa fa-check"></i><b>13.3.2</b> Ataque sideout</a>
+<ul>
+<li class="chapter" data-level="13.3.2.1" data-path="mapa-de-calor.html"><a href="mapa-de-calor.html#aso---por-passe-9"><i class="fa fa-check"></i><b>13.3.2.1</b> ASO - Por passe</a></li>
+</ul></li>
+<li class="chapter" data-level="13.3.3" data-path="mapa-de-calor.html"><a href="mapa-de-calor.html#aso---passando-e-sem-7"><i class="fa fa-check"></i><b>13.3.3</b> ASO - passando e sem</a></li>
+<li class="chapter" data-level="13.3.4" data-path="mapa-de-calor.html"><a href="mapa-de-calor.html#aso---por-base-9"><i class="fa fa-check"></i><b>13.3.4</b> ASO - por base</a></li>
+<li class="chapter" data-level="13.3.5" data-path="mapa-de-calor.html"><a href="mapa-de-calor.html#aso---entrada-setor-9"><i class="fa fa-check"></i><b>13.3.5</b> ASO - Entrada setor</a></li>
+<li class="chapter" data-level="13.3.6" data-path="11-Centrais.html"><a href="#aso---sa%C3%ADda-setor-5"><i class="fa fa-check"></i><b>13.3.6</b> ASO - Saída setor</a></li>
+<li class="chapter" data-level="13.3.7" data-path="11-Centrais.html"><a href="#ataque-transi%C3%A7%C3%A3o-9"><i class="fa fa-check"></i><b>13.3.7</b> Ataque transição</a>
+<ul>
+<li class="chapter" data-level="13.3.7.1" data-path="11-Centrais.html"><a href="#atr---por-situa%C3%A7%C3%A3o-7"><i class="fa fa-check"></i><b>13.3.7.1</b> ATR - Por situação</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="13.4" data-path="mapa-de-calor.html"><a href="mapa-de-calor.html#wen-z.-h.-1"><i class="fa fa-check"></i><b>13.4</b> 01 Wen Z. H.</a>
+<ul>
+<li class="chapter" data-level="13.4.1" data-path="mapa-de-calor.html"><a href="mapa-de-calor.html#saque-10"><i class="fa fa-check"></i><b>13.4.1</b> Saque</a></li>
+<li class="chapter" data-level="13.4.2" data-path="mapa-de-calor.html"><a href="mapa-de-calor.html#ataque-sideout-10"><i class="fa fa-check"></i><b>13.4.2</b> Ataque sideout</a>
+<ul>
+<li class="chapter" data-level="13.4.2.1" data-path="mapa-de-calor.html"><a href="mapa-de-calor.html#aso---por-passe-10"><i class="fa fa-check"></i><b>13.4.2.1</b> ASO - Por passe</a></li>
+</ul></li>
+<li class="chapter" data-level="13.4.3" data-path="mapa-de-calor.html"><a href="mapa-de-calor.html#aso---passando-e-sem-8"><i class="fa fa-check"></i><b>13.4.3</b> ASO - passando e sem</a></li>
+<li class="chapter" data-level="13.4.4" data-path="mapa-de-calor.html"><a href="mapa-de-calor.html#aso---por-base-10"><i class="fa fa-check"></i><b>13.4.4</b> ASO - por base</a></li>
+<li class="chapter" data-level="13.4.5" data-path="mapa-de-calor.html"><a href="mapa-de-calor.html#aso---entrada-setor-10"><i class="fa fa-check"></i><b>13.4.5</b> ASO - Entrada setor</a></li>
+<li class="chapter" data-level="13.4.6" data-path="11-Centrais.html"><a href="#aso---sa%C3%ADda-setor-6"><i class="fa fa-check"></i><b>13.4.6</b> ASO - Saída setor</a></li>
+<li class="chapter" data-level="13.4.7" data-path="11-Centrais.html"><a href="#ataque-transi%C3%A7%C3%A3o-10"><i class="fa fa-check"></i><b>13.4.7</b> Ataque transição</a>
+<ul>
+<li class="chapter" data-level="13.4.7.1" data-path="11-Centrais.html"><a href="#atr---por-situa%C3%A7%C3%A3o-8"><i class="fa fa-check"></i><b>13.4.7.1</b> ATR - Por situação</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="13.5" data-path="mapa-de-calor.html"><a href="mapa-de-calor.html#jiang-c.-1"><i class="fa fa-check"></i><b>13.5</b> 02 Jiang C.</a>
+<ul>
+<li class="chapter" data-level="13.5.1" data-path="mapa-de-calor.html"><a href="mapa-de-calor.html#saque-11"><i class="fa fa-check"></i><b>13.5.1</b> Saque</a></li>
+<li class="chapter" data-level="13.5.2" data-path="mapa-de-calor.html"><a href="mapa-de-calor.html#ataque-sideout-11"><i class="fa fa-check"></i><b>13.5.2</b> Ataque sideout</a>
+<ul>
+<li class="chapter" data-level="13.5.2.1" data-path="mapa-de-calor.html"><a href="mapa-de-calor.html#aso---por-passe-11"><i class="fa fa-check"></i><b>13.5.2.1</b> ASO - Por passe</a></li>
+</ul></li>
+<li class="chapter" data-level="13.5.3" data-path="mapa-de-calor.html"><a href="mapa-de-calor.html#aso---passando-e-sem-9"><i class="fa fa-check"></i><b>13.5.3</b> ASO - passando e sem</a></li>
+<li class="chapter" data-level="13.5.4" data-path="mapa-de-calor.html"><a href="mapa-de-calor.html#aso---por-base-11"><i class="fa fa-check"></i><b>13.5.4</b> ASO - por base</a></li>
+<li class="chapter" data-level="13.5.5" data-path="mapa-de-calor.html"><a href="mapa-de-calor.html#aso---entrada-setor-11"><i class="fa fa-check"></i><b>13.5.5</b> ASO - Entrada setor</a></li>
+<li class="chapter" data-level="13.5.6" data-path="11-Centrais.html"><a href="#aso---sa%C3%ADda-setor-7"><i class="fa fa-check"></i><b>13.5.6</b> ASO - Saída setor</a></li>
+<li class="chapter" data-level="13.5.7" data-path="11-Centrais.html"><a href="#ataque-transi%C3%A7%C3%A3o-11"><i class="fa fa-check"></i><b>13.5.7</b> Ataque transição</a>
+<ul>
+<li class="chapter" data-level="13.5.7.1" data-path="11-Centrais.html"><a href="#atr---por-situa%C3%A7%C3%A3o-9"><i class="fa fa-check"></i><b>13.5.7.1</b> ATR - Por situação</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="13.6" data-path="mapa-de-calor.html"><a href="mapa-de-calor.html#li-y.z.-1"><i class="fa fa-check"></i><b>13.6</b> 09 Li Y.Z.</a>
+<ul>
+<li class="chapter" data-level="13.6.1" data-path="mapa-de-calor.html"><a href="mapa-de-calor.html#saque-12"><i class="fa fa-check"></i><b>13.6.1</b> Saque</a></li>
+<li class="chapter" data-level="13.6.2" data-path="mapa-de-calor.html"><a href="mapa-de-calor.html#ataque-sideout-12"><i class="fa fa-check"></i><b>13.6.2</b> Ataque sideout</a>
+<ul>
+<li class="chapter" data-level="13.6.2.1" data-path="mapa-de-calor.html"><a href="mapa-de-calor.html#aso---por-passe-12"><i class="fa fa-check"></i><b>13.6.2.1</b> ASO - Por passe</a></li>
+</ul></li>
+<li class="chapter" data-level="13.6.3" data-path="mapa-de-calor.html"><a href="mapa-de-calor.html#aso---passando-e-sem-10"><i class="fa fa-check"></i><b>13.6.3</b> ASO - passando e sem</a></li>
+<li class="chapter" data-level="13.6.4" data-path="mapa-de-calor.html"><a href="mapa-de-calor.html#aso---por-base-12"><i class="fa fa-check"></i><b>13.6.4</b> ASO - por base</a></li>
+<li class="chapter" data-level="13.6.5" data-path="mapa-de-calor.html"><a href="mapa-de-calor.html#aso---entrada-setor-12"><i class="fa fa-check"></i><b>13.6.5</b> ASO - Entrada setor</a></li>
+<li class="chapter" data-level="13.6.6" data-path="11-Centrais.html"><a href="#ataque-transi%C3%A7%C3%A3o-12"><i class="fa fa-check"></i><b>13.6.6</b> Ataque transição</a></li>
+</ul></li>
+<li class="chapter" data-level="13.7" data-path="mapa-de-calor.html"><a href="mapa-de-calor.html#peng-s.k.-1"><i class="fa fa-check"></i><b>13.7</b> 15 Peng S.K.</a>
+<ul>
+<li class="chapter" data-level="13.7.1" data-path="mapa-de-calor.html"><a href="mapa-de-calor.html#saque-13"><i class="fa fa-check"></i><b>13.7.1</b> Saque</a></li>
+<li class="chapter" data-level="13.7.2" data-path="mapa-de-calor.html"><a href="mapa-de-calor.html#ataque-sideout-13"><i class="fa fa-check"></i><b>13.7.2</b> Ataque sideout</a>
+<ul>
+<li class="chapter" data-level="13.7.2.1" data-path="mapa-de-calor.html"><a href="mapa-de-calor.html#aso---por-passe-13"><i class="fa fa-check"></i><b>13.7.2.1</b> ASO - Por passe</a></li>
+</ul></li>
+<li class="chapter" data-level="13.7.3" data-path="mapa-de-calor.html"><a href="mapa-de-calor.html#aso---passando-e-sem-11"><i class="fa fa-check"></i><b>13.7.3</b> ASO - passando e sem</a></li>
+<li class="chapter" data-level="13.7.4" data-path="mapa-de-calor.html"><a href="mapa-de-calor.html#aso---por-base-13"><i class="fa fa-check"></i><b>13.7.4</b> ASO - por base</a></li>
+<li class="chapter" data-level="13.7.5" data-path="mapa-de-calor.html"><a href="mapa-de-calor.html#aso---entrada-setor-13"><i class="fa fa-check"></i><b>13.7.5</b> ASO - Entrada setor</a></li>
+<li class="chapter" data-level="13.7.6" data-path="11-Centrais.html"><a href="#ataque-transi%C3%A7%C3%A3o-13"><i class="fa fa-check"></i><b>13.7.6</b> Ataque transição</a></li>
+</ul></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Relatório de equipes</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="centrais" class="section level1 hasAnchor" number="12">
+<h1><span class="header-section-number">Chapter 12</span> Centrais<a href="centrais.html#centrais" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="li-y.z." class="section level2 hasAnchor" number="12.1">
+<h2><span class="header-section-number">12.1</span> 09 Li Y.Z.<a href="centrais.html#li-y.z." class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="saque-5" class="section level3 hasAnchor" number="12.1.1">
+<h3><span class="header-section-number">12.1.1</span> Saque<a href="centrais.html#saque-5" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><img src="_main_files/figure-html/unnamed-chunk-49-1.png" width="1056" /><img src="_main_files/figure-html/unnamed-chunk-49-2.png" width="1056" /></p>
+<p><strong>Saques contra P1; contra P63; contra P542</strong><br />
+<img src="_main_files/figure-html/unnamed-chunk-49-3.png" width="1056" /></p>
+<p><strong>Saques por fase do set</strong><br />
+<img src="_main_files/figure-html/unnamed-chunk-49-4.png" width="1056" /></p>
+</div>
+<div id="ataque-sideout-5" class="section level3 hasAnchor" number="12.1.2">
+<h3><span class="header-section-number">12.1.2</span> Ataque sideout<a href="centrais.html#ataque-sideout-5" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><strong>Sem variação no ataque (ataques fortes)</strong><br />
+<img src="_main_files/figure-html/unnamed-chunk-49-5.png" width="1056" /></p>
+<p><strong>Somente variação no ataque (largadas e caixinhas)</strong><br />
+<img src="_main_files/figure-html/unnamed-chunk-49-6.png" width="1056" /></p>
+<div id="aso---por-passe-5" class="section level4 hasAnchor" number="12.1.2.1">
+<h4><span class="header-section-number">12.1.2.1</span> ASO - Por passe<a href="centrais.html#aso---por-passe-5" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p><img src="_main_files/figure-html/unnamed-chunk-49-7.png" width="1056" /></p>
+</div>
+</div>
+<div id="aso---passando-e-sem-3" class="section level3 hasAnchor" number="12.1.3">
+<h3><span class="header-section-number">12.1.3</span> ASO - passando e sem<a href="centrais.html#aso---passando-e-sem-3" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Acumulado<br />
+<img src="_main_files/figure-html/unnamed-chunk-49-8.png" width="1056" /></p>
+<p>Passando<br />
+<img src="_main_files/figure-html/unnamed-chunk-49-9.png" width="1056" /></p>
+<p>Sem passar<br />
+<img src="_main_files/figure-html/unnamed-chunk-49-10.png" width="1056" /></p>
+</div>
+<div id="aso---por-base-5" class="section level3 hasAnchor" number="12.1.4">
+<h3><span class="header-section-number">12.1.4</span> ASO - por base<a href="centrais.html#aso---por-base-5" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Acumulado<br />
+<img src="_main_files/figure-html/unnamed-chunk-49-11.png" width="1056" /></p>
+<p>Base alta por passe<br />
+<img src="_main_files/figure-html/unnamed-chunk-49-12.png" width="1056" /></p>
+<p>Base baixa por passe<br />
+<img src="_main_files/figure-html/unnamed-chunk-49-13.png" width="1056" /></p>
+</div>
+<div id="aso---entrada-setor-5" class="section level3 hasAnchor" number="12.1.5">
+<h3><span class="header-section-number">12.1.5</span> ASO - Entrada setor<a href="centrais.html#aso---entrada-setor-5" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Setorização acumulada ABB-<br />
+<img src="_main_files/figure-html/unnamed-chunk-49-14.png" width="1056" /></p>
+<p>Entrada com setorização detalhada ABB-<br />
+<img src="_main_files/figure-html/unnamed-chunk-49-15.png" width="1056" /><img src="_main_files/figure-html/unnamed-chunk-49-16.png" width="1056" /><img src="_main_files/figure-html/unnamed-chunk-49-17.png" width="1056" /></p>
+</div>
+<div id="ataque-transição-5" class="section level3 hasAnchor" number="12.1.6">
+<h3><span class="header-section-number">12.1.6</span> Ataque transição<a href="#ataque-transi%C3%A7%C3%A3o-5" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><strong>Sem variação no ataque (ataques fortes)</strong><br />
+<img src="_main_files/figure-html/unnamed-chunk-49-18.png" width="1056" /></p>
+<p><strong>Somente variação no ataque (largadas e caixinhas)</strong><br />
+<img src="_main_files/figure-html/unnamed-chunk-49-19.png" width="1056" /></p>
+</div>
+</div>
+<div id="peng-s.k." class="section level2 hasAnchor" number="12.2">
+<h2><span class="header-section-number">12.2</span> 15 Peng S.K.<a href="centrais.html#peng-s.k." class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="saque-6" class="section level3 hasAnchor" number="12.2.1">
+<h3><span class="header-section-number">12.2.1</span> Saque<a href="centrais.html#saque-6" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><img src="_main_files/figure-html/unnamed-chunk-49-20.png" width="1056" /><img src="_main_files/figure-html/unnamed-chunk-49-21.png" width="1056" /></p>
+<p><strong>Saques contra P1; contra P63; contra P542</strong><br />
+<img src="_main_files/figure-html/unnamed-chunk-49-22.png" width="1056" /></p>
+<p><strong>Saques por fase do set</strong><br />
+<img src="_main_files/figure-html/unnamed-chunk-49-23.png" width="1056" /></p>
+</div>
+<div id="ataque-sideout-6" class="section level3 hasAnchor" number="12.2.2">
+<h3><span class="header-section-number">12.2.2</span> Ataque sideout<a href="centrais.html#ataque-sideout-6" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><strong>Sem variação no ataque (ataques fortes)</strong><br />
+<img src="_main_files/figure-html/unnamed-chunk-49-24.png" width="1056" /></p>
+<p><strong>Somente variação no ataque (largadas e caixinhas)</strong><br />
+<img src="_main_files/figure-html/unnamed-chunk-49-25.png" width="1056" /></p>
+<div id="aso---por-passe-6" class="section level4 hasAnchor" number="12.2.2.1">
+<h4><span class="header-section-number">12.2.2.1</span> ASO - Por passe<a href="centrais.html#aso---por-passe-6" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p><img src="_main_files/figure-html/unnamed-chunk-49-26.png" width="1056" /></p>
+</div>
+</div>
+<div id="aso---passando-e-sem-4" class="section level3 hasAnchor" number="12.2.3">
+<h3><span class="header-section-number">12.2.3</span> ASO - passando e sem<a href="centrais.html#aso---passando-e-sem-4" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Acumulado<br />
+<img src="_main_files/figure-html/unnamed-chunk-49-27.png" width="1056" /></p>
+<p>Passando<br />
+<img src="_main_files/figure-html/unnamed-chunk-49-28.png" width="1056" /></p>
+<p>Sem passar<br />
+<img src="_main_files/figure-html/unnamed-chunk-49-29.png" width="1056" /></p>
+</div>
+<div id="aso---por-base-6" class="section level3 hasAnchor" number="12.2.4">
+<h3><span class="header-section-number">12.2.4</span> ASO - por base<a href="centrais.html#aso---por-base-6" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Acumulado<br />
+<img src="_main_files/figure-html/unnamed-chunk-49-30.png" width="1056" /></p>
+<p>Base alta por passe<br />
+<img src="_main_files/figure-html/unnamed-chunk-49-31.png" width="1056" /></p>
+<p>Base baixa por passe<br />
+<img src="_main_files/figure-html/unnamed-chunk-49-32.png" width="1056" /></p>
+</div>
+<div id="aso---entrada-setor-6" class="section level3 hasAnchor" number="12.2.5">
+<h3><span class="header-section-number">12.2.5</span> ASO - Entrada setor<a href="centrais.html#aso---entrada-setor-6" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Setorização acumulada ABB-<br />
+<img src="_main_files/figure-html/unnamed-chunk-49-33.png" width="1056" /></p>
+<p>Entrada com setorização detalhada ABB-<br />
+<img src="_main_files/figure-html/unnamed-chunk-49-34.png" width="1056" /><img src="_main_files/figure-html/unnamed-chunk-49-35.png" width="1056" /><img src="_main_files/figure-html/unnamed-chunk-49-36.png" width="1056" /></p>
+</div>
+<div id="ataque-transição-6" class="section level3 hasAnchor" number="12.2.6">
+<h3><span class="header-section-number">12.2.6</span> Ataque transição<a href="#ataque-transi%C3%A7%C3%A3o-6" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><strong>Sem variação no ataque (ataques fortes)</strong><br />
+<img src="_main_files/figure-html/unnamed-chunk-49-37.png" width="1056" /></p>
+<p><strong>Somente variação no ataque (largadas e caixinhas)</strong><br />
+<img src="_main_files/figure-html/unnamed-chunk-49-38.png" width="1056" /></p>
+
+</div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="opostos.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="mapa-de-calor.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+  "sharing": {
+    "github": false,
+    "facebook": true,
+    "twitter": true,
+    "linkedin": false,
+    "weibo": false,
+    "instapaper": false,
+    "vk": false,
+    "whatsapp": false,
+    "all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+  },
+  "fontsettings": {
+    "theme": "white",
+    "family": "sans",
+    "size": 2
+  },
+  "edit": {
+    "link": "https://github.com/USERNAME/REPO/edit/BRANCH/11-Centrais.Rmd",
+    "text": "Edit"
+  },
+  "history": {
+    "link": null,
+    "text": null
+  },
+  "view": {
+    "link": null,
+    "text": null
+  },
+  "download": ["_main.pdf", "_main.epub"],
+  "search": {
+    "engine": "fuse",
+    "options": null
+  },
+  "toc": {
+    "collapse": "subsection",
+    "scroll_highlight": true
+  }
+});
+});
+</script>
+
+</body>
+
+</html>
