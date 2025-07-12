@@ -18,7 +18,7 @@ formacoes
 roles
 first-set-1
 first-set-by-match
-lineup-by-match-5-last
+lineup-by-match-6-last
 rotations-by-match
 fase-de-bp
 fase-de-so
