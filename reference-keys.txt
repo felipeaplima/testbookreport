@@ -311,9 +311,13 @@ sideout
 por-passe-36
 transição
 detalhado-1
+variantes
+ponteiros
+opostos
+centrais
 bloqueio
 defesa
-ponteiros
+ponteiros-1
 yu-y.t.
 saque
 ataque-sideout
@@ -354,7 +358,7 @@ aso---entrada-setor-3
 aso---saída-setor-3
 ataque-transição-3
 atr---por-situação-3
-opostos
+opostos-1
 wen-z.-h.
 saque-4
 ataque-sideout-4
@@ -375,7 +379,7 @@ aso---saida-fundo-setor-1
 aso---entrada-setor-5
 ataque-transição-5
 atr---por-situação-5
-centrais
+centrais-1
 li-y.z.
 saque-6
 ataque-sideout-6
@@ -417,7 +421,7 @@ aso---por-base-10
 aso---entrada-setor-10
 ataque-transição-10
 mapa-de-calor
-ponteiros-1
+ponteiros-2
 yu-y.t.-1
 saque-11
 ataque-sideout-11
@@ -458,7 +462,7 @@ aso---entrada-setor-14
 aso---saída-setor-7
 ataque-transição-14
 atr---por-situação-9
-opostos-1
+opostos-2
 wen-z.-h.-1
 saque-15
 ataque-sideout-15
@@ -479,7 +483,7 @@ aso---saida-fundo-setor-3
 aso---entrada-setor-16
 ataque-transição-16
 atr---por-situação-11
-centrais-1
+centrais-2
 li-y.z.-1
 saque-17
 ataque-sideout-17
